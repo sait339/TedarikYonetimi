@@ -150,7 +150,7 @@ namespace TedarikYonetimi
                     {
                         HataEkranı onaygoster = new HataEkranı();
                         HataEkranı.durum = "ONAY";
-                        HataEkranı.baslik = "BAŞARILI";
+                        HataEkranı.baslik = "BAŞARILI.";
                         HataEkranı.text = "Kartvizit başarılı bir şekilde yüklenmiştir.";
                         onaygoster.Show();
 
