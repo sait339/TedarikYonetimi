@@ -15,7 +15,6 @@ namespace TedarikYonetimi
 {
     public partial class FirmaEkle : Form
     {
-        SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-3JRCNLH\\SQLEXPRESS;Initial Catalog=TEDARIKYONETIM;Integrated Security=True;");
         string kartvizityolu, kartvizitismi,kayityolu;
         public FirmaEkle()
         {
@@ -154,42 +153,42 @@ namespace TedarikYonetimi
                         HataEkranı.text = "Kartvizit başarılı bir şekilde yüklenmiştir.";
                         onaygoster.Show();
 
-                        baglanti.Close();
-                        baglanti.Open();
-                        SqlCommand kartvizitkayıt = new SqlCommand("INSERT INTO kartvizitler(kartvizit_ismi) values(@kartvizit)", baglanti);
+                        SqlBaglanti.baglanti.Close();
+                        SqlBaglanti.baglanti.Open();
+                        SqlCommand kartvizitkayıt = new SqlCommand("INSERT INTO kartvizitler(kartvizit_ismi) values(@kartvizit)", SqlBaglanti.baglanti);
                         kartvizitkayıt.Parameters.AddWithValue("@kartvizit", kartvizitismi);
                         kartvizitkayıt.ExecuteNonQuery();
-                        baglanti.Close();
+                        SqlBaglanti.baglanti.Close();
                         string kartvizitid="";
-                        baglanti.Open();
-                        SqlCommand kartvizitidsorgula = new SqlCommand("SELECT kartvizit_id FROM kartvizitler WHERE kartvizit_ismi=@kartvizit", baglanti);
+                        SqlBaglanti.baglanti.Open();
+                        SqlCommand kartvizitidsorgula = new SqlCommand("SELECT kartvizit_id FROM kartvizitler WHERE kartvizit_ismi=@kartvizit", SqlBaglanti.baglanti);
                         kartvizitidsorgula.Parameters.AddWithValue("@kartvizit", kartvizitismi);
                         SqlDataReader dr = kartvizitidsorgula.ExecuteReader();
                         if(dr.Read())
                         {
                             kartvizitid = dr["kartvizit_id"].ToString();
                         }
-                        baglanti.Close();
+                        SqlBaglanti.baglanti.Close();
                         string sorumluid = "";
-                        baglanti.Open();
-                        SqlCommand sorumluidsorgula = new SqlCommand("SELECT kullanici_id FROM kullanicilar WHERE kullanici_adi=@kullaniciadi", baglanti);
+                        SqlBaglanti.baglanti.Open();
+                        SqlCommand sorumluidsorgula = new SqlCommand("SELECT kullanici_id FROM kullanicilar WHERE kullanici_adi=@kullaniciadi", SqlBaglanti.baglanti);
                         sorumluidsorgula.Parameters.AddWithValue("@kullaniciadi",KullaniciAnaSayfa.sorumluadi);
                         SqlDataReader dr1 = sorumluidsorgula.ExecuteReader();
                         if (dr1.Read())
                         {
                             sorumluid = dr1["kullanici_id"].ToString();
                         }
-                        baglanti.Close();
+                        SqlBaglanti.baglanti.Close();
                         string sektorid = "";
-                        baglanti.Open();
-                        SqlCommand sektoridsorgula = new SqlCommand("SELECT sektor_id FROM sektorler WHERE sektor_adi=@sektoradi", baglanti);
+                        SqlBaglanti.baglanti.Open();
+                        SqlCommand sektoridsorgula = new SqlCommand("SELECT sektor_id FROM sektorler WHERE sektor_adi=@sektoradi", SqlBaglanti.baglanti);
                         sektoridsorgula.Parameters.AddWithValue("@sektoradi", sektorcombobox.SelectedItem.ToString());
                         SqlDataReader dr2 = sektoridsorgula.ExecuteReader();
                         if(dr2.Read())
                         {
                             sektorid = dr2["sektor_id"].ToString();
                         }
-                        baglanti.Close();
+                        SqlBaglanti.baglanti.Close();
 
                         string ad, odeme, calisma, website, mail, iletisim, aciklama;
                        
@@ -251,9 +250,9 @@ namespace TedarikYonetimi
                         }
                         if(ad != null && odeme != null && calisma != null && website != null && mail != null && iletisim != null)
                         {
-                            baglanti.Open();
+                            SqlBaglanti.baglanti.Open();
                             SqlCommand firmakayit = new SqlCommand("INSERT INTO firmalar(firma_adi,firma_odemesekli,firma_calismasekli,firma_websitesi,firma_mail,firma_iletisim,firma_aciklama,kartvizitID,sektorID,sorumluID) " +
-                                "values(@ad,@odeme,@calisma,@website,@mail,@iletisim,@aciklama,@kID,@sID,@sorumluID)", baglanti);
+                                "values(@ad,@odeme,@calisma,@website,@mail,@iletisim,@aciklama,@kID,@sID,@sorumluID)", SqlBaglanti.baglanti);
                             firmakayit.Parameters.AddWithValue("@ad", ad);
                             firmakayit.Parameters.AddWithValue("@odeme", odeme);
                             firmakayit.Parameters.AddWithValue("@calisma", calisma);
@@ -265,7 +264,7 @@ namespace TedarikYonetimi
                             firmakayit.Parameters.AddWithValue("@sID", sektorid);
                             firmakayit.Parameters.AddWithValue("@sorumluID", sorumluid);
                             firmakayit.ExecuteNonQuery();
-                            baglanti.Close();
+                            SqlBaglanti.baglanti.Close();
 
                             File.Copy(kartvizityolu, kayityolu + "\\" + kartvizitismi);
                             HataEkranı onay = new HataEkranı();
@@ -305,14 +304,14 @@ namespace TedarikYonetimi
         private void FirmaEkle_Load(object sender, EventArgs e)
         {
             firmaeklebuton.Enabled = false;
-            baglanti.Open();
-            SqlCommand sektorlistele = new SqlCommand("SELECT sektor_adi FROM sektorler ORDER BY sektor_adi", baglanti);
+            SqlBaglanti.baglanti.Open();
+            SqlCommand sektorlistele = new SqlCommand("SELECT sektor_adi FROM sektorler ORDER BY sektor_adi", SqlBaglanti.baglanti);
             SqlDataReader dr1 = sektorlistele.ExecuteReader();
             while(dr1.Read())
             {
                 sektorcombobox.Items.Add(dr1["sektor_adi"].ToString());
             }
-            baglanti.Close();
+            SqlBaglanti.baglanti.Close();
 
         }
     }

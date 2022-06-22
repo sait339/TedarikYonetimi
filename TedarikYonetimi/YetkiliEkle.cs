@@ -15,7 +15,6 @@ namespace TedarikYonetimi
 {
     public partial class YetkiliEkle : Form
     {
-        SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-3JRCNLH\\SQLEXPRESS;Initial Catalog=TEDARIKYONETIM;Integrated Security=True;");
         string firmaadi,firmaid,yetkiliad,yetkilisoyad,yetkiliiletisim,yetkilimail,yetkilipozisyon,sorumluid;
 
 
@@ -38,18 +37,18 @@ namespace TedarikYonetimi
             yetkilikaydetbuton.Enabled = false;
             try
             {
-                baglanti.Open();
-                SqlCommand sektorfiltre = new SqlCommand("SELECT *FROM sektorler ORDER BY sektor_adi", baglanti);
+                SqlBaglanti.baglanti.Open();
+                SqlCommand sektorfiltre = new SqlCommand("SELECT *FROM sektorler ORDER BY sektor_adi", SqlBaglanti.baglanti);
                 SqlDataReader dr = sektorfiltre.ExecuteReader();
                 while (dr.Read())
                 {
                     sektoridler.Add(dr["sektor_id"].ToString());
                     sektorfiltercombo.Items.Add(dr["sektor_adi"].ToString());
                 }
-                baglanti.Close();
+                SqlBaglanti.baglanti.Close();
 
-                baglanti.Open();
-                SqlCommand firmalar = new SqlCommand("SELECT firma_id,firma_adi,sektorID FROM firmalar ORDER BY firma_adi", baglanti);
+                SqlBaglanti.baglanti.Open();
+                SqlCommand firmalar = new SqlCommand("SELECT firma_id,firma_adi,sektorID FROM firmalar ORDER BY firma_adi", SqlBaglanti.baglanti);
                 SqlDataReader fr = firmalar.ExecuteReader();
                 while (fr.Read())
                 {
@@ -57,19 +56,19 @@ namespace TedarikYonetimi
                     firmaidler.Add(fr["firma_id"].ToString());
                     firmasektoridler.Add(fr["sektorID"].ToString());
                 }
-                baglanti.Close();
+                SqlBaglanti.baglanti.Close();
 
                 for (int i = 0; i < firmasektoridler.Count; i++)
                 {
-                    baglanti.Open();
-                    SqlCommand sektorID = new SqlCommand("SELECT sektor_adi FROM sektorler WHERE sektor_id=@sektorid", baglanti);
+                    SqlBaglanti.baglanti.Open();
+                    SqlCommand sektorID = new SqlCommand("SELECT sektor_adi FROM sektorler WHERE sektor_id=@sektorid", SqlBaglanti.baglanti);
                     sektorID.Parameters.AddWithValue("@sektorid", firmasektoridler[i]);
                     SqlDataReader sr = sektorID.ExecuteReader();
                     while (sr.Read())
                     {
                         sektoradlari.Add(sr["sektor_adi"].ToString());
                     }
-                    baglanti.Close();
+                    SqlBaglanti.baglanti.Close();
                 }
                 for (int i = 0; i < firmasektoridler.Count; i++)
                 {
@@ -272,19 +271,19 @@ namespace TedarikYonetimi
             {
                 try
                 {
-                    baglanti.Open();
-                    SqlCommand sorumluidsorgula = new SqlCommand("SELECT kullanici_id FROM kullanicilar WHERE kullanici_adi=@kullaniciadi", baglanti);
+                    SqlBaglanti.baglanti.Open();
+                    SqlCommand sorumluidsorgula = new SqlCommand("SELECT kullanici_id FROM kullanicilar WHERE kullanici_adi=@kullaniciadi", SqlBaglanti.baglanti);
                     sorumluidsorgula.Parameters.AddWithValue("@kullaniciadi", KullaniciAnaSayfa.sorumluadi);
                     SqlDataReader dr1 = sorumluidsorgula.ExecuteReader();
                     if (dr1.Read())
                     {
                         sorumluid = dr1["kullanici_id"].ToString();
                     }
-                    baglanti.Close();
+                    SqlBaglanti.baglanti.Close();
 
-                    baglanti.Open();
+                    SqlBaglanti.baglanti.Open();
                     SqlCommand firmakayit = new SqlCommand("INSERT INTO yetkililer(yetkili_adi,yetkili_soyadi,yetkili_calismapozisyonu,yetkili_iletisim,yetkili_mail,firmaID,sorumluID) " +
-                        "values(@ad,@soyad,@pozisyon,@tel,@mail,@fid,@sorumluid)", baglanti);
+                        "values(@ad,@soyad,@pozisyon,@tel,@mail,@fid,@sorumluid)", SqlBaglanti.baglanti);
                     firmakayit.Parameters.AddWithValue("@ad", yetkiliad);
                     firmakayit.Parameters.AddWithValue("@soyad", yetkilisoyad);
                     firmakayit.Parameters.AddWithValue("@pozisyon", yetkilipozisyon);
@@ -293,7 +292,7 @@ namespace TedarikYonetimi
                     firmakayit.Parameters.AddWithValue("@fid", int.Parse(firmaid));
                     firmakayit.Parameters.AddWithValue("@sorumluid", int.Parse(sorumluid));
                     firmakayit.ExecuteNonQuery();
-                    baglanti.Close();
+                    SqlBaglanti.baglanti.Close();
 
                     HataEkranı hatagoster = new HataEkranı();
                     HataEkranı.durum = "ONAY";
@@ -320,15 +319,15 @@ namespace TedarikYonetimi
             {
                 firmaadi = firmalardtgview.CurrentRow.Cells[1].Value.ToString();
                 yetkilikaydetbuton.Enabled = true;
-                baglanti.Open();
-                SqlCommand firmaids = new SqlCommand("SELECT firma_id FROM firmalar WHERE firma_adi=@firmaad", baglanti);
+                SqlBaglanti.baglanti.Open();
+                SqlCommand firmaids = new SqlCommand("SELECT firma_id FROM firmalar WHERE firma_adi=@firmaad", SqlBaglanti.baglanti);
                 firmaids.Parameters.AddWithValue("@firmaad", firmaadi);
                 SqlDataReader dr = firmaids.ExecuteReader();
                 if (dr.Read())
                 {
                     firmaid = dr["firma_id"].ToString();
                 }
-                baglanti.Close();
+                SqlBaglanti.baglanti.Close();
                 firmasecimlabel.Text = firmaadi;
             }
             catch

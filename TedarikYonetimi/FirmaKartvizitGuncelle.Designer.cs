@@ -46,7 +46,7 @@
             this.kartvizitpicturebox.Location = new System.Drawing.Point(12, 12);
             this.kartvizitpicturebox.Name = "kartvizitpicturebox";
             this.kartvizitpicturebox.Size = new System.Drawing.Size(553, 233);
-            this.kartvizitpicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.kartvizitpicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.kartvizitpicturebox.TabIndex = 0;
             this.kartvizitpicturebox.TabStop = false;
             // 

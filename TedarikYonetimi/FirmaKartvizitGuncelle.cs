@@ -69,12 +69,21 @@ namespace TedarikYonetimi
         private void FirmaKartvizitGuncelle_Load(object sender, EventArgs e)
         {
             SqlBaglanti.baglanti.Open();
-            SqlCommand sorumluidsorgula = new SqlCommand("SELECT kullanici_id FROM kullanicilar WHERE kullanici_adi=@kullaniciadi", SqlBaglanti.baglanti);
-            sorumluidsorgula.Parameters.AddWithValue("@kullaniciadi", KullaniciAnaSayfa.sorumluadi);
-            SqlDataReader dr3 = sorumluidsorgula.ExecuteReader();
+            SqlCommand islemyaopanidsorgula = new SqlCommand("SELECT kullanici_id FROM kullanicilar WHERE kullanici_adi=@kullaniciadi", SqlBaglanti.baglanti);
+            islemyaopanidsorgula.Parameters.AddWithValue("@kullaniciadi", KullaniciAnaSayfa.sorumluadi);
+            SqlDataReader dr3 = islemyaopanidsorgula.ExecuteReader();
             if (dr3.Read())
             {
                 islemyapanid = dr3["kullanici_id"].ToString();
+            }
+            SqlBaglanti.baglanti.Close();
+            SqlBaglanti.baglanti.Open();
+            SqlCommand sorumluidsorgula = new SqlCommand("SELECT sorumluID FROM firmalar WHERE firma_id=@fid", SqlBaglanti.baglanti);
+            sorumluidsorgula.Parameters.AddWithValue("@fid", FirmaGuncelle.firmaid);
+            SqlDataReader dr4 = sorumluidsorgula.ExecuteReader();
+            if (dr4.Read())
+            {
+                sorumluid = dr4["sorumluID"].ToString();
             }
             SqlBaglanti.baglanti.Close();
             if (islemyapanid == sorumluid)

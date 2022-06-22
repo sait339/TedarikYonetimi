@@ -561,6 +561,7 @@
             this.firmalistele.Text = "Firmaları Listele";
             this.firmalistele.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.firmalistele.Visible = false;
+            this.firmalistele.Click += new System.EventHandler(this.firmalistele_Click);
             // 
             // sozlesmeekle
             // 

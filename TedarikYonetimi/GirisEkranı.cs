@@ -15,7 +15,6 @@ namespace TedarikYonetimi
 {
     public partial class GirisEkranı : Form
     {
-        SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-3JRCNLH\\SQLEXPRESS;Initial Catalog=TEDARIKYONETIM;Integrated Security=True;");
         int sayac = 0;
         public GirisEkranı()
         {
@@ -67,9 +66,9 @@ namespace TedarikYonetimi
         {
             try
             {
-                baglanti.Close();
-                baglanti.Open();
-                SqlCommand cmd = new SqlCommand("SELECT *FROM kullanicilar WHERE kullanici_adi=@kadi AND kullanici_sifre=@sifre", baglanti);
+                SqlBaglanti.baglanti.Close();
+                SqlBaglanti.baglanti.Open();
+                SqlCommand cmd = new SqlCommand("SELECT *FROM kullanicilar WHERE kullanici_adi=@kadi AND kullanici_sifre=@sifre", SqlBaglanti.baglanti);
                 cmd.Parameters.AddWithValue("@kadi", kullaniciadi.Text);
                 cmd.Parameters.AddWithValue("@sifre", sifre.Text);
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -108,7 +107,7 @@ namespace TedarikYonetimi
                     HataEkranı.text= "Kullanıcı adı veya şifre hatalı";
                     hata.Show();
                 }
-                baglanti.Close();
+                SqlBaglanti.baglanti.Close();
             }
             catch(Exception) 
             {

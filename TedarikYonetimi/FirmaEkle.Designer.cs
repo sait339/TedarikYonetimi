@@ -83,7 +83,7 @@
             this.calismaseklicombobox.HoverState.Parent = this.calismaseklicombobox;
             this.calismaseklicombobox.ItemHeight = 30;
             this.calismaseklicombobox.Items.AddRange(new object[] {
-            "*Çalışma Şekli Seçiniz",
+            "*Ödeme Şekli Seçiniz",
             "NAKİT",
             "VADELİ",
             "DİĞER(açıklama kısmında belirtiniz.)"});
@@ -93,7 +93,7 @@
             this.calismaseklicombobox.ShadowDecoration.Parent = this.calismaseklicombobox;
             this.calismaseklicombobox.Size = new System.Drawing.Size(517, 36);
             this.calismaseklicombobox.StartIndex = 0;
-            this.calismaseklicombobox.TabIndex = 5;
+            this.calismaseklicombobox.TabIndex = 2;
             // 
             // odemeseklicombobox
             // 
@@ -111,7 +111,7 @@
             this.odemeseklicombobox.HoverState.Parent = this.odemeseklicombobox;
             this.odemeseklicombobox.ItemHeight = 30;
             this.odemeseklicombobox.Items.AddRange(new object[] {
-            "*Ödeme Şekli Seçiniz",
+            "*Çalışma Şekli Seçiniz",
             "SÖZLEŞMELİ",
             "TEKLİFLİ",
             "DİĞER(açıklama kısmında belirtiniz.)"});
@@ -121,7 +121,7 @@
             this.odemeseklicombobox.ShadowDecoration.Parent = this.odemeseklicombobox;
             this.odemeseklicombobox.Size = new System.Drawing.Size(517, 36);
             this.odemeseklicombobox.StartIndex = 0;
-            this.odemeseklicombobox.TabIndex = 4;
+            this.odemeseklicombobox.TabIndex = 3;
             // 
             // sektorcombobox
             // 
@@ -146,7 +146,7 @@
             this.sektorcombobox.ShadowDecoration.Parent = this.sektorcombobox;
             this.sektorcombobox.Size = new System.Drawing.Size(517, 36);
             this.sektorcombobox.StartIndex = 0;
-            this.sektorcombobox.TabIndex = 3;
+            this.sektorcombobox.TabIndex = 1;
             // 
             // aciklamatextbox
             // 
@@ -176,7 +176,7 @@
             this.aciklamatextbox.SelectionStart = 16;
             this.aciklamatextbox.ShadowDecoration.Parent = this.aciklamatextbox;
             this.aciklamatextbox.Size = new System.Drawing.Size(1092, 49);
-            this.aciklamatextbox.TabIndex = 2;
+            this.aciklamatextbox.TabIndex = 4;
             this.aciklamatextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.aciklamatextbox_KeyPress);
             this.aciklamatextbox.Leave += new System.EventHandler(this.aciklamatextbox_Leave);
             // 
@@ -370,7 +370,7 @@
             this.kartviziteklebuton.Name = "kartviziteklebuton";
             this.kartviziteklebuton.ShadowDecoration.Parent = this.kartviziteklebuton;
             this.kartviziteklebuton.Size = new System.Drawing.Size(150, 38);
-            this.kartviziteklebuton.TabIndex = 5;
+            this.kartviziteklebuton.TabIndex = 1;
             this.kartviziteklebuton.Text = "Kartvizit Ekle";
             this.kartviziteklebuton.Click += new System.EventHandler(this.kartviziteklebuton_Click);
             // 
@@ -379,7 +379,7 @@
             this.kartvizitpicturebox.Location = new System.Drawing.Point(7, 49);
             this.kartvizitpicturebox.Name = "kartvizitpicturebox";
             this.kartvizitpicturebox.Size = new System.Drawing.Size(540, 220);
-            this.kartvizitpicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.kartvizitpicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.kartvizitpicturebox.TabIndex = 4;
             this.kartvizitpicturebox.TabStop = false;
             // 
@@ -399,7 +399,7 @@
             this.firmaeklebuton.Name = "firmaeklebuton";
             this.firmaeklebuton.ShadowDecoration.Parent = this.firmaeklebuton;
             this.firmaeklebuton.Size = new System.Drawing.Size(150, 38);
-            this.firmaeklebuton.TabIndex = 3;
+            this.firmaeklebuton.TabIndex = 2;
             this.firmaeklebuton.Text = "Ekle";
             this.firmaeklebuton.Click += new System.EventHandler(this.firmaeklebuton_Click);
             // 

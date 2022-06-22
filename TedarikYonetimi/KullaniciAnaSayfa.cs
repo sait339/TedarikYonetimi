@@ -165,5 +165,16 @@ namespace TedarikYonetimi
             firmaguncelle.BringToFront();
             firmaguncelle.Show();
         }
+
+        private void firmalistele_Click(object sender, EventArgs e)
+        {
+            KullaniciGirisAnaPanel.Controls.Clear();
+            FirmaListele firmalistele= new FirmaListele();
+            firmalistele.TopLevel = false;
+            firmalistele.Dock = DockStyle.Fill;
+            KullaniciGirisAnaPanel.Controls.Add(firmalistele);
+            firmalistele.BringToFront();
+            firmalistele.Show();
+        }
     }
 }
