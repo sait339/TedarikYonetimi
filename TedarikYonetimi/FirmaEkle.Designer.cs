@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.calismaseklicombobox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.odemeseklicombobox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.calismaseklicombobox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.sektorcombobox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.aciklamatextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.firmaunvantextbox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -51,8 +51,8 @@
             // 
             // guna2GroupBox1
             // 
-            this.guna2GroupBox1.Controls.Add(this.calismaseklicombobox);
             this.guna2GroupBox1.Controls.Add(this.odemeseklicombobox);
+            this.guna2GroupBox1.Controls.Add(this.calismaseklicombobox);
             this.guna2GroupBox1.Controls.Add(this.sektorcombobox);
             this.guna2GroupBox1.Controls.Add(this.aciklamatextbox);
             this.guna2GroupBox1.Controls.Add(this.firmaunvantextbox);
@@ -66,34 +66,6 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(1118, 244);
             this.guna2GroupBox1.TabIndex = 0;
             this.guna2GroupBox1.Text = "Firma Genel Bilgiler";
-            // 
-            // calismaseklicombobox
-            // 
-            this.calismaseklicombobox.AutoRoundedCorners = true;
-            this.calismaseklicombobox.BackColor = System.Drawing.Color.Transparent;
-            this.calismaseklicombobox.BorderColor = System.Drawing.Color.Red;
-            this.calismaseklicombobox.BorderRadius = 17;
-            this.calismaseklicombobox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.calismaseklicombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.calismaseklicombobox.FocusedColor = System.Drawing.Color.Empty;
-            this.calismaseklicombobox.FocusedState.Parent = this.calismaseklicombobox;
-            this.calismaseklicombobox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.calismaseklicombobox.ForeColor = System.Drawing.Color.Black;
-            this.calismaseklicombobox.FormattingEnabled = true;
-            this.calismaseklicombobox.HoverState.Parent = this.calismaseklicombobox;
-            this.calismaseklicombobox.ItemHeight = 30;
-            this.calismaseklicombobox.Items.AddRange(new object[] {
-            "*Ödeme Şekli Seçiniz",
-            "NAKİT",
-            "VADELİ",
-            "DİĞER(açıklama kısmında belirtiniz.)"});
-            this.calismaseklicombobox.ItemsAppearance.Parent = this.calismaseklicombobox;
-            this.calismaseklicombobox.Location = new System.Drawing.Point(13, 146);
-            this.calismaseklicombobox.Name = "calismaseklicombobox";
-            this.calismaseklicombobox.ShadowDecoration.Parent = this.calismaseklicombobox;
-            this.calismaseklicombobox.Size = new System.Drawing.Size(517, 36);
-            this.calismaseklicombobox.StartIndex = 0;
-            this.calismaseklicombobox.TabIndex = 2;
             // 
             // odemeseklicombobox
             // 
@@ -111,17 +83,45 @@
             this.odemeseklicombobox.HoverState.Parent = this.odemeseklicombobox;
             this.odemeseklicombobox.ItemHeight = 30;
             this.odemeseklicombobox.Items.AddRange(new object[] {
-            "*Çalışma Şekli Seçiniz",
-            "SÖZLEŞMELİ",
-            "TEKLİFLİ",
+            "*Ödeme Şekli Seçiniz",
+            "NAKİT",
+            "VADELİ",
             "DİĞER(açıklama kısmında belirtiniz.)"});
             this.odemeseklicombobox.ItemsAppearance.Parent = this.odemeseklicombobox;
-            this.odemeseklicombobox.Location = new System.Drawing.Point(588, 146);
+            this.odemeseklicombobox.Location = new System.Drawing.Point(13, 146);
             this.odemeseklicombobox.Name = "odemeseklicombobox";
             this.odemeseklicombobox.ShadowDecoration.Parent = this.odemeseklicombobox;
             this.odemeseklicombobox.Size = new System.Drawing.Size(517, 36);
             this.odemeseklicombobox.StartIndex = 0;
-            this.odemeseklicombobox.TabIndex = 3;
+            this.odemeseklicombobox.TabIndex = 2;
+            // 
+            // calismaseklicombobox
+            // 
+            this.calismaseklicombobox.AutoRoundedCorners = true;
+            this.calismaseklicombobox.BackColor = System.Drawing.Color.Transparent;
+            this.calismaseklicombobox.BorderColor = System.Drawing.Color.Red;
+            this.calismaseklicombobox.BorderRadius = 17;
+            this.calismaseklicombobox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.calismaseklicombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.calismaseklicombobox.FocusedColor = System.Drawing.Color.Empty;
+            this.calismaseklicombobox.FocusedState.Parent = this.calismaseklicombobox;
+            this.calismaseklicombobox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.calismaseklicombobox.ForeColor = System.Drawing.Color.Black;
+            this.calismaseklicombobox.FormattingEnabled = true;
+            this.calismaseklicombobox.HoverState.Parent = this.calismaseklicombobox;
+            this.calismaseklicombobox.ItemHeight = 30;
+            this.calismaseklicombobox.Items.AddRange(new object[] {
+            "*Çalışma Şekli Seçiniz",
+            "SÖZLEŞMELİ",
+            "TEKLİFLİ",
+            "DİĞER(açıklama kısmında belirtiniz.)"});
+            this.calismaseklicombobox.ItemsAppearance.Parent = this.calismaseklicombobox;
+            this.calismaseklicombobox.Location = new System.Drawing.Point(588, 146);
+            this.calismaseklicombobox.Name = "calismaseklicombobox";
+            this.calismaseklicombobox.ShadowDecoration.Parent = this.calismaseklicombobox;
+            this.calismaseklicombobox.Size = new System.Drawing.Size(517, 36);
+            this.calismaseklicombobox.StartIndex = 0;
+            this.calismaseklicombobox.TabIndex = 3;
             // 
             // sektorcombobox
             // 
@@ -436,8 +436,8 @@
         private Guna.UI2.WinForms.Guna2GradientButton firmaeklebuton;
         private Guna.UI2.WinForms.Guna2GradientButton kartviziteklebuton;
         private System.Windows.Forms.PictureBox kartvizitpicturebox;
-        private Guna.UI2.WinForms.Guna2ComboBox calismaseklicombobox;
         private Guna.UI2.WinForms.Guna2ComboBox odemeseklicombobox;
+        private Guna.UI2.WinForms.Guna2ComboBox calismaseklicombobox;
         private Guna.UI2.WinForms.Guna2TextBox iletisimtexbox;
         private Guna.UI2.WinForms.Guna2TextBox mailtextbox;
         private Guna.UI2.WinForms.Guna2TextBox websitesitextbox;

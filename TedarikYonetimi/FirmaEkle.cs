@@ -200,21 +200,29 @@ namespace TedarikYonetimi
                         {
                             aciklama = aciklamatextbox.Text;
                         }
-                        if(odemeseklicombobox.SelectedIndex==0)
-                        {
-                            odeme = null;
-                        }
-                        else
-                        {
-                            odeme = odemeseklicombobox.SelectedItem.ToString();
-                        }
                         if(calismaseklicombobox.SelectedIndex==0)
                         {
-                            calisma = null; 
+                            calisma = null;
+                        }
+                        else if(calismaseklicombobox.SelectedItem.Equals("DİĞER(açıklama kısmında belirtiniz.)"))
+                        {
+                            calisma = "Diğer";
                         }
                         else
                         {
                             calisma = calismaseklicombobox.SelectedItem.ToString();
+                        }
+                        if(odemeseklicombobox.SelectedIndex==0)
+                        {
+                            odeme = null; 
+                        }
+                        else if (odemeseklicombobox.SelectedItem.Equals("DİĞER(açıklama kısmında belirtiniz.)"))
+                        {
+                            odeme = "Diğer";
+                        }
+                        else
+                        {
+                            odeme = odemeseklicombobox.SelectedItem.ToString();
                         }
                         if(websitesitextbox.Text== "*Web Sitesi" || websitesitextbox.Text=="")
                         {
