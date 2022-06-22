@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -135,24 +137,30 @@ namespace TedarikYonetimi
 
         private void firmalardtgview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-            var senderGrid = (DataGridView)sender;
-            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0 )
-            //if (e.ColumnIndex == firmalardtgview.Columns["Oku"].Index)
+            string kartismi="";
+            if (e.ColumnIndex == 0)
             {
                 string firmaid = firmalardtgview.CurrentRow.Cells["ID"].Value.ToString();
                 int index = firmaidler.IndexOf(firmaid);
                 MessageBox.Show(aciklamalar[index].ToString(), "Açıklama");
             }
-            /*
-            var senderGrid = (DataGridView)sender;
-            if (e.ColumnIndex == firmalardtgview.Columns["Açıklama"].Index)
-            {.
+            else if (e.ColumnIndex == 1)
+            {
                 string firmaid = firmalardtgview.CurrentRow.Cells["ID"].Value.ToString();
                 int index = firmaidler.IndexOf(firmaid);
-                MessageBox.Show(aciklamalar[index].ToString(), "Açıklama");
+                SqlBaglanti.baglanti.Open();
+                SqlCommand kartvizitisimi = new SqlCommand("SELECT kartvizit_ismi FROM kartvizitler WHERE kartvizit_id=@kid", SqlBaglanti.baglanti);
+                kartvizitisimi.Parameters.AddWithValue("@kid", kartvizitIDler[index]);
+                SqlDataReader dr = kartvizitisimi.ExecuteReader();
+                if(dr.Read())
+                {
+                    kartismi = dr["kartvizit_ismi"].ToString();
+                }
+                SqlBaglanti.baglanti.Close();
+
+                Process.Start(Path.Combine(Application.StartupPath,"Kartvizitler",kartismi));
             }
-            */
+
 
         }
 
