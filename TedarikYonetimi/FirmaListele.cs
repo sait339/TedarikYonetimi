@@ -28,7 +28,8 @@ namespace TedarikYonetimi
         ArrayList sektoradlar = new ArrayList();
         ArrayList sorumluIDler = new ArrayList();
         ArrayList sorumluadlar = new ArrayList();
-        DataGridViewButtonColumn dgvBtn = new DataGridViewButtonColumn();
+        DataGridViewButtonColumn dgvaciklamaBtn = new DataGridViewButtonColumn();
+        DataGridViewButtonColumn dgvkartvizitBtn = new DataGridViewButtonColumn();
         public FirmaListele()
         {
             InitializeComponent();
@@ -36,10 +37,19 @@ namespace TedarikYonetimi
 
         private void FirmaListele_Load(object sender, EventArgs e)
         {
+            SqlBaglanti.baglanti.Open();
+            SqlCommand sektorfiltre = new SqlCommand("SELECT *FROM sektorler ORDER BY sektor_adi", SqlBaglanti.baglanti);
+            SqlDataReader dr0 = sektorfiltre.ExecuteReader();
+            while (dr0.Read())
+            {
+                sektorfiltercombo.Items.Add(dr0["sektor_adi"].ToString());
+            }
+
+            SqlBaglanti.baglanti.Close();
             firmalardtgview.Rows.Clear();
             firmalardtgview.Refresh();
             firmalartablo.Columns.Add("ID", typeof(string));
-            firmalartablo.Columns.Add("Firma Ünvan", typeof(string));
+            firmalartablo.Columns.Add("FirmaÜnvan", typeof(string));
             firmalartablo.Columns.Add("Ödeme Şekli", typeof(string));
             firmalartablo.Columns.Add("Çalışma Şekli", typeof(string));
             firmalartablo.Columns.Add("Web Sitesi", typeof(string));
@@ -95,23 +105,24 @@ namespace TedarikYonetimi
                 {
                     firmalartablo.Rows.Add(firmaidler[i], firmaadlari[i], odemesekilleri[i], calismasekilleri[i], websiteleri[i], mailler[i], iletisimler[i], sektoradlar[i], sorumluadlar[i]);
                 }
-                /*** NORMAL BUTON EKLEME ***/
-                //Kolon Başlığı
-                dgvBtn.HeaderText = "Açıklama";
-                // Butonun Text
-                dgvBtn.Text = "Oku";
-                // Butonda Text Kullanılmasını aktifleştirme
-                dgvBtn.UseColumnTextForButtonValue = true;
-                // Buton çerçeve rengi
-                dgvBtn.DefaultCellStyle.BackColor = Color.Red;
-                // Buton seçiliykenki çerçeve rengi
-                dgvBtn.DefaultCellStyle.SelectionBackColor = Color.White;
-                // Butonun genişiliği
-                dgvBtn.Width = 70;
-                // DataGridView e ekleme
+                dgvaciklamaBtn.Name = "Açıklama";
+                dgvaciklamaBtn.HeaderText = "Açıklama";
+                dgvkartvizitBtn.HeaderText = "Kartvizit";
+                dgvaciklamaBtn.Name = "Oku";
+                dgvaciklamaBtn.Text = "Oku";
+                dgvkartvizitBtn.Text = "Görüntüle";
+                dgvaciklamaBtn.UseColumnTextForButtonValue = true;
+                dgvkartvizitBtn.UseColumnTextForButtonValue = true;
+                dgvaciklamaBtn.DefaultCellStyle.BackColor = Color.Red;
+                dgvkartvizitBtn.DefaultCellStyle.BackColor = Color.Red;
+                dgvaciklamaBtn.DefaultCellStyle.SelectionBackColor = Color.White;
+                dgvkartvizitBtn.DefaultCellStyle.SelectionBackColor = Color.White;
+                dgvaciklamaBtn.Width = 70;
+                dgvkartvizitBtn.Width = 70;
                 firmalardtgview.DataSource = firmalartablo;
                 firmalardtgview.Columns[0].Width = 30;
-                firmalardtgview.Columns.Add(dgvBtn);
+                firmalardtgview.Columns.Add(dgvaciklamaBtn);
+                firmalardtgview.Columns.Add(dgvkartvizitBtn);
                 firmalardtgview.Refresh();
             }
             catch
@@ -121,11 +132,80 @@ namespace TedarikYonetimi
 
         }
 
-        private void firmalardtgview_CellClick(object sender, DataGridViewCellEventArgs e)
+
+        private void firmalardtgview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string firmaid = firmalardtgview.CurrentRow.Cells["ID"].Value.ToString();
-            int index = firmaidler.IndexOf(firmaid);
-            MessageBox.Show(aciklamalar[index].ToString(), "Açıklama");
+            
+            var senderGrid = (DataGridView)sender;
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0 )
+            //if (e.ColumnIndex == firmalardtgview.Columns["Oku"].Index)
+            {
+                string firmaid = firmalardtgview.CurrentRow.Cells["ID"].Value.ToString();
+                int index = firmaidler.IndexOf(firmaid);
+                MessageBox.Show(aciklamalar[index].ToString(), "Açıklama");
+            }
+            /*
+            var senderGrid = (DataGridView)sender;
+            if (e.ColumnIndex == firmalardtgview.Columns["Açıklama"].Index)
+            {.
+                string firmaid = firmalardtgview.CurrentRow.Cells["ID"].Value.ToString();
+                int index = firmaidler.IndexOf(firmaid);
+                MessageBox.Show(aciklamalar[index].ToString(), "Açıklama");
+            }
+            */
+
+        }
+
+        private void firmaaramatextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (firmaaramatextbox.Text.Equals("Firma Adına Göre Ara"))
+            {
+                firmaaramatextbox.Clear();
+            }
+        }
+
+        private void firmaaramatextbox_Leave(object sender, EventArgs e)
+        {
+            if (firmaaramatextbox.Text.Equals(""))
+            {
+                firmaaramatextbox.Text = "Firma Adına Göre Ara";
+            }
+        }
+
+        private void firmaaramatextbox_TextChanged(object sender, EventArgs e)
+        {
+            if (sektorfiltercombo.Text != "Tümü")
+            {
+                DataView dv = firmalartablo.DefaultView;
+                dv.RowFilter = String.Format("FirmaÜnvan LIKE '%" + firmaaramatextbox.Text + "%' AND Sektör LIKE '" + sektorfiltercombo.SelectedItem.ToString() + "'");
+                firmalardtgview.DataSource = dv;
+            }
+            else
+            {
+                DataView dv = firmalartablo.DefaultView;
+                dv.RowFilter = "FirmaÜnvan LIKE '%" + firmaaramatextbox.Text + "%'";
+                firmalardtgview.DataSource = dv;
+            }
+        }
+
+        private void sektorfiltercombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (firmaaramatextbox.Text != "Firma Adına Göre Ara")
+            {
+                firmaaramatextbox.Text = "Firma Adına Göre Ara";
+            }
+            if (sektorfiltercombo.SelectedItem.ToString() == "Tümü")
+            {
+                DataView dv = firmalartablo.DefaultView;
+                dv.RowFilter = "Sektör LIKE '" + "%" + "" + "%'";
+                firmalardtgview.DataSource = dv;
+            }
+            else
+            {
+                DataView dv = firmalartablo.DefaultView;
+                dv.RowFilter = "Sektör LIKE '" + "%" + sektorfiltercombo.SelectedItem.ToString() + "%'";
+                firmalardtgview.DataSource = dv;
+            }
         }
     }
 }

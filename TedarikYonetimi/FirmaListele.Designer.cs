@@ -30,33 +30,11 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.sektorfiltercombo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.firmaaramatextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.firmalardtgview = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.firmalardtgview)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(213, 63);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 25);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "FİRMA ADI";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(27, 63);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 25);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "SEKTÖR";
             // 
             // sektorfiltercombo
             // 
@@ -82,9 +60,12 @@
             this.sektorfiltercombo.Size = new System.Drawing.Size(361, 36);
             this.sektorfiltercombo.StartIndex = 0;
             this.sektorfiltercombo.TabIndex = 20;
+            this.sektorfiltercombo.SelectedIndexChanged += new System.EventHandler(this.sektorfiltercombo_SelectedIndexChanged);
             // 
             // firmaaramatextbox
             // 
+            this.firmaaramatextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.firmaaramatextbox.AutoRoundedCorners = true;
             this.firmaaramatextbox.BackColor = System.Drawing.Color.Transparent;
             this.firmaaramatextbox.BorderColor = System.Drawing.Color.Red;
@@ -112,9 +93,15 @@
             this.firmaaramatextbox.ShadowDecoration.Parent = this.firmaaramatextbox;
             this.firmaaramatextbox.Size = new System.Drawing.Size(725, 36);
             this.firmaaramatextbox.TabIndex = 19;
+            this.firmaaramatextbox.TextChanged += new System.EventHandler(this.firmaaramatextbox_TextChanged);
+            this.firmaaramatextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.firmaaramatextbox_KeyPress);
+            this.firmaaramatextbox.Leave += new System.EventHandler(this.firmaaramatextbox_Leave);
             // 
             // firmalardtgview
             // 
+            this.firmalardtgview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.firmalardtgview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -146,7 +133,7 @@
             this.firmalardtgview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.firmalardtgview.Size = new System.Drawing.Size(1094, 480);
             this.firmalardtgview.TabIndex = 18;
-            this.firmalardtgview.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.firmalardtgview_CellClick);
+            this.firmalardtgview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.firmalardtgview_CellContentClick);
             // 
             // FirmaListele
             // 
@@ -154,8 +141,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1118, 668);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.sektorfiltercombo);
             this.Controls.Add(this.firmaaramatextbox);
             this.Controls.Add(this.firmalardtgview);
@@ -166,14 +151,10 @@
             this.Load += new System.EventHandler(this.FirmaListele_Load);
             ((System.ComponentModel.ISupportInitialize)(this.firmalardtgview)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ComboBox sektorfiltercombo;
         private Guna.UI2.WinForms.Guna2TextBox firmaaramatextbox;
         private System.Windows.Forms.DataGridView firmalardtgview;
