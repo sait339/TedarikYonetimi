@@ -81,6 +81,12 @@
     <Compile Include="FirmaListele.Designer.cs">
       <DependentUpon>FirmaListele.cs</DependentUpon>
     </Compile>
+    <Compile Include="FirmaSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirmaSil.Designer.cs">
+      <DependentUpon>FirmaSil.cs</DependentUpon>
+    </Compile>
     <Compile Include="GirisEkranı.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FirmaListele.resx">
       <DependentUpon>FirmaListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirmaSil.resx">
+      <DependentUpon>FirmaSil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GirisEkranı.resx">
       <DependentUpon>GirisEkranı.cs</DependentUpon>

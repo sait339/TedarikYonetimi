@@ -433,6 +433,7 @@
             this.firmasil.Text = "Firma Sil";
             this.firmasil.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.firmasil.Visible = false;
+            this.firmasil.Click += new System.EventHandler(this.firmasil_Click);
             // 
             // yetkililistele
             // 
