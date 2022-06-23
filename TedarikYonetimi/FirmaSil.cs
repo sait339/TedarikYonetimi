@@ -198,22 +198,40 @@ namespace TedarikYonetimi
                 SqlBaglanti.baglanti.Close();
                 if(sorumluID==islemyapanid)//silme işlemi
                 {
-                    SqlBaglanti.baglanti.Open();
-                    SqlCommand sozlesmesil = new SqlCommand("DELETE FROM sozlesmeler WHERE firmaID=@firmaid", SqlBaglanti.baglanti);
-                    sozlesmesil.Parameters.AddWithValue("@firmaid", firmaid);
-                    SqlBaglanti.baglanti.Close();
-                    SqlBaglanti.baglanti.Open();
-                    SqlCommand yetkilisil = new SqlCommand("DELETE FROM yetkililer WHERE firmaID=@firmaid", SqlBaglanti.baglanti);
-                    yetkilisil.Parameters.AddWithValue("@firmaid", firmaid);
-                    SqlBaglanti.baglanti.Close();
-                    SqlBaglanti.baglanti.Open();
-                    SqlCommand firmasil = new SqlCommand("DELETE FROM firmalar WHERE firma_id=@firmaid", SqlBaglanti.baglanti);
-                    firmasil.Parameters.AddWithValue("@firmaid", firmaid);
-                    SqlBaglanti.baglanti.Close();
-                    SqlBaglanti.baglanti.Open();
-                    SqlCommand kartvizitsil = new SqlCommand("DELETE FROM kartvizitler WHERE kartvizit_id=@kartvizit_id", SqlBaglanti.baglanti);
-                    kartvizitsil.Parameters.AddWithValue("@kartvizit_id", kartvizitID);
-                    SqlBaglanti.baglanti.Close();
+                    DialogResult dialog = new DialogResult();
+                    dialog = MessageBox.Show("Firmaya tüm bilgiler silinceketir.\nOnaylıyor musunuz?", "Dikkat" , MessageBoxButtons.YesNo , MessageBoxIcon.Warning);
+                    if(dialog==DialogResult.Yes)
+                    {
+                        SqlBaglanti.baglanti.Open();
+                        SqlCommand sozlesmesil = new SqlCommand("DELETE FROM sozlesmeler WHERE firmaID=@firmaid", SqlBaglanti.baglanti);
+                        sozlesmesil.Parameters.AddWithValue("@firmaid", firmaid);
+                        sozlesmesil.ExecuteNonQuery();
+                        SqlBaglanti.baglanti.Close();
+                        SqlBaglanti.baglanti.Open();
+                        SqlCommand yetkilisil = new SqlCommand("DELETE FROM yetkililer WHERE firmaID=@firmaid", SqlBaglanti.baglanti);
+                        yetkilisil.Parameters.AddWithValue("@firmaid", firmaid);
+                        yetkilisil.ExecuteNonQuery();
+                        SqlBaglanti.baglanti.Close();
+                        SqlBaglanti.baglanti.Open();
+                        SqlCommand firmasil = new SqlCommand("DELETE FROM firmalar WHERE firma_id=@firmaid", SqlBaglanti.baglanti);
+                        firmasil.Parameters.AddWithValue("@firmaid", firmaid);
+                        firmasil.ExecuteNonQuery();
+                        SqlBaglanti.baglanti.Close();
+                        SqlBaglanti.baglanti.Open();
+                        SqlCommand kartvizitsil = new SqlCommand("DELETE FROM kartvizitler WHERE kartvizit_id=@kartvizitid", SqlBaglanti.baglanti);
+                        kartvizitsil.Parameters.AddWithValue("@kartvizitid", kartvizitID);
+                        kartvizitsil.ExecuteNonQuery();
+                        SqlBaglanti.baglanti.Close();
+                    }
+                    else
+                    {
+                        HataEkranı hata = new HataEkranı();
+                        HataEkranı.durum = "HATA";
+                        HataEkranı.baslik = "BİLGİ";
+                        HataEkranı.text = "İŞLEMDEN VAZGEÇİLDİ";
+                        hata.Show();
+                    }
+                    
 
                 }
                 else

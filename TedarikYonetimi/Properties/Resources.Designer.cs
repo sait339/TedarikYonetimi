@@ -83,16 +83,6 @@ namespace TedarikYonetimi.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_lock_16 {
-            get {
-                object obj = ResourceManager.GetObject("icons8_lock_16", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
-        /// </summary>
         internal static System.Drawing.Bitmap Onay {
             get {
                 object obj = ResourceManager.GetObject("Onay", resourceCulture);
