@@ -120,6 +120,12 @@
     <Compile Include="YetkiliEkle.Designer.cs">
       <DependentUpon>YetkiliEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="YetkiliGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YetkiliGuncelle.Designer.cs">
+      <DependentUpon>YetkiliGuncelle.cs</DependentUpon>
+    </Compile>
     <Compile Include="YetkiliListele.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -82,6 +82,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::TedarikYonetimi.Properties.Resources.emperologo;
             this.pictureBox1.Location = new System.Drawing.Point(22, 3);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
@@ -359,6 +360,7 @@
             this.yetkiligüncelle.Text = "Firma Yetkilisi Güncelle";
             this.yetkiligüncelle.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.yetkiligüncelle.Visible = false;
+            this.yetkiligüncelle.Click += new System.EventHandler(this.yetkiligüncelle_Click);
             // 
             // guna2GradientTileButton1
             // 
