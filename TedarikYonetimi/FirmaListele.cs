@@ -46,7 +46,6 @@ namespace TedarikYonetimi
             {
                 sektorfiltercombo.Items.Add(dr0["sektor_adi"].ToString());
             }
-
             SqlBaglanti.baglanti.Close();
             firmalardtgview.Rows.Clear();
             firmalardtgview.Refresh();

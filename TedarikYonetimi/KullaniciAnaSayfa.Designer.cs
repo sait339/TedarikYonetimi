@@ -459,6 +459,7 @@
             this.yetkililistele.Text = "Firma Yetkilileri Listele";
             this.yetkililistele.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.yetkililistele.Visible = false;
+            this.yetkililistele.Click += new System.EventHandler(this.yetkililistele_Click);
             // 
             // firmaekle
             // 

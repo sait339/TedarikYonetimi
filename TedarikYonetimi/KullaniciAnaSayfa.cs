@@ -187,5 +187,16 @@ namespace TedarikYonetimi
             firmasil.BringToFront();
             firmasil.Show();
         }
+
+        private void yetkililistele_Click(object sender, EventArgs e)
+        {
+            KullaniciGirisAnaPanel.Controls.Clear();
+            YetkiliListele yetkililistele = new YetkiliListele();
+            yetkililistele.TopLevel = false;
+            yetkililistele.Dock = DockStyle.Fill;
+            KullaniciGirisAnaPanel.Controls.Add(yetkililistele);
+            yetkililistele.BringToFront();
+            yetkililistele.Show();
+        }
     }
 }
