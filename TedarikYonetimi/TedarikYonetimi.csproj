@@ -132,6 +132,12 @@
     <Compile Include="YetkiliListele.Designer.cs">
       <DependentUpon>YetkiliListele.cs</DependentUpon>
     </Compile>
+    <Compile Include="YetkiliSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YetkiliSil.Designer.cs">
+      <DependentUpon>YetkiliSil.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FirmaEkle.resx">
       <DependentUpon>FirmaEkle.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="YetkiliListele.resx">
       <DependentUpon>YetkiliListele.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YetkiliSil.resx">
+      <DependentUpon>YetkiliSil.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

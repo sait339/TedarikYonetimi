@@ -209,5 +209,16 @@ namespace TedarikYonetimi
             yetkiliguncelle.BringToFront();
             yetkiliguncelle.Show();
         }
+
+        private void yetkilisil_Click(object sender, EventArgs e)
+        {
+            KullaniciGirisAnaPanel.Controls.Clear();
+            YetkiliSil yetkilisil = new YetkiliSil();
+            yetkilisil.TopLevel = false;
+            yetkilisil.Dock = DockStyle.Fill;
+            KullaniciGirisAnaPanel.Controls.Add(yetkilisil);
+            yetkilisil.BringToFront();
+            yetkilisil.Show();
+        }
     }
 }

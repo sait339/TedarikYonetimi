@@ -231,6 +231,7 @@
             this.yetkilisil.Text = "Firma Yetkilisi Sil";
             this.yetkilisil.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.yetkilisil.Visible = false;
+            this.yetkilisil.Click += new System.EventHandler(this.yetkilisil_Click);
             // 
             // firmaislemleri
             // 
@@ -621,6 +622,8 @@
             // KullaniciGirisAnaPanel
             // 
             this.KullaniciGirisAnaPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.KullaniciGirisAnaPanel.BackgroundImage = global::TedarikYonetimi.Properties.Resources.emperologo;
+            this.KullaniciGirisAnaPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.KullaniciGirisAnaPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.KullaniciGirisAnaPanel.Location = new System.Drawing.Point(200, 60);
             this.KullaniciGirisAnaPanel.Name = "KullaniciGirisAnaPanel";
