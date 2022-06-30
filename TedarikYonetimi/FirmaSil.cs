@@ -222,6 +222,12 @@ namespace TedarikYonetimi
                         kartvizitsil.Parameters.AddWithValue("@kartvizitid", kartvizitID);
                         kartvizitsil.ExecuteNonQuery();
                         SqlBaglanti.baglanti.Close();
+
+                        HataEkranı hata = new HataEkranı();
+                        HataEkranı.durum = "ONAY";
+                        HataEkranı.baslik = "BAŞARILI";
+                        HataEkranı.text = "Silme işlemi tamamlandı.";
+                        hata.Show();
                     }
                     else
                     {

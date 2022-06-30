@@ -28,127 +28,141 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.firmasilbuton = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.sektorfiltercombo = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.firmaaramatextbox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.firmalardtgview = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.firmalardtgview)).BeginInit();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.yetkilisilbuton = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.yetkililerdtgview = new System.Windows.Forms.DataGridView();
+            this.yetkiliadinagorearatextbox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.firmaadinagorearatextbox = new Guna.UI2.WinForms.Guna2TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.yetkililerdtgview)).BeginInit();
             this.SuspendLayout();
             // 
-            // firmasilbuton
+            // yetkilisilbuton
             // 
-            this.firmasilbuton.AutoRoundedCorners = true;
-            this.firmasilbuton.BackColor = System.Drawing.Color.Transparent;
-            this.firmasilbuton.BorderRadius = 18;
-            this.firmasilbuton.CheckedState.Parent = this.firmasilbuton;
-            this.firmasilbuton.CustomImages.Parent = this.firmasilbuton;
-            this.firmasilbuton.FillColor = System.Drawing.Color.Maroon;
-            this.firmasilbuton.FillColor2 = System.Drawing.Color.Red;
-            this.firmasilbuton.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.firmasilbuton.ForeColor = System.Drawing.Color.White;
-            this.firmasilbuton.HoverState.Parent = this.firmasilbuton;
-            this.firmasilbuton.Location = new System.Drawing.Point(955, 540);
-            this.firmasilbuton.Name = "firmasilbuton";
-            this.firmasilbuton.ShadowDecoration.Parent = this.firmasilbuton;
-            this.firmasilbuton.Size = new System.Drawing.Size(150, 38);
-            this.firmasilbuton.TabIndex = 28;
-            this.firmasilbuton.Text = "Sil";
+            this.yetkilisilbuton.AutoRoundedCorners = true;
+            this.yetkilisilbuton.BackColor = System.Drawing.Color.Transparent;
+            this.yetkilisilbuton.BorderRadius = 18;
+            this.yetkilisilbuton.CheckedState.Parent = this.yetkilisilbuton;
+            this.yetkilisilbuton.CustomImages.Parent = this.yetkilisilbuton;
+            this.yetkilisilbuton.FillColor = System.Drawing.Color.Maroon;
+            this.yetkilisilbuton.FillColor2 = System.Drawing.Color.Red;
+            this.yetkilisilbuton.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.yetkilisilbuton.ForeColor = System.Drawing.Color.White;
+            this.yetkilisilbuton.HoverState.Parent = this.yetkilisilbuton;
+            this.yetkilisilbuton.Location = new System.Drawing.Point(955, 540);
+            this.yetkilisilbuton.Name = "yetkilisilbuton";
+            this.yetkilisilbuton.ShadowDecoration.Parent = this.yetkilisilbuton;
+            this.yetkilisilbuton.Size = new System.Drawing.Size(150, 38);
+            this.yetkilisilbuton.TabIndex = 28;
+            this.yetkilisilbuton.Text = "Sil";
+            this.yetkilisilbuton.Click += new System.EventHandler(this.yetkilisilbuton_Click);
             // 
-            // sektorfiltercombo
+            // yetkililerdtgview
             // 
-            this.sektorfiltercombo.AutoRoundedCorners = true;
-            this.sektorfiltercombo.BackColor = System.Drawing.Color.Transparent;
-            this.sektorfiltercombo.BorderColor = System.Drawing.Color.Red;
-            this.sektorfiltercombo.BorderRadius = 17;
-            this.sektorfiltercombo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.sektorfiltercombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.sektorfiltercombo.FocusedColor = System.Drawing.Color.Empty;
-            this.sektorfiltercombo.FocusedState.Parent = this.sektorfiltercombo;
-            this.sektorfiltercombo.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.sektorfiltercombo.ForeColor = System.Drawing.Color.Black;
-            this.sektorfiltercombo.FormattingEnabled = true;
-            this.sektorfiltercombo.HoverState.Parent = this.sektorfiltercombo;
-            this.sektorfiltercombo.ItemHeight = 30;
-            this.sektorfiltercombo.Items.AddRange(new object[] {
-            "Tümü"});
-            this.sektorfiltercombo.ItemsAppearance.Parent = this.sektorfiltercombo;
-            this.sektorfiltercombo.Location = new System.Drawing.Point(12, 12);
-            this.sektorfiltercombo.Name = "sektorfiltercombo";
-            this.sektorfiltercombo.ShadowDecoration.Parent = this.sektorfiltercombo;
-            this.sektorfiltercombo.Size = new System.Drawing.Size(361, 36);
-            this.sektorfiltercombo.StartIndex = 0;
-            this.sektorfiltercombo.TabIndex = 27;
-            // 
-            // firmaaramatextbox
-            // 
-            this.firmaaramatextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.firmaaramatextbox.AutoRoundedCorners = true;
-            this.firmaaramatextbox.BackColor = System.Drawing.Color.Transparent;
-            this.firmaaramatextbox.BorderColor = System.Drawing.Color.Red;
-            this.firmaaramatextbox.BorderRadius = 17;
-            this.firmaaramatextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.firmaaramatextbox.DefaultText = "Firma Adına Göre Ara";
-            this.firmaaramatextbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.firmaaramatextbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.firmaaramatextbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.firmaaramatextbox.DisabledState.Parent = this.firmaaramatextbox;
-            this.firmaaramatextbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.firmaaramatextbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.firmaaramatextbox.FocusedState.Parent = this.firmaaramatextbox;
-            this.firmaaramatextbox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.firmaaramatextbox.ForeColor = System.Drawing.Color.Black;
-            this.firmaaramatextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.firmaaramatextbox.HoverState.Parent = this.firmaaramatextbox;
-            this.firmaaramatextbox.Location = new System.Drawing.Point(380, 12);
-            this.firmaaramatextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.firmaaramatextbox.Name = "firmaaramatextbox";
-            this.firmaaramatextbox.PasswordChar = '\0';
-            this.firmaaramatextbox.PlaceholderText = "";
-            this.firmaaramatextbox.SelectedText = "";
-            this.firmaaramatextbox.SelectionStart = 20;
-            this.firmaaramatextbox.ShadowDecoration.Parent = this.firmaaramatextbox;
-            this.firmaaramatextbox.Size = new System.Drawing.Size(725, 36);
-            this.firmaaramatextbox.TabIndex = 26;
-            // 
-            // firmalardtgview
-            // 
-            this.firmalardtgview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.yetkililerdtgview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.firmalardtgview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.firmalardtgview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.firmalardtgview.ColumnHeadersHeight = 30;
-            this.firmalardtgview.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.firmalardtgview.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.firmalardtgview.Location = new System.Drawing.Point(11, 91);
-            this.firmalardtgview.MultiSelect = false;
-            this.firmalardtgview.Name = "firmalardtgview";
-            this.firmalardtgview.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.firmalardtgview.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.firmalardtgview.RowHeadersVisible = false;
-            this.firmalardtgview.RowTemplate.Height = 25;
-            this.firmalardtgview.RowTemplate.ReadOnly = true;
-            this.firmalardtgview.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.firmalardtgview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.firmalardtgview.Size = new System.Drawing.Size(1094, 429);
-            this.firmalardtgview.TabIndex = 25;
+            this.yetkililerdtgview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.yetkililerdtgview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.yetkililerdtgview.ColumnHeadersHeight = 30;
+            this.yetkililerdtgview.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.yetkililerdtgview.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.yetkililerdtgview.Location = new System.Drawing.Point(11, 91);
+            this.yetkililerdtgview.MultiSelect = false;
+            this.yetkililerdtgview.Name = "yetkililerdtgview";
+            this.yetkililerdtgview.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.yetkililerdtgview.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.yetkililerdtgview.RowHeadersVisible = false;
+            this.yetkililerdtgview.RowTemplate.Height = 25;
+            this.yetkililerdtgview.RowTemplate.ReadOnly = true;
+            this.yetkililerdtgview.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.yetkililerdtgview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.yetkililerdtgview.Size = new System.Drawing.Size(1094, 429);
+            this.yetkililerdtgview.TabIndex = 25;
+            // 
+            // yetkiliadinagorearatextbox
+            // 
+            this.yetkiliadinagorearatextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.yetkiliadinagorearatextbox.AutoRoundedCorners = true;
+            this.yetkiliadinagorearatextbox.BackColor = System.Drawing.Color.Transparent;
+            this.yetkiliadinagorearatextbox.BorderColor = System.Drawing.Color.Red;
+            this.yetkiliadinagorearatextbox.BorderRadius = 17;
+            this.yetkiliadinagorearatextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.yetkiliadinagorearatextbox.DefaultText = "Yetkili Adına Göre Ara";
+            this.yetkiliadinagorearatextbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.yetkiliadinagorearatextbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.yetkiliadinagorearatextbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.yetkiliadinagorearatextbox.DisabledState.Parent = this.yetkiliadinagorearatextbox;
+            this.yetkiliadinagorearatextbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.yetkiliadinagorearatextbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.yetkiliadinagorearatextbox.FocusedState.Parent = this.yetkiliadinagorearatextbox;
+            this.yetkiliadinagorearatextbox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yetkiliadinagorearatextbox.ForeColor = System.Drawing.Color.Black;
+            this.yetkiliadinagorearatextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.yetkiliadinagorearatextbox.HoverState.Parent = this.yetkiliadinagorearatextbox;
+            this.yetkiliadinagorearatextbox.Location = new System.Drawing.Point(13, 13);
+            this.yetkiliadinagorearatextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.yetkiliadinagorearatextbox.Name = "yetkiliadinagorearatextbox";
+            this.yetkiliadinagorearatextbox.PasswordChar = '\0';
+            this.yetkiliadinagorearatextbox.PlaceholderText = "";
+            this.yetkiliadinagorearatextbox.SelectedText = "";
+            this.yetkiliadinagorearatextbox.SelectionStart = 22;
+            this.yetkiliadinagorearatextbox.ShadowDecoration.Parent = this.yetkiliadinagorearatextbox;
+            this.yetkiliadinagorearatextbox.Size = new System.Drawing.Size(492, 36);
+            this.yetkiliadinagorearatextbox.TabIndex = 30;
+            this.yetkiliadinagorearatextbox.TextChanged += new System.EventHandler(this.yetkiliadinagorearatextbox_TextChanged);
+            this.yetkiliadinagorearatextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.yetkiliadinagorearatextbox_KeyPress);
+            this.yetkiliadinagorearatextbox.Leave += new System.EventHandler(this.yetkiliadinagorearatextbox_Leave);
+            // 
+            // firmaadinagorearatextbox
+            // 
+            this.firmaadinagorearatextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.firmaadinagorearatextbox.AutoRoundedCorners = true;
+            this.firmaadinagorearatextbox.BackColor = System.Drawing.Color.Transparent;
+            this.firmaadinagorearatextbox.BorderColor = System.Drawing.Color.Red;
+            this.firmaadinagorearatextbox.BorderRadius = 17;
+            this.firmaadinagorearatextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.firmaadinagorearatextbox.DefaultText = "Firma Adına Göre Ara";
+            this.firmaadinagorearatextbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.firmaadinagorearatextbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.firmaadinagorearatextbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.firmaadinagorearatextbox.DisabledState.Parent = this.firmaadinagorearatextbox;
+            this.firmaadinagorearatextbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.firmaadinagorearatextbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.firmaadinagorearatextbox.FocusedState.Parent = this.firmaadinagorearatextbox;
+            this.firmaadinagorearatextbox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firmaadinagorearatextbox.ForeColor = System.Drawing.Color.Black;
+            this.firmaadinagorearatextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.firmaadinagorearatextbox.HoverState.Parent = this.firmaadinagorearatextbox;
+            this.firmaadinagorearatextbox.Location = new System.Drawing.Point(513, 13);
+            this.firmaadinagorearatextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.firmaadinagorearatextbox.Name = "firmaadinagorearatextbox";
+            this.firmaadinagorearatextbox.PasswordChar = '\0';
+            this.firmaadinagorearatextbox.PlaceholderText = "";
+            this.firmaadinagorearatextbox.SelectedText = "";
+            this.firmaadinagorearatextbox.SelectionStart = 20;
+            this.firmaadinagorearatextbox.ShadowDecoration.Parent = this.firmaadinagorearatextbox;
+            this.firmaadinagorearatextbox.Size = new System.Drawing.Size(593, 36);
+            this.firmaadinagorearatextbox.TabIndex = 29;
+            this.firmaadinagorearatextbox.TextChanged += new System.EventHandler(this.firmaadinagorearatextbox_TextChanged);
+            this.firmaadinagorearatextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.firmaadinagorearatextbox_KeyPress);
+            this.firmaadinagorearatextbox.Leave += new System.EventHandler(this.firmaadinagorearatextbox_Leave);
             // 
             // YetkiliSil
             // 
@@ -156,23 +170,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1118, 668);
-            this.Controls.Add(this.firmasilbuton);
-            this.Controls.Add(this.sektorfiltercombo);
-            this.Controls.Add(this.firmaaramatextbox);
-            this.Controls.Add(this.firmalardtgview);
+            this.Controls.Add(this.yetkiliadinagorearatextbox);
+            this.Controls.Add(this.firmaadinagorearatextbox);
+            this.Controls.Add(this.yetkilisilbuton);
+            this.Controls.Add(this.yetkililerdtgview);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "YetkiliSil";
             this.Text = "YetkiliSil";
-            ((System.ComponentModel.ISupportInitialize)(this.firmalardtgview)).EndInit();
+            this.Load += new System.EventHandler(this.YetkiliSil_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.yetkililerdtgview)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2GradientButton firmasilbuton;
-        private Guna.UI2.WinForms.Guna2ComboBox sektorfiltercombo;
-        private Guna.UI2.WinForms.Guna2TextBox firmaaramatextbox;
-        private System.Windows.Forms.DataGridView firmalardtgview;
+        private Guna.UI2.WinForms.Guna2GradientButton yetkilisilbuton;
+        private System.Windows.Forms.DataGridView yetkililerdtgview;
+        private Guna.UI2.WinForms.Guna2TextBox yetkiliadinagorearatextbox;
+        private Guna.UI2.WinForms.Guna2TextBox firmaadinagorearatextbox;
     }
 }
