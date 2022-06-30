@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -203,6 +204,26 @@ namespace TedarikYonetimi
                     if(dialog==DialogResult.Yes)
                     {
                         SqlBaglanti.baglanti.Open();
+                        SqlCommand kartvizitadisorgula = new SqlCommand("SELECT kartvizit_ismi FROM kartvizitler WHERE kartvizit_id=@kID", SqlBaglanti.baglanti);
+                        kartvizitadisorgula.Parameters.AddWithValue("@kID", kartvizitID);
+                        SqlDataReader kr = kartvizitadisorgula.ExecuteReader();
+                        if (kr.Read())
+                        {
+                            string kartvizitADI = kr["kartvizit_ismi"].ToString();
+                            File.Delete(Application.StartupPath + "\\Kartvizitler\\" + kartvizitADI);
+                        }
+                        SqlBaglanti.baglanti.Close();
+                        SqlBaglanti.baglanti.Open();
+                        SqlCommand sozlesmelersorgula = new SqlCommand("SELECT sozlesme_dosyaadi FROM sozlesmeler WHERE firmaID=@fID", SqlBaglanti.baglanti);
+                        sozlesmelersorgula.Parameters.AddWithValue("@fID", firmaid);
+                        SqlDataReader sr = sozlesmelersorgula.ExecuteReader();
+                        while (sr.Read())
+                        {
+                            string sozlesmead = sr["sozlesme_dosyaadi"].ToString();
+                            File.Delete(Application.StartupPath + "\\2022Sözleşmeler\\" +firmaadi +"-"+ sozlesmead);
+                        }
+                        SqlBaglanti.baglanti.Close();
+                        SqlBaglanti.baglanti.Open();
                         SqlCommand sozlesmesil = new SqlCommand("DELETE FROM sozlesmeler WHERE firmaID=@firmaid", SqlBaglanti.baglanti);
                         sozlesmesil.Parameters.AddWithValue("@firmaid", firmaid);
                         sozlesmesil.ExecuteNonQuery();
@@ -251,7 +272,11 @@ namespace TedarikYonetimi
             }
             catch
             {
-
+                HataEkranı hata = new HataEkranı();
+                HataEkranı.durum = "HATA";
+                HataEkranı.baslik = "HATA";
+                HataEkranı.text = "Silme İşlemi Sırasında Hata Meydana Geldi";
+                hata.Show();
             }
         }
     }

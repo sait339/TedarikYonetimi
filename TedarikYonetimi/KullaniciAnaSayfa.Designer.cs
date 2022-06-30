@@ -412,6 +412,7 @@
             this.sozlesmesil.Text = "Sözleşme Sil";
             this.sozlesmesil.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.sozlesmesil.Visible = false;
+            this.sozlesmesil.Click += new System.EventHandler(this.sozlesmesil_Click);
             // 
             // firmasil
             // 
