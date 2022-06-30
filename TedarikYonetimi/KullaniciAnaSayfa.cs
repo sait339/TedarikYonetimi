@@ -231,5 +231,16 @@ namespace TedarikYonetimi
             sozlesmelistele.BringToFront();
             sozlesmelistele.Show();
         }
+
+        private void sozlesmeguncelle_Click(object sender, EventArgs e)
+        {
+            KullaniciGirisAnaPanel.Controls.Clear();
+            SozlesmeGuncelle sozlesmeguncelle = new SozlesmeGuncelle();
+            sozlesmeguncelle.TopLevel = false;
+            sozlesmeguncelle.Dock = DockStyle.Fill;
+            KullaniciGirisAnaPanel.Controls.Add(sozlesmeguncelle);
+            sozlesmeguncelle.BringToFront();
+            sozlesmeguncelle.Show();
+        }
     }
 }

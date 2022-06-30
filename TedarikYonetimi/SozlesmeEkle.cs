@@ -183,7 +183,7 @@ namespace TedarikYonetimi
         {
             OpenFileDialog sozlesme = new OpenFileDialog();
             sozlesme.Filter = "Tüm Dosyalar |*.*| Resim Dosyası *.jpg |*.jpg | PDF *.pdf|*.pdf"; ;
-            sozlesme.Title = "Kartvizit Seçiniz.";
+            sozlesme.Title = "Sözleşme Seçiniz.";
             yıl = DateTime.Now.Year.ToString();
             kayityolu = Application.StartupPath + "\\" + yıl + "Sözleşmeler";
             if (sozlesme.ShowDialog() == DialogResult.OK)

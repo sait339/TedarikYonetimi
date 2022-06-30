@@ -113,6 +113,12 @@
     <Compile Include="SozlesmeEkle.Designer.cs">
       <DependentUpon>SozlesmeEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="SozlesmeGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SozlesmeGuncelle.Designer.cs">
+      <DependentUpon>SozlesmeGuncelle.cs</DependentUpon>
+    </Compile>
     <Compile Include="SozlesmeListele.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     </Compile>
     <EmbeddedResource Include="SozlesmeEkle.resx">
       <DependentUpon>SozlesmeEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SozlesmeGuncelle.resx">
+      <DependentUpon>SozlesmeGuncelle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SozlesmeListele.resx">
       <DependentUpon>SozlesmeListele.cs</DependentUpon>

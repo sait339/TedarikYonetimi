@@ -309,6 +309,7 @@
             this.sozlesmeguncelle.Text = "Sözleşme Güncelle";
             this.sozlesmeguncelle.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.sozlesmeguncelle.Visible = false;
+            this.sozlesmeguncelle.Click += new System.EventHandler(this.sozlesmeguncelle_Click);
             // 
             // geridon
             // 
