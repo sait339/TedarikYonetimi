@@ -110,7 +110,7 @@ namespace TedarikYonetimi
                     HataEkranı onay = new HataEkranı();
                     HataEkranı.durum = "ONAY";
                     HataEkranı.baslik = "GÜNCELLEME BAŞARILI";
-                    HataEkranı.text = firmaadi + "-" + sozlesmedosyaadi + " Sözleşmesi\n" +
+                    HataEkranı.text = firmaadi + "-" + sozlesmedosyaadi + " sözleşmesi\n" +
                         firmaadi+"-"+sozlesmeadi+" olarak güncellenmiştir.";
                     onay.Show();
                 }
