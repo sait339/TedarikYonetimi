@@ -618,6 +618,7 @@
             this.sozlesmelistele.Text = "Sözleşme Listele";
             this.sozlesmelistele.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.sozlesmelistele.Visible = false;
+            this.sozlesmelistele.Click += new System.EventHandler(this.sozlesmelistele_Click);
             // 
             // KullaniciGirisAnaPanel
             // 

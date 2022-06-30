@@ -113,6 +113,12 @@
     <Compile Include="SozlesmeEkle.Designer.cs">
       <DependentUpon>SozlesmeEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="SozlesmeListele.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SozlesmeListele.Designer.cs">
+      <DependentUpon>SozlesmeListele.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlBaglanti.cs" />
     <Compile Include="YetkiliEkle.cs">
       <SubType>Form</SubType>
@@ -174,6 +180,9 @@
     </Compile>
     <EmbeddedResource Include="SozlesmeEkle.resx">
       <DependentUpon>SozlesmeEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SozlesmeListele.resx">
+      <DependentUpon>SozlesmeListele.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YetkiliEkle.resx">
       <DependentUpon>YetkiliEkle.cs</DependentUpon>

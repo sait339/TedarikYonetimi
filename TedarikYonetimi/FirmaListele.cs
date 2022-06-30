@@ -107,9 +107,9 @@ namespace TedarikYonetimi
                     firmalartablo.Rows.Add(firmaidler[i], firmaadlari[i], odemesekilleri[i], calismasekilleri[i], websiteleri[i], mailler[i], iletisimler[i], sektoradlar[i], sorumluadlar[i]);
                 }
                 dgvaciklamaBtn.Name = "Açıklama";
+                dgvaciklamaBtn.Name = "Oku";
                 dgvaciklamaBtn.HeaderText = "Açıklama";
                 dgvkartvizitBtn.HeaderText = "Kartvizit";
-                dgvaciklamaBtn.Name = "Oku";
                 dgvaciklamaBtn.Text = "Oku";
                 dgvkartvizitBtn.Text = "Görüntüle";
                 dgvaciklamaBtn.UseColumnTextForButtonValue = true;

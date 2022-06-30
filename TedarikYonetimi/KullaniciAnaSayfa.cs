@@ -220,5 +220,16 @@ namespace TedarikYonetimi
             yetkilisil.BringToFront();
             yetkilisil.Show();
         }
+
+        private void sozlesmelistele_Click(object sender, EventArgs e)
+        {
+            KullaniciGirisAnaPanel.Controls.Clear();
+            SozlesmeListele sozlesmelistele = new SozlesmeListele();
+            sozlesmelistele.TopLevel = false;
+            sozlesmelistele.Dock = DockStyle.Fill;
+            KullaniciGirisAnaPanel.Controls.Add(sozlesmelistele);
+            sozlesmelistele.BringToFront();
+            sozlesmelistele.Show();
+        }
     }
 }
