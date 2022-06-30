@@ -310,5 +310,27 @@ namespace TedarikYonetimi
             sozlesmesil.BringToFront();
             sozlesmesil.Show();
         }
+
+        private void kullanicilar_Click(object sender, EventArgs e)
+        {
+            KullaniciGirisAnaPanel.Controls.Clear();
+            Kullanicilar kullanicilar = new Kullanicilar();
+            kullanicilar.TopLevel = false;
+            kullanicilar.Dock = DockStyle.Fill;
+            KullaniciGirisAnaPanel.Controls.Add(kullanicilar);
+            kullanicilar.BringToFront();
+            kullanicilar.Show();
+        }
+
+        private void tanimlamalar_Click(object sender, EventArgs e)
+        {
+            KullaniciGirisAnaPanel.Controls.Clear();
+            Tanimlamalar tanimlamalar = new Tanimlamalar();
+            tanimlamalar.TopLevel = false;
+            tanimlamalar.Dock = DockStyle.Fill;
+            KullaniciGirisAnaPanel.Controls.Add(tanimlamalar);
+            tanimlamalar.BringToFront();
+            tanimlamalar.Show();
+        }
     }
 }

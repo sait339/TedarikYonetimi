@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KullaniciAnaSayfa));
             this.KullaniciGirisUstPanel = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.kullanicibilgisi = new System.Windows.Forms.Label();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -54,13 +53,14 @@
             this.firmalistele = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.sozlesmeekle = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.sozlesmelistele = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.KullaniciGirisAnaPanel = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.kullanicilar = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.tanimlamalar = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.KullaniciGirisAnaPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.KullaniciGirisUstPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.KullaniciGirisMenuPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // KullaniciGirisUstPanel
@@ -80,18 +80,6 @@
             this.KullaniciGirisUstPanel.Size = new System.Drawing.Size(1318, 60);
             this.KullaniciGirisUstPanel.TabIndex = 1;
             this.KullaniciGirisUstPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.KullaniciGirisUstPanel_MouseDown);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::TedarikYonetimi.Properties.Resources.emperologo;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 51);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // kullanicibilgisi
             // 
@@ -626,17 +614,6 @@
             this.sozlesmelistele.Visible = false;
             this.sozlesmelistele.Click += new System.EventHandler(this.sozlesmelistele_Click);
             // 
-            // KullaniciGirisAnaPanel
-            // 
-            this.KullaniciGirisAnaPanel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.KullaniciGirisAnaPanel.BackgroundImage = global::TedarikYonetimi.Properties.Resources.emperologo;
-            this.KullaniciGirisAnaPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.KullaniciGirisAnaPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.KullaniciGirisAnaPanel.Location = new System.Drawing.Point(200, 60);
-            this.KullaniciGirisAnaPanel.Name = "KullaniciGirisAnaPanel";
-            this.KullaniciGirisAnaPanel.Size = new System.Drawing.Size(1118, 668);
-            this.KullaniciGirisAnaPanel.TabIndex = 3;
-            // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.TargetControl = this;
@@ -666,6 +643,7 @@
             this.kullanicilar.Text = "Kullanıcılar";
             this.kullanicilar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.kullanicilar.Visible = false;
+            this.kullanicilar.Click += new System.EventHandler(this.kullanicilar_Click);
             // 
             // tanimlamalar
             // 
@@ -692,6 +670,30 @@
             this.tanimlamalar.Text = "Tanımlamalar";
             this.tanimlamalar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tanimlamalar.Visible = false;
+            this.tanimlamalar.Click += new System.EventHandler(this.tanimlamalar_Click);
+            // 
+            // KullaniciGirisAnaPanel
+            // 
+            this.KullaniciGirisAnaPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.KullaniciGirisAnaPanel.BackgroundImage = global::TedarikYonetimi.Properties.Resources.emperologo;
+            this.KullaniciGirisAnaPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.KullaniciGirisAnaPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.KullaniciGirisAnaPanel.Location = new System.Drawing.Point(200, 60);
+            this.KullaniciGirisAnaPanel.Name = "KullaniciGirisAnaPanel";
+            this.KullaniciGirisAnaPanel.Size = new System.Drawing.Size(1118, 668);
+            this.KullaniciGirisAnaPanel.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::TedarikYonetimi.Properties.Resources.emperologo;
+            this.pictureBox1.Location = new System.Drawing.Point(22, 3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(143, 51);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // KullaniciAnaSayfa
             // 
@@ -709,8 +711,8 @@
             this.Load += new System.EventHandler(this.KullaniciAnaSayfa_Load);
             this.KullaniciGirisUstPanel.ResumeLayout(false);
             this.KullaniciGirisUstPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.KullaniciGirisMenuPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

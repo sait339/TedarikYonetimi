@@ -105,6 +105,12 @@
     <Compile Include="KullaniciAnaSayfa.Designer.cs">
       <DependentUpon>KullaniciAnaSayfa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kullanicilar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kullanicilar.Designer.cs">
+      <DependentUpon>Kullanicilar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SozlesmeEkle.cs">
@@ -132,6 +138,12 @@
       <DependentUpon>SozlesmeSil.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlBaglanti.cs" />
+    <Compile Include="Tanimlamalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tanimlamalar.Designer.cs">
+      <DependentUpon>Tanimlamalar.cs</DependentUpon>
+    </Compile>
     <Compile Include="YetkiliEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +192,9 @@
     <EmbeddedResource Include="KullaniciAnaSayfa.resx">
       <DependentUpon>KullaniciAnaSayfa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Kullanicilar.resx">
+      <DependentUpon>Kullanicilar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -201,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SozlesmeSil.resx">
       <DependentUpon>SozlesmeSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tanimlamalar.resx">
+      <DependentUpon>Tanimlamalar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YetkiliEkle.resx">
       <DependentUpon>YetkiliEkle.cs</DependentUpon>
