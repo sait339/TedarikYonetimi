@@ -140,7 +140,7 @@ namespace TedarikYonetimi
                     islemyapanid = dr1["kullanici_id"].ToString();
                 }
                 SqlBaglanti.baglanti.Close();
-                if (islemyapanid == sorumluIDler[index].ToString())
+                if (islemyapanid == sorumluIDler[index].ToString() || GirisEkranı.yetki == "1")
                 {
                     SqlBaglanti.baglanti.Open();
                     SqlCommand yetkiliguncelleme = new SqlCommand("UPDATE yetkililer SET yetkili_adi=@ad,yetkili_soyadi=@soyadi,yetkili_calismapozisyonu=@pozisyon,yetkili_iletisim=@iletisim," +

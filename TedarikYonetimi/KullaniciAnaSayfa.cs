@@ -40,6 +40,8 @@ namespace TedarikYonetimi
             sozlesmeguncelle.Visible = false;
             sozlesmelistele.Visible = false;
             sozlesmesil.Visible = false;
+            kullanicilar.Visible = false;
+            tanimlamalar.Visible = false;
         }
 
         private void yetkiliislemleri_Click(object sender, EventArgs e)
@@ -60,6 +62,8 @@ namespace TedarikYonetimi
             sozlesmeguncelle.Visible = false;
             sozlesmelistele.Visible = false;
             sozlesmesil.Visible = false;
+            kullanicilar.Visible = false;
+            tanimlamalar.Visible = false;
         }
 
         private void sozlesmeler_Click(object sender, EventArgs e)
@@ -80,6 +84,26 @@ namespace TedarikYonetimi
             sozlesmeguncelle.Visible = true;
             sozlesmelistele.Visible = true;
             sozlesmesil.Visible = true;
+            kullanicilar.Visible = false;
+            tanimlamalar.Visible = false;
+            sorumluadi = kullanicibilgisi.Text;
+            if (GirisEkranı.yetki == "1")
+            {
+                
+            }
+            else if (GirisEkranı.yetki == "2")
+            {
+
+            }
+            else if (GirisEkranı.yetki == "3")
+            {
+                sozlesmeekle.Visible = false;
+                sozlesmeguncelle.Visible = false;
+                sozlesmelistele.Visible = true;
+                sozlesmesil.Visible = false;
+                sozlesmelistele.Location = new Point(12, 16);
+                geridon.Location = new Point(12, 88);
+            }
         }
 
         private void firmagerigel_Click(object sender, EventArgs e)
@@ -101,6 +125,23 @@ namespace TedarikYonetimi
             sozlesmelistele.Visible = false;
             sozlesmesil.Visible = false;
             KullaniciGirisAnaPanel.Controls.Clear();
+            sorumluadi = kullanicibilgisi.Text;
+            if (GirisEkranı.yetki == "1")
+            {
+                kullanicilar.Visible = true;
+                tanimlamalar.Visible = true;
+            }
+            else if (GirisEkranı.yetki == "2")
+            {
+
+            }
+            else if (GirisEkranı.yetki == "3")
+            {
+                firmaislemleri.Visible = false;
+                yetkiliislemleri.Visible = false;
+                sozlesmeler.Visible = true;
+                sozlesmeler.Location = new Point(12, 16);
+            }
         }
 
         private void firmaekle_Click(object sender, EventArgs e)
@@ -142,6 +183,22 @@ namespace TedarikYonetimi
         private void KullaniciAnaSayfa_Load(object sender, EventArgs e)
         {
             sorumluadi = kullanicibilgisi.Text;
+            if(GirisEkranı.yetki=="1")
+            {
+                kullanicilar.Visible = true;
+                tanimlamalar.Visible = true;
+            }
+            else if (GirisEkranı.yetki == "2")
+            {
+
+            }
+            else if (GirisEkranı.yetki == "3")
+            {
+                firmaislemleri.Visible = false;
+                yetkiliislemleri.Visible = false;
+                sozlesmeler.Visible = true;
+                sozlesmeler.Location = new Point(12, 16);
+            }
         }
 
         private void yetkiliekle_Click(object sender, EventArgs e)

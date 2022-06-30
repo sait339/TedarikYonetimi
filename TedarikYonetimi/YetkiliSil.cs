@@ -126,7 +126,7 @@ namespace TedarikYonetimi
                 yetkiliad= yetkililerdtgview.CurrentRow.Cells[1].Value.ToString();
                 yetkiliad += " "+ yetkililerdtgview.CurrentRow.Cells[2].Value.ToString();
                 yetkiliid = yetkililerdtgview.CurrentRow.Cells[0].Value.ToString();
-                if (sorumlu == KullaniciAnaSayfa.sorumluadi)
+                if (sorumlu == KullaniciAnaSayfa.sorumluadi || GirisEkranı.yetki == "1")
                 {
                     DialogResult dialog = new DialogResult();
                     dialog = MessageBox.Show(yetkiliad+" silinceketir.\nOnaylıyor musunuz?", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);

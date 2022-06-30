@@ -96,7 +96,7 @@ namespace TedarikYonetimi
         {
             try
             {
-                if(sorumluadi==KullaniciAnaSayfa.sorumluadi)
+                if(sorumluadi==KullaniciAnaSayfa.sorumluadi || GirisEkranı.yetki == "1")
                 {
                     File.Delete(Application.StartupPath + "\\2022Sözleşmeler\\" + firmaadi + "-" + sozlesmedosyaadi);
                     File.Copy(sozlesmeyolu, Application.StartupPath + "\\2022Sözleşmeler" + "\\" + firmaadi + "-" + sozlesmeadi);

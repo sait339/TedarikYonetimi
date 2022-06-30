@@ -54,7 +54,7 @@ namespace TedarikYonetimi
             firmaadi = sozlesmelerdtgview.CurrentRow.Cells[3].Value.ToString();
             try
             {
-                if (sorumlu == KullaniciAnaSayfa.sorumluadi)
+                if (sorumlu == KullaniciAnaSayfa.sorumluadi || GirisEkranı.yetki == "1")
                 {
                     DialogResult dialog = new DialogResult();
                     dialog = MessageBox.Show(sozlesmedosyaadi + " silinceketir.\nOnaylıyor musunuz?", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);

@@ -197,7 +197,7 @@ namespace TedarikYonetimi
                     sorumluID = dr["sorumluID"].ToString();
                 }
                 SqlBaglanti.baglanti.Close();
-                if(sorumluID==islemyapanid)//silme işlemi
+                if(sorumluID==islemyapanid || GirisEkranı.yetki =="1")//silme işlemi
                 {
                     DialogResult dialog = new DialogResult();
                     dialog = MessageBox.Show("Firmaya tüm bilgiler silinceketir.\nOnaylıyor musunuz?", "Dikkat" , MessageBoxButtons.YesNo , MessageBoxIcon.Warning);
@@ -209,8 +209,13 @@ namespace TedarikYonetimi
                         SqlDataReader kr = kartvizitadisorgula.ExecuteReader();
                         if (kr.Read())
                         {
+                            string tasimayolu = Application.StartupPath + "\\Silinen Firmaların Kartvizitleri";
                             string kartvizitADI = kr["kartvizit_ismi"].ToString();
-                            File.Delete(Application.StartupPath + "\\Kartvizitler\\" + kartvizitADI);
+                            if(File.Exists(tasimayolu) == false)
+                            {
+                                Directory.CreateDirectory(tasimayolu);
+                                File.Move(Application.StartupPath + "\\Kartvizitler\\" + kartvizitADI, tasimayolu);
+                            }
                         }
                         SqlBaglanti.baglanti.Close();
                         SqlBaglanti.baglanti.Open();

@@ -86,7 +86,7 @@ namespace TedarikYonetimi
                 sorumluid = dr4["sorumluID"].ToString();
             }
             SqlBaglanti.baglanti.Close();
-            if (islemyapanid == sorumluid)
+            if (islemyapanid == sorumluid || GirisEkranı.yetki == "1")
             {
                 kartvizityüklebuton.Enabled = true;
             }

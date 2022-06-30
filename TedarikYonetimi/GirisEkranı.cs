@@ -15,6 +15,7 @@ namespace TedarikYonetimi
 {
     public partial class GirisEkranı : Form
     {
+        public static string yetki;
         int sayac = 0;
         public GirisEkranı()
         {
@@ -74,10 +75,13 @@ namespace TedarikYonetimi
                 SqlDataReader dr = cmd.ExecuteReader();
                 if(dr.Read())
                 {
-                    string yetki = dr["kullanici_yetki"].ToString();
+                    yetki = dr["kullanici_yetki"].ToString();
                     if(yetki=="1")
                     {
-                        
+                        KullaniciAnaSayfa giris = new KullaniciAnaSayfa();
+                        giris.kullanicibilgisi.Text = kullaniciadi.Text;
+                        giris.Show();
+                        this.Hide();
                     }
                     else if(yetki=="2")
                     {
@@ -88,7 +92,10 @@ namespace TedarikYonetimi
                     }
                     else if (yetki == "3")
                     {
-
+                        KullaniciAnaSayfa giris = new KullaniciAnaSayfa();
+                        giris.kullanicibilgisi.Text = kullaniciadi.Text;
+                        giris.Show();
+                        this.Hide();
                     }
                     else
                     {

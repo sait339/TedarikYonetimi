@@ -162,7 +162,7 @@ namespace TedarikYonetimi
                 islemyapanid = dr1["kullanici_id"].ToString();
             }
             SqlBaglanti.baglanti.Close();
-            if (islemyapanid==sorumluid)
+            if (islemyapanid==sorumluid || GirisEkranı.yetki == "1")
             {
                 SqlBaglanti.baglanti.Open();
                 SqlCommand firmakayit = new SqlCommand("UPDATE firmalar SET firma_adi=@ad,firma_odemesekli=@odeme,firma_calismasekli=@calisma,firma_websitesi=@website," +
