@@ -122,7 +122,7 @@ namespace TedarikYonetimi
 
         private void kullanicieklebtn_Click(object sender, EventArgs e)
         {
-            kullanicigrup.Visible = true;
+            eklegrup.Visible = true;
         }
 
         private void kullaniciaditextbox_KeyPress(object sender, KeyPressEventArgs e)
@@ -201,5 +201,11 @@ namespace TedarikYonetimi
 
             }
         }
+
+        private void kullanicikaydetbtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
