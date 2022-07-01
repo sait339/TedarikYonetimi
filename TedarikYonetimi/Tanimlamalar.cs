@@ -204,7 +204,23 @@ namespace TedarikYonetimi
 
         private void kullanicikaydetbtn_Click(object sender, EventArgs e)
         {
-
+            string kullaniciadi, sifre;
+            kullaniciadi = kullaniciaditextbox.Text;
+            sifre = sifretextbox.Text;
+            if(kullaniciadi=="" || kullaniciadi == "Kullanıcı Adı" || sifre=="" || sifre=="Şifre")
+            {
+                HataEkranı hata = new HataEkranı();
+                HataEkranı.durum = "HATA";
+                HataEkranı.baslik = "KAYIT TAMAMLANAMADI";
+                HataEkranı.text = "Geçerli bir kullanıcı adı ve şifre giriniz.";
+                hata.Show();
+            }
+            else
+            {
+                SqlBaglanti.baglanti.Open();
+                SqlCommand kullaniciadikontrol = new SqlCommand("SELECT kullanici_adi FROM kullanicilar", SqlBaglanti.baglanti);
+                SqlBaglanti.baglanti.Close();
+            }
         }
 
     }
