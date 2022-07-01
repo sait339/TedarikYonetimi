@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GirisEkranı));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.GirisUstPanel = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -40,11 +41,11 @@
             this.girisyapbuton = new Guna.UI2.WinForms.Guna2GradientButton();
             this.sifre = new Guna.UI2.WinForms.Guna2TextBox();
             this.kullaniciadi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.benihatirla = new System.Windows.Forms.CheckBox();
             this.GirisUstPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GirisAnaPanel.SuspendLayout();
             this.GirisEkrani.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -69,6 +70,18 @@
             this.GirisUstPanel.Size = new System.Drawing.Size(725, 60);
             this.GirisUstPanel.TabIndex = 0;
             this.GirisUstPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GirisUstPanel_MouseDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::TedarikYonetimi.Properties.Resources.emperologo;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(143, 42);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // guna2ControlBox3
             // 
@@ -138,6 +151,7 @@
             this.GirisEkrani.BorderColor = System.Drawing.Color.Red;
             this.GirisEkrani.BorderRadius = 16;
             this.GirisEkrani.BorderThickness = 0;
+            this.GirisEkrani.Controls.Add(this.benihatirla);
             this.GirisEkrani.Controls.Add(this.girisyapbuton);
             this.GirisEkrani.Controls.Add(this.sifre);
             this.GirisEkrani.Controls.Add(this.kullaniciadi);
@@ -149,7 +163,7 @@
             this.GirisEkrani.Name = "GirisEkrani";
             this.GirisEkrani.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.GirisEkrani.ShadowDecoration.Parent = this.GirisEkrani;
-            this.GirisEkrani.Size = new System.Drawing.Size(345, 200);
+            this.GirisEkrani.Size = new System.Drawing.Size(345, 233);
             this.GirisEkrani.TabIndex = 0;
             this.GirisEkrani.Text = "Kullanıcı Giriş Ekranı";
             this.GirisEkrani.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -166,11 +180,11 @@
             this.girisyapbuton.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.girisyapbuton.ForeColor = System.Drawing.Color.White;
             this.girisyapbuton.HoverState.Parent = this.girisyapbuton;
-            this.girisyapbuton.Location = new System.Drawing.Point(100, 159);
+            this.girisyapbuton.Location = new System.Drawing.Point(94, 176);
             this.girisyapbuton.Name = "girisyapbuton";
             this.girisyapbuton.ShadowDecoration.Parent = this.girisyapbuton;
             this.girisyapbuton.Size = new System.Drawing.Size(150, 38);
-            this.girisyapbuton.TabIndex = 2;
+            this.girisyapbuton.TabIndex = 3;
             this.girisyapbuton.Text = "Giriş Yap";
             this.girisyapbuton.Click += new System.EventHandler(this.girisyapbuton_Click);
             // 
@@ -244,17 +258,16 @@
             this.kullaniciadi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kullaniciadi_KeyPress);
             this.kullaniciadi.Leave += new System.EventHandler(this.kullaniciadi_Leave);
             // 
-            // pictureBox1
+            // benihatirla
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::TedarikYonetimi.Properties.Resources.emperologo;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 42);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.benihatirla.AutoSize = true;
+            this.benihatirla.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.benihatirla.Location = new System.Drawing.Point(70, 147);
+            this.benihatirla.Name = "benihatirla";
+            this.benihatirla.Size = new System.Drawing.Size(105, 23);
+            this.benihatirla.TabIndex = 2;
+            this.benihatirla.Text = "Beni Hatırla";
+            this.benihatirla.UseVisualStyleBackColor = true;
             // 
             // GirisEkranı
             // 
@@ -270,9 +283,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giris";
             this.GirisUstPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.GirisAnaPanel.ResumeLayout(false);
             this.GirisEkrani.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.GirisEkrani.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -290,6 +304,7 @@
         private Guna.UI2.WinForms.Guna2TextBox sifre;
         private Guna.UI2.WinForms.Guna2GradientButton girisyapbuton;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox benihatirla;
     }
 }
 

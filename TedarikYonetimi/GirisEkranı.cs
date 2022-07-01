@@ -20,7 +20,45 @@ namespace TedarikYonetimi
         public GirisEkranı()
         {
             InitializeComponent();
+            Data_Init();
         }
+
+        private void Data_Init()
+        {
+            if(Properties.Settings.Default.KullaniciAdi!=String.Empty)
+            {
+                if(Properties.Settings.Default.BeniHatirla==true)
+                {
+                    kullaniciadi.Text = Properties.Settings.Default.KullaniciAdi;
+                    sifre.Text = Properties.Settings.Default.Sifre;
+                    sifre.PasswordChar = '*';
+                    benihatirla.Checked = true;
+                }
+                else
+                {
+                    kullaniciadi.Text = Properties.Settings.Default.KullaniciAdi;
+                }
+            }
+        }
+
+        private void Data_Save()
+        {
+            if(benihatirla.Checked == true)
+            {
+                Properties.Settings.Default.KullaniciAdi = kullaniciadi.Text;
+                Properties.Settings.Default.Sifre = sifre.Text;
+                Properties.Settings.Default.BeniHatirla = true;
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                Properties.Settings.Default.KullaniciAdi = "";
+                Properties.Settings.Default.Sifre = "";
+                Properties.Settings.Default.BeniHatirla = false;
+                Properties.Settings.Default.Save();
+            }
+        }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -82,6 +120,7 @@ namespace TedarikYonetimi
                         giris.kullanicibilgisi.Text = kullaniciadi.Text;
                         giris.Show();
                         this.Hide();
+                        Data_Save();
                     }
                     else if(yetki=="2")
                     {
@@ -89,6 +128,7 @@ namespace TedarikYonetimi
                         giris.kullanicibilgisi.Text = kullaniciadi.Text;
                         giris.Show();
                         this.Hide();
+                        Data_Save();
                     }
                     else if (yetki == "3")
                     {
@@ -96,6 +136,7 @@ namespace TedarikYonetimi
                         giris.kullanicibilgisi.Text = kullaniciadi.Text;
                         giris.Show();
                         this.Hide();
+                        Data_Save();
                     }
                     else
                     {
