@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.zamanlayici = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
@@ -40,13 +40,13 @@
             this.zamanlayici.Interval = 1;
             this.zamanlayici.Tick += new System.EventHandler(this.zamanlayici_Tick);
             // 
-            // panel1
+            // panel
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel1.Location = new System.Drawing.Point(65, 292);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(430, 29);
-            this.panel1.TabIndex = 0;
+            this.panel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel.Location = new System.Drawing.Point(65, 292);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(430, 29);
+            this.panel.TabIndex = 0;
             // 
             // panel2
             // 
@@ -64,7 +64,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(579, 343);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AcilisEkrani";
@@ -76,7 +76,7 @@
 
         #endregion
         private System.Windows.Forms.Timer zamanlayici;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Panel panel2;
     }
 }
