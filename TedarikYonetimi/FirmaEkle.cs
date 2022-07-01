@@ -129,6 +129,7 @@ namespace TedarikYonetimi
             }
         }
 
+
         private void firmaeklebuton_Click(object sender, EventArgs e)
         {
             kayityolu = Application.StartupPath + "\\Kartvizitler";

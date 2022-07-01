@@ -40,7 +40,6 @@ namespace TedarikYonetimi
             sozlesmeguncelle.Visible = false;
             sozlesmelistele.Visible = false;
             sozlesmesil.Visible = false;
-            kullanicilar.Visible = false;
             tanimlamalar.Visible = false;
         }
 
@@ -62,7 +61,6 @@ namespace TedarikYonetimi
             sozlesmeguncelle.Visible = false;
             sozlesmelistele.Visible = false;
             sozlesmesil.Visible = false;
-            kullanicilar.Visible = false;
             tanimlamalar.Visible = false;
         }
 
@@ -84,7 +82,6 @@ namespace TedarikYonetimi
             sozlesmeguncelle.Visible = true;
             sozlesmelistele.Visible = true;
             sozlesmesil.Visible = true;
-            kullanicilar.Visible = false;
             tanimlamalar.Visible = false;
             sorumluadi = kullanicibilgisi.Text;
             if (GirisEkranı.yetki == "1")
@@ -128,7 +125,6 @@ namespace TedarikYonetimi
             sorumluadi = kullanicibilgisi.Text;
             if (GirisEkranı.yetki == "1")
             {
-                kullanicilar.Visible = true;
                 tanimlamalar.Visible = true;
             }
             else if (GirisEkranı.yetki == "2")
@@ -185,7 +181,6 @@ namespace TedarikYonetimi
             sorumluadi = kullanicibilgisi.Text;
             if(GirisEkranı.yetki=="1")
             {
-                kullanicilar.Visible = true;
                 tanimlamalar.Visible = true;
             }
             else if (GirisEkranı.yetki == "2")
@@ -309,17 +304,6 @@ namespace TedarikYonetimi
             KullaniciGirisAnaPanel.Controls.Add(sozlesmesil);
             sozlesmesil.BringToFront();
             sozlesmesil.Show();
-        }
-
-        private void kullanicilar_Click(object sender, EventArgs e)
-        {
-            KullaniciGirisAnaPanel.Controls.Clear();
-            Kullanicilar kullanicilar = new Kullanicilar();
-            kullanicilar.TopLevel = false;
-            kullanicilar.Dock = DockStyle.Fill;
-            KullaniciGirisAnaPanel.Controls.Add(kullanicilar);
-            kullanicilar.BringToFront();
-            kullanicilar.Show();
         }
 
         private void tanimlamalar_Click(object sender, EventArgs e)

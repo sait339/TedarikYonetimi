@@ -436,10 +436,10 @@
         private Guna.UI2.WinForms.Guna2GradientButton firmaeklebuton;
         private Guna.UI2.WinForms.Guna2GradientButton kartviziteklebuton;
         private System.Windows.Forms.PictureBox kartvizitpicturebox;
-        private Guna.UI2.WinForms.Guna2ComboBox odemeseklicombobox;
-        private Guna.UI2.WinForms.Guna2ComboBox calismaseklicombobox;
         private Guna.UI2.WinForms.Guna2TextBox iletisimtexbox;
         private Guna.UI2.WinForms.Guna2TextBox mailtextbox;
         private Guna.UI2.WinForms.Guna2TextBox websitesitextbox;
+        public Guna.UI2.WinForms.Guna2ComboBox odemeseklicombobox;
+        public Guna.UI2.WinForms.Guna2ComboBox calismaseklicombobox;
     }
 }

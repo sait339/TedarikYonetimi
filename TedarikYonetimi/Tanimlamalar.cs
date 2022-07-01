@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,193 @@ namespace TedarikYonetimi
 {
     public partial class Tanimlamalar : Form
     {
+        DataTable sektortablo = new DataTable();
+        DataTable kullanicitablo = new DataTable();
+        string yetki;
         public Tanimlamalar()
         {
             InitializeComponent();
+        }
+
+        private void sektortanimla_Click(object sender, EventArgs e)
+        {
+            sektorgrup.Visible = true;
+            kullanicigrup.Visible = false;
+            try
+            {
+                sektortablo.Clear();
+                SqlBaglanti.baglanti.Open();
+                SqlCommand sektorlistele = new SqlCommand("SELECT *FROM sektorler",SqlBaglanti.baglanti);
+                SqlDataAdapter dr = new SqlDataAdapter(sektorlistele);
+                dr.Fill(sektortablo);
+                sektorlerdtgview.DataSource = sektortablo;
+                SqlBaglanti.baglanti.Close();
+            }
+            catch
+            {
+
+            }
+            
+        }
+
+        private void sektoraditextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (sektoraditextbox.Text.Equals("Sektör Adı"))
+            {
+                sektoraditextbox.Clear();
+            }
+        }
+
+        private void sektoraciklamatextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (sektoraciklamatextbox.Text.Equals("Sektör Açıklaması"))
+            {
+                sektoraciklamatextbox.Clear();
+            }
+        }
+
+        private void sektoraditextbox_Leave(object sender, EventArgs e)
+        {
+            if (sektoraditextbox.Text.Equals(""))
+            {
+                sektoraditextbox.Text = "Sektör Adı";
+            }
+        }
+
+        private void sektoraciklamatextbox_Leave(object sender, EventArgs e)
+        {
+            if (sektoraciklamatextbox.Text.Equals(""))
+            {
+                sektoraciklamatextbox.Text = "Sektör Açıklaması";
+            }
+        }
+
+        private void sektoreklebtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(sektoraditextbox.Text!="Sektör Adı")
+                {
+                    string aciklama = sektoraciklamatextbox.Text;
+                    if(aciklama=="Sektör Açıklaması")
+                    {
+                        aciklama = "";
+                    }
+                    SqlBaglanti.baglanti.Open();
+                    SqlCommand sektorekle = new SqlCommand("INSERT INTO sektorler(sektor_adi,sektor_aciklama) VALUES (@ad,@aciklama)", SqlBaglanti.baglanti);
+                    sektorekle.Parameters.AddWithValue("@ad", sektoraditextbox.Text);
+                    sektorekle.Parameters.AddWithValue("@aciklama", aciklama);
+                    sektorekle.ExecuteNonQuery();
+                    SqlBaglanti.baglanti.Close();
+                    sektortanimla.PerformClick();
+
+                    HataEkranı onay = new HataEkranı();
+                    HataEkranı.durum = "ONAY";
+                    HataEkranı.baslik = "KAYIT BAŞARILI";
+                    HataEkranı.text = sektoraditextbox.Text + "\nSektor başarılı bir şekilde eklenmiştir.";
+                    onay.Show();
+                }
+                else
+                {
+                    HataEkranı hata = new HataEkranı();
+                    HataEkranı.durum = "HATA";
+                    HataEkranı.baslik = "KAYIT TAMAMLANAMADI";
+                    HataEkranı.text = "Geçerli Bir sektör adı giriniz.";
+                    hata.Show();
+                }
+                
+            }
+            catch
+            {
+                HataEkranı hata = new HataEkranı();
+                HataEkranı.durum = "HATA";
+                HataEkranı.baslik = "KAYIT TAMAMLANAMADI";
+                HataEkranı.text = "Teknik Bir Hata Meydana Geldi.";
+                hata.Show();
+            }
+            
+        }
+
+        private void kullanicieklebtn_Click(object sender, EventArgs e)
+        {
+            kullanicigrup.Visible = true;
+        }
+
+        private void kullaniciaditextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (kullaniciaditextbox.Text.Equals("Kullanıcı Adı"))
+            {
+                kullaniciaditextbox.Clear();
+            }
+        }
+
+        private void kullaniciaditextbox_Leave(object sender, EventArgs e)
+        {
+            if (kullaniciaditextbox.Text.Equals(""))
+            {
+                kullaniciaditextbox.Text = "Kullanıcı Adı";
+            }
+        }
+
+        private void sifretextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (sifretextbox.Text.Equals("Şifre"))
+            {
+                sifretextbox.Clear();
+            }
+        }
+
+        private void sifretextbox_Leave(object sender, EventArgs e)
+        {
+            if (sifretextbox.Text.Equals(""))
+            {
+                sifretextbox.Text = "Şifre";
+            }
+        }
+
+        private void yetkicombobox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            string secim = yetkicombobox.SelectedItem.ToString();
+            if (secim=="ADMİN")
+            {
+                yetki = "1";
+            }
+            else if(secim=="KULLANICI")
+            {
+                yetki = "2";
+            }
+            else if (secim=="MUHASEBE")
+            {
+                yetki = "3";
+            }
+            else
+            {
+                HataEkranı hata = new HataEkranı();
+                HataEkranı.durum = "HATA";
+                HataEkranı.baslik = "KAYIT TAMAMLANAMADI";
+                HataEkranı.text = "Yetki Seçimi Yapılmadı";
+                hata.Show();
+            }
+        }
+
+        private void kullanicitanimla_Click(object sender, EventArgs e)
+        {
+            sektorgrup.Visible = false;
+            kullanicigrup.Visible = true;
+            try
+            {
+                kullanicitablo.Clear();
+                SqlBaglanti.baglanti.Open();
+                SqlCommand kullanicilistele = new SqlCommand("SELECT *FROM kullanicilar", SqlBaglanti.baglanti);
+                SqlDataAdapter dr = new SqlDataAdapter(kullanicilistele);
+                dr.Fill(kullanicitablo);
+                kullanicilardtgvw.DataSource = kullanicitablo;
+                SqlBaglanti.baglanti.Close();
+            }
+            catch
+            {
+
+            }
         }
     }
 }

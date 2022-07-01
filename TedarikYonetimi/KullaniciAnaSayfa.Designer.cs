@@ -31,11 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KullaniciAnaSayfa));
             this.KullaniciGirisUstPanel = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.kullanicibilgisi = new System.Windows.Forms.Label();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.KullaniciGirisMenuPanel = new System.Windows.Forms.Panel();
+            this.tanimlamalar = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.sozlesmeler = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.yetkilisil = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.firmaislemleri = new Guna.UI2.WinForms.Guna2GradientTileButton();
@@ -54,13 +56,10 @@
             this.sozlesmeekle = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.sozlesmelistele = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.kullanicilar = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.tanimlamalar = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.KullaniciGirisAnaPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.KullaniciGirisUstPanel.SuspendLayout();
-            this.KullaniciGirisMenuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.KullaniciGirisMenuPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // KullaniciGirisUstPanel
@@ -80,6 +79,18 @@
             this.KullaniciGirisUstPanel.Size = new System.Drawing.Size(1318, 60);
             this.KullaniciGirisUstPanel.TabIndex = 1;
             this.KullaniciGirisUstPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.KullaniciGirisUstPanel_MouseDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::TedarikYonetimi.Properties.Resources.emperologo;
+            this.pictureBox1.Location = new System.Drawing.Point(22, 3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(143, 51);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // kullanicibilgisi
             // 
@@ -148,7 +159,6 @@
             // 
             this.KullaniciGirisMenuPanel.BackColor = System.Drawing.Color.DimGray;
             this.KullaniciGirisMenuPanel.Controls.Add(this.tanimlamalar);
-            this.KullaniciGirisMenuPanel.Controls.Add(this.kullanicilar);
             this.KullaniciGirisMenuPanel.Controls.Add(this.sozlesmeler);
             this.KullaniciGirisMenuPanel.Controls.Add(this.yetkilisil);
             this.KullaniciGirisMenuPanel.Controls.Add(this.firmaislemleri);
@@ -171,6 +181,33 @@
             this.KullaniciGirisMenuPanel.Name = "KullaniciGirisMenuPanel";
             this.KullaniciGirisMenuPanel.Size = new System.Drawing.Size(200, 668);
             this.KullaniciGirisMenuPanel.TabIndex = 0;
+            // 
+            // tanimlamalar
+            // 
+            this.tanimlamalar.Animated = true;
+            this.tanimlamalar.AutoRoundedCorners = true;
+            this.tanimlamalar.BorderColor = System.Drawing.Color.Transparent;
+            this.tanimlamalar.BorderRadius = 32;
+            this.tanimlamalar.CheckedState.Parent = this.tanimlamalar;
+            this.tanimlamalar.CustomBorderColor = System.Drawing.Color.Red;
+            this.tanimlamalar.CustomImages.Parent = this.tanimlamalar;
+            this.tanimlamalar.FillColor = System.Drawing.Color.Red;
+            this.tanimlamalar.FillColor2 = System.Drawing.Color.DimGray;
+            this.tanimlamalar.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tanimlamalar.ForeColor = System.Drawing.Color.White;
+            this.tanimlamalar.HoverState.BorderColor = System.Drawing.Color.Red;
+            this.tanimlamalar.HoverState.FillColor = System.Drawing.Color.Red;
+            this.tanimlamalar.HoverState.FillColor2 = System.Drawing.Color.Red;
+            this.tanimlamalar.HoverState.Parent = this.tanimlamalar;
+            this.tanimlamalar.Location = new System.Drawing.Point(12, 232);
+            this.tanimlamalar.Name = "tanimlamalar";
+            this.tanimlamalar.ShadowDecoration.Parent = this.tanimlamalar;
+            this.tanimlamalar.Size = new System.Drawing.Size(180, 66);
+            this.tanimlamalar.TabIndex = 15;
+            this.tanimlamalar.Text = "Tanımlamalar";
+            this.tanimlamalar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tanimlamalar.Visible = false;
+            this.tanimlamalar.Click += new System.EventHandler(this.tanimlamalar_Click);
             // 
             // sozlesmeler
             // 
@@ -618,60 +655,6 @@
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
-            // kullanicilar
-            // 
-            this.kullanicilar.Animated = true;
-            this.kullanicilar.AutoRoundedCorners = true;
-            this.kullanicilar.BorderColor = System.Drawing.Color.Transparent;
-            this.kullanicilar.BorderRadius = 32;
-            this.kullanicilar.CheckedState.Parent = this.kullanicilar;
-            this.kullanicilar.CustomBorderColor = System.Drawing.Color.Red;
-            this.kullanicilar.CustomImages.Parent = this.kullanicilar;
-            this.kullanicilar.FillColor = System.Drawing.Color.Red;
-            this.kullanicilar.FillColor2 = System.Drawing.Color.DimGray;
-            this.kullanicilar.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kullanicilar.ForeColor = System.Drawing.Color.White;
-            this.kullanicilar.HoverState.BorderColor = System.Drawing.Color.Red;
-            this.kullanicilar.HoverState.FillColor = System.Drawing.Color.Red;
-            this.kullanicilar.HoverState.FillColor2 = System.Drawing.Color.Red;
-            this.kullanicilar.HoverState.Parent = this.kullanicilar;
-            this.kullanicilar.Location = new System.Drawing.Point(14, 232);
-            this.kullanicilar.Name = "kullanicilar";
-            this.kullanicilar.ShadowDecoration.Parent = this.kullanicilar;
-            this.kullanicilar.Size = new System.Drawing.Size(180, 66);
-            this.kullanicilar.TabIndex = 14;
-            this.kullanicilar.Text = "Kullanıcılar";
-            this.kullanicilar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.kullanicilar.Visible = false;
-            this.kullanicilar.Click += new System.EventHandler(this.kullanicilar_Click);
-            // 
-            // tanimlamalar
-            // 
-            this.tanimlamalar.Animated = true;
-            this.tanimlamalar.AutoRoundedCorners = true;
-            this.tanimlamalar.BorderColor = System.Drawing.Color.Transparent;
-            this.tanimlamalar.BorderRadius = 32;
-            this.tanimlamalar.CheckedState.Parent = this.tanimlamalar;
-            this.tanimlamalar.CustomBorderColor = System.Drawing.Color.Red;
-            this.tanimlamalar.CustomImages.Parent = this.tanimlamalar;
-            this.tanimlamalar.FillColor = System.Drawing.Color.Red;
-            this.tanimlamalar.FillColor2 = System.Drawing.Color.DimGray;
-            this.tanimlamalar.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tanimlamalar.ForeColor = System.Drawing.Color.White;
-            this.tanimlamalar.HoverState.BorderColor = System.Drawing.Color.Red;
-            this.tanimlamalar.HoverState.FillColor = System.Drawing.Color.Red;
-            this.tanimlamalar.HoverState.FillColor2 = System.Drawing.Color.Red;
-            this.tanimlamalar.HoverState.Parent = this.tanimlamalar;
-            this.tanimlamalar.Location = new System.Drawing.Point(12, 304);
-            this.tanimlamalar.Name = "tanimlamalar";
-            this.tanimlamalar.ShadowDecoration.Parent = this.tanimlamalar;
-            this.tanimlamalar.Size = new System.Drawing.Size(180, 66);
-            this.tanimlamalar.TabIndex = 15;
-            this.tanimlamalar.Text = "Tanımlamalar";
-            this.tanimlamalar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.tanimlamalar.Visible = false;
-            this.tanimlamalar.Click += new System.EventHandler(this.tanimlamalar_Click);
-            // 
             // KullaniciGirisAnaPanel
             // 
             this.KullaniciGirisAnaPanel.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -682,18 +665,6 @@
             this.KullaniciGirisAnaPanel.Name = "KullaniciGirisAnaPanel";
             this.KullaniciGirisAnaPanel.Size = new System.Drawing.Size(1118, 668);
             this.KullaniciGirisAnaPanel.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::TedarikYonetimi.Properties.Resources.emperologo;
-            this.pictureBox1.Location = new System.Drawing.Point(22, 3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(143, 51);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // KullaniciAnaSayfa
             // 
@@ -711,8 +682,8 @@
             this.Load += new System.EventHandler(this.KullaniciAnaSayfa_Load);
             this.KullaniciGirisUstPanel.ResumeLayout(false);
             this.KullaniciGirisUstPanel.PerformLayout();
-            this.KullaniciGirisMenuPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.KullaniciGirisMenuPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -745,6 +716,5 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Label kullanicibilgisi;
         private Guna.UI2.WinForms.Guna2GradientTileButton tanimlamalar;
-        private Guna.UI2.WinForms.Guna2GradientTileButton kullanicilar;
     }
 }
