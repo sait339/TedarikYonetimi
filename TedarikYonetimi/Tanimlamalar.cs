@@ -252,8 +252,84 @@ namespace TedarikYonetimi
 
         private void kullaniciguncellebtn_Click(object sender, EventArgs e)
         {
-            eklegrup.Visible = false;
             guncellegrup.Visible = true;
+            eklegrup.Visible = false;
+        }
+
+        private void guncellebtn_Click(object sender, EventArgs e)
+        {
+            string sifree=sifre.Text;
+            SqlBaglanti.baglanti.Open();
+            SqlCommand yetkiliguncelleme = new SqlCommand("UPDATE kullanicilar SET kullanici_sifre=@sifre,kullanici_yetki=@yetki WHERE kullanici_adi=@ad", SqlBaglanti.baglanti);
+            yetkiliguncelleme.Parameters.AddWithValue("@sifre", sifree);
+            yetkiliguncelleme.Parameters.AddWithValue("@yetki", yetki);
+            yetkiliguncelleme.Parameters.AddWithValue("@ad", kullaniciadi.Text);
+            yetkiliguncelleme.ExecuteNonQuery();
+            SqlBaglanti.baglanti.Close();
+            kullanicitanimla.PerformClick();
+            HataEkranı hata = new HataEkranı();
+            HataEkranı.durum = "ONAY";
+            HataEkranı.baslik = "GÜNCELLEME BAŞARILI";
+            HataEkranı.text = "Güncelleme işlemi başarılı.";
+            hata.Show();
+            
+
+        }
+
+        private void kullaniciyetki_SelectedValueChanged(object sender, EventArgs e)
+        {
+            string secim = yetkicombobox.SelectedItem.ToString();
+            if (secim == "ADMİN")
+            {
+                yetki = "1";
+            }
+            else if (secim == "KULLANICI")
+            {
+                yetki = "2";
+            }
+            else if (secim == "MUHASEBE")
+            {
+                yetki = "3";
+            }
+            else
+            {
+                HataEkranı hata = new HataEkranı();
+                HataEkranı.durum = "HATA";
+                HataEkranı.baslik = "KAYIT TAMAMLANAMADI";
+                HataEkranı.text = "Yetki Seçimi Yapılmadı";
+                hata.Show();
+            }
+        }
+
+        private void kullanicilardtgvw_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                string ksifre, yetkidrum;
+                ksifre = sifre.Text;
+                if (eklegrup.Visible == false && guncellegrup.Visible == true)
+                {
+                    kullaniciadi.Text = kullanicilardtgvw.CurrentRow.Cells[1].Value.ToString();
+                    sifre.Text = kullanicilardtgvw.CurrentRow.Cells[2].Value.ToString();
+                    yetkidrum = kullanicilardtgvw.CurrentRow.Cells[3].Value.ToString();
+                    if (yetkidrum == "1")
+                    {
+                        kullaniciyetki.Text = "ADMİN";
+                    }
+                    else if (yetkidrum == "2")
+                    {
+                        kullaniciyetki.Text = "KULLANICI";
+                    }
+                    else if (yetkidrum == "3")
+                    {
+                        kullaniciyetki.Text = "MUHASEBE";
+                    }
+                }
+            }
+            catch
+            {
+
+            }
         }
     }
 }
