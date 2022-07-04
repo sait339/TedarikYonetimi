@@ -65,5 +65,77 @@ namespace TedarikYonetimi
                 Process.Start(Path.Combine(Application.StartupPath, "2022Sözleşmeler", firmaadi+"-"+sozlesmeadi));
             }
         }
+
+        private void firmaaramatextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (firmaaramatextbox.Text.Equals("Firma Adına Göre Ara"))
+            {
+                firmaaramatextbox.Clear();
+            }
+        }
+
+        private void firmaaramatextbox_Leave(object sender, EventArgs e)
+        {
+            if (firmaaramatextbox.Text.Equals(""))
+            {
+                firmaaramatextbox.Text = "Firma Adına Göre Ara";
+            }
+        }
+
+        private void sozlesmeadinagoreara_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (sozlesmeadinagoreara.Text.Equals("Sözleşme Adına Göre Ara"))
+            {
+                sozlesmeadinagoreara.Clear();
+            }
+        }
+
+        private void sozlesmeadinagoreara_Leave(object sender, EventArgs e)
+        {
+            if (sozlesmeadinagoreara.Text.Equals(""))
+            {
+                sozlesmeadinagoreara.Text = "Sözleşme Adına Göre Ara";
+            }
+        }
+
+        private void firmaaramatextbox_TextChanged(object sender, EventArgs e)
+        {
+            if (sozlesmeadinagoreara.Text != "Sözleşme Adına Göre Ara")
+            {
+                DataView dv = sozlesmeler.DefaultView;
+                dv.RowFilter = String.Format("FirmaAdı LIKE '%" + firmaaramatextbox.Text + "%' AND SözleşmeAdı LIKE '%" + sozlesmeadinagoreara.Text + "%'");
+                sozlesmelerdtgview.DataSource = dv;
+            }
+            else if (firmaaramatextbox.Text == "Firma Adına Göre Ara" && sozlesmeadinagoreara.Text == "Sözleşme Adına Göre Ara")
+            {
+                sozlesmelerdtgview.Refresh();
+            }
+            else
+            {
+                DataView dv = sozlesmeler.DefaultView;
+                dv.RowFilter = "SözleşmeAdı LIKE '%" + firmaaramatextbox.Text + "%'";
+                sozlesmelerdtgview.DataSource = dv;
+            }
+        }
+
+        private void sozlesmeadinagoreara_TextChanged(object sender, EventArgs e)
+        {
+            if (firmaaramatextbox.Text != "Firma Adına Göre Ara")
+            {
+                DataView dv = sozlesmeler.DefaultView;
+                dv.RowFilter = String.Format("SözleşmeAdı LIKE '%" + sozlesmeadinagoreara.Text + "%' AND FirmaAdı LIKE '%" + firmaaramatextbox.Text + "%'");
+                sozlesmelerdtgview.DataSource = dv;
+            }
+            else if (sozlesmeadinagoreara.Text == "Sözleşme Adına Göre Ara" && firmaaramatextbox.Text == "Firma Adına Göre Ara")
+            {
+                sozlesmelerdtgview.Refresh();
+            }
+            else
+            {
+                DataView dv = sozlesmeler.DefaultView;
+                dv.RowFilter = "SözleşmeAdı LIKE '%" + sozlesmeadinagoreara.Text + "%'";
+                sozlesmelerdtgview.DataSource = dv;
+            }
+        }
     }
 }

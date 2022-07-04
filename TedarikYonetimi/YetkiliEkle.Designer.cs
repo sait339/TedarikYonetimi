@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.sektorfiltercombo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.firmaaramatextbox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -116,6 +116,9 @@
             // 
             // firmalardtgview
             // 
+            this.firmalardtgview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.firmalardtgview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.firmalardtgview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.firmalardtgview.ColumnHeadersVisible = false;
@@ -125,14 +128,14 @@
             this.firmalardtgview.MultiSelect = false;
             this.firmalardtgview.Name = "firmalardtgview";
             this.firmalardtgview.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.firmalardtgview.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.firmalardtgview.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.firmalardtgview.RowHeadersVisible = false;
             this.firmalardtgview.RowTemplate.Height = 25;
             this.firmalardtgview.RowTemplate.ReadOnly = true;
@@ -143,6 +146,7 @@
             // 
             // firmasecbtn
             // 
+            this.firmasecbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.firmasecbtn.AutoRoundedCorners = true;
             this.firmasecbtn.BackColor = System.Drawing.Color.Transparent;
             this.firmasecbtn.BorderRadius = 18;
@@ -163,6 +167,7 @@
             // 
             // yetkilikaydetbuton
             // 
+            this.yetkilikaydetbuton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.yetkilikaydetbuton.AutoRoundedCorners = true;
             this.yetkilikaydetbuton.BackColor = System.Drawing.Color.Transparent;
             this.yetkilikaydetbuton.BorderRadius = 18;
@@ -194,6 +199,7 @@
             // 
             // firmasecimlabel
             // 
+            this.firmasecimlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.firmasecimlabel.AutoSize = true;
             this.firmasecimlabel.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.firmasecimlabel.Location = new System.Drawing.Point(25, 449);
@@ -204,6 +210,7 @@
             // 
             // adıtextbox
             // 
+            this.adıtextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.adıtextbox.AutoRoundedCorners = true;
             this.adıtextbox.BackColor = System.Drawing.Color.Transparent;
             this.adıtextbox.BorderColor = System.Drawing.Color.Red;
@@ -227,6 +234,7 @@
             this.adıtextbox.PasswordChar = '\0';
             this.adıtextbox.PlaceholderText = "";
             this.adıtextbox.SelectedText = "";
+            this.adıtextbox.SelectionStart = 4;
             this.adıtextbox.ShadowDecoration.Parent = this.adıtextbox;
             this.adıtextbox.Size = new System.Drawing.Size(428, 36);
             this.adıtextbox.TabIndex = 18;
@@ -236,6 +244,7 @@
             // 
             // telnotextbox
             // 
+            this.telnotextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.telnotextbox.AutoRoundedCorners = true;
             this.telnotextbox.BackColor = System.Drawing.Color.Transparent;
             this.telnotextbox.BorderColor = System.Drawing.Color.Red;
@@ -259,6 +268,7 @@
             this.telnotextbox.PasswordChar = '\0';
             this.telnotextbox.PlaceholderText = "";
             this.telnotextbox.SelectedText = "";
+            this.telnotextbox.SelectionStart = 17;
             this.telnotextbox.ShadowDecoration.Parent = this.telnotextbox;
             this.telnotextbox.Size = new System.Drawing.Size(428, 36);
             this.telnotextbox.TabIndex = 20;
@@ -268,6 +278,7 @@
             // 
             // pozisyontexbox
             // 
+            this.pozisyontexbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.pozisyontexbox.AutoRoundedCorners = true;
             this.pozisyontexbox.BackColor = System.Drawing.Color.Transparent;
             this.pozisyontexbox.BorderColor = System.Drawing.Color.Red;
@@ -291,6 +302,7 @@
             this.pozisyontexbox.PasswordChar = '\0';
             this.pozisyontexbox.PlaceholderText = "";
             this.pozisyontexbox.SelectedText = "";
+            this.pozisyontexbox.SelectionStart = 10;
             this.pozisyontexbox.ShadowDecoration.Parent = this.pozisyontexbox;
             this.pozisyontexbox.Size = new System.Drawing.Size(428, 36);
             this.pozisyontexbox.TabIndex = 22;
@@ -300,6 +312,7 @@
             // 
             // soyadıtextbox
             // 
+            this.soyadıtextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.soyadıtextbox.AutoRoundedCorners = true;
             this.soyadıtextbox.BackColor = System.Drawing.Color.Transparent;
             this.soyadıtextbox.BorderColor = System.Drawing.Color.Red;
@@ -323,6 +336,7 @@
             this.soyadıtextbox.PasswordChar = '\0';
             this.soyadıtextbox.PlaceholderText = "";
             this.soyadıtextbox.SelectedText = "";
+            this.soyadıtextbox.SelectionStart = 7;
             this.soyadıtextbox.ShadowDecoration.Parent = this.soyadıtextbox;
             this.soyadıtextbox.Size = new System.Drawing.Size(428, 36);
             this.soyadıtextbox.TabIndex = 19;
@@ -332,6 +346,7 @@
             // 
             // mailtextbox
             // 
+            this.mailtextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.mailtextbox.AutoRoundedCorners = true;
             this.mailtextbox.BackColor = System.Drawing.Color.Transparent;
             this.mailtextbox.BorderColor = System.Drawing.Color.Red;
@@ -355,6 +370,7 @@
             this.mailtextbox.PasswordChar = '\0';
             this.mailtextbox.PlaceholderText = "";
             this.mailtextbox.SelectedText = "";
+            this.mailtextbox.SelectionStart = 12;
             this.mailtextbox.ShadowDecoration.Parent = this.mailtextbox;
             this.mailtextbox.Size = new System.Drawing.Size(428, 36);
             this.mailtextbox.TabIndex = 21;

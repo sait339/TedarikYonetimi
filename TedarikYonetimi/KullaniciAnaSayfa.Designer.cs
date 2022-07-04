@@ -94,7 +94,6 @@
             // 
             // kullanicibilgisi
             // 
-            this.kullanicibilgisi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.kullanicibilgisi.AutoSize = true;
             this.kullanicibilgisi.BackColor = System.Drawing.Color.Transparent;
             this.kullanicibilgisi.Font = new System.Drawing.Font("Cambria", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -203,7 +202,7 @@
             this.tanimlamalar.Name = "tanimlamalar";
             this.tanimlamalar.ShadowDecoration.Parent = this.tanimlamalar;
             this.tanimlamalar.Size = new System.Drawing.Size(180, 66);
-            this.tanimlamalar.TabIndex = 15;
+            this.tanimlamalar.TabIndex = 3;
             this.tanimlamalar.Text = "Tanımlamalar";
             this.tanimlamalar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tanimlamalar.Visible = false;
@@ -230,7 +229,7 @@
             this.sozlesmeler.Name = "sozlesmeler";
             this.sozlesmeler.ShadowDecoration.Parent = this.sozlesmeler;
             this.sozlesmeler.Size = new System.Drawing.Size(180, 66);
-            this.sozlesmeler.TabIndex = 4;
+            this.sozlesmeler.TabIndex = 2;
             this.sozlesmeler.Text = "Sözleşmeler";
             this.sozlesmeler.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.sozlesmeler.Click += new System.EventHandler(this.sozlesmeler_Click);
@@ -283,7 +282,7 @@
             this.firmaislemleri.Name = "firmaislemleri";
             this.firmaislemleri.ShadowDecoration.Parent = this.firmaislemleri;
             this.firmaislemleri.Size = new System.Drawing.Size(180, 66);
-            this.firmaislemleri.TabIndex = 2;
+            this.firmaislemleri.TabIndex = 0;
             this.firmaislemleri.Text = "Firma İşlemleri";
             this.firmaislemleri.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.firmaislemleri.Click += new System.EventHandler(this.firmaislemleri_Click);
@@ -309,7 +308,7 @@
             this.yetkiliislemleri.Name = "yetkiliislemleri";
             this.yetkiliislemleri.ShadowDecoration.Parent = this.yetkiliislemleri;
             this.yetkiliislemleri.Size = new System.Drawing.Size(180, 66);
-            this.yetkiliislemleri.TabIndex = 3;
+            this.yetkiliislemleri.TabIndex = 1;
             this.yetkiliislemleri.Text = "Yetkili İşlemleri";
             this.yetkiliislemleri.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.yetkiliislemleri.Click += new System.EventHandler(this.yetkiliislemleri_Click);
@@ -361,7 +360,7 @@
             this.geridon.Name = "geridon";
             this.geridon.ShadowDecoration.Parent = this.geridon;
             this.geridon.Size = new System.Drawing.Size(180, 66);
-            this.geridon.TabIndex = 9;
+            this.geridon.TabIndex = 4;
             this.geridon.Text = "Geri Dön";
             this.geridon.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.geridon.Visible = false;
@@ -416,6 +415,7 @@
             this.guna2GradientTileButton1.Size = new System.Drawing.Size(180, 64);
             this.guna2GradientTileButton1.TabIndex = 0;
             this.guna2GradientTileButton1.Text = "Şifre Değiştir";
+            this.guna2GradientTileButton1.Click += new System.EventHandler(this.guna2GradientTileButton1_Click);
             // 
             // sozlesmesil
             // 
@@ -664,7 +664,7 @@
             this.KullaniciGirisAnaPanel.Location = new System.Drawing.Point(200, 60);
             this.KullaniciGirisAnaPanel.Name = "KullaniciGirisAnaPanel";
             this.KullaniciGirisAnaPanel.Size = new System.Drawing.Size(1118, 668);
-            this.KullaniciGirisAnaPanel.TabIndex = 3;
+            this.KullaniciGirisAnaPanel.TabIndex = 2;
             // 
             // KullaniciAnaSayfa
             // 

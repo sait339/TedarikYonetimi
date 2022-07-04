@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.firmalardtgview = new System.Windows.Forms.DataGridView();
             this.firmaaramatextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.sektorfiltercombo = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -45,6 +45,9 @@
             // 
             // firmalardtgview
             // 
+            this.firmalardtgview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.firmalardtgview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.firmalardtgview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.firmalardtgview.ColumnHeadersVisible = false;
@@ -54,14 +57,14 @@
             this.firmalardtgview.MultiSelect = false;
             this.firmalardtgview.Name = "firmalardtgview";
             this.firmalardtgview.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.firmalardtgview.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.firmalardtgview.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.firmalardtgview.RowHeadersVisible = false;
             this.firmalardtgview.RowTemplate.Height = 25;
             this.firmalardtgview.RowTemplate.ReadOnly = true;
@@ -131,6 +134,7 @@
             // 
             // sozlesmeyuklebuton
             // 
+            this.sozlesmeyuklebuton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.sozlesmeyuklebuton.AutoRoundedCorners = true;
             this.sozlesmeyuklebuton.BackColor = System.Drawing.Color.Transparent;
             this.sozlesmeyuklebuton.BorderRadius = 18;
@@ -151,6 +155,7 @@
             // 
             // dosyasecbuton
             // 
+            this.dosyasecbuton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.dosyasecbuton.AutoRoundedCorners = true;
             this.dosyasecbuton.BackColor = System.Drawing.Color.Transparent;
             this.dosyasecbuton.BorderRadius = 18;
@@ -191,6 +196,7 @@
             // 
             // firmasecbtn
             // 
+            this.firmasecbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.firmasecbtn.AutoRoundedCorners = true;
             this.firmasecbtn.BackColor = System.Drawing.Color.Transparent;
             this.firmasecbtn.BorderRadius = 18;
@@ -211,6 +217,7 @@
             // 
             // aciklamatextbox
             // 
+            this.aciklamatextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.aciklamatextbox.AutoRoundedCorners = true;
             this.aciklamatextbox.BackColor = System.Drawing.Color.Transparent;
             this.aciklamatextbox.BorderColor = System.Drawing.Color.Red;
@@ -243,6 +250,7 @@
             // 
             // firmasecimlabel
             // 
+            this.firmasecimlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.firmasecimlabel.AutoSize = true;
             this.firmasecimlabel.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.firmasecimlabel.Location = new System.Drawing.Point(28, 476);
@@ -253,6 +261,7 @@
             // 
             // dosyasecimlabel
             // 
+            this.dosyasecimlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dosyasecimlabel.AutoSize = true;
             this.dosyasecimlabel.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dosyasecimlabel.Location = new System.Drawing.Point(28, 528);

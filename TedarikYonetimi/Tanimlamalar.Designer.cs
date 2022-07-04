@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.sektortanimla = new Guna.UI2.WinForms.Guna2GradientButton();
             this.kullanicitanimla = new Guna.UI2.WinForms.Guna2GradientButton();
             this.sektorgrup = new System.Windows.Forms.GroupBox();
@@ -40,20 +40,25 @@
             this.sektoraditextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.sektorlerdtgview = new System.Windows.Forms.DataGridView();
             this.kullanicigrup = new System.Windows.Forms.GroupBox();
-            this.kullanicikaydetbtn = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.sifretextbox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.kullaniciaditextbox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.kullanicilardtgvw = new System.Windows.Forms.DataGridView();
-            this.yetkicombobox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.kullanicisilbtn = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.kullaniciguncellebtn = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.kullanicieklebtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.eklegrup = new System.Windows.Forms.GroupBox();
+            this.kullaniciaditextbox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.sifretextbox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.kullanicikaydetbtn = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.yetkicombobox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.kullanicieklebtn = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.kullaniciguncellebtn = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.kullanicilardtgvw = new System.Windows.Forms.DataGridView();
+            this.guncellegrup = new System.Windows.Forms.GroupBox();
+            this.kullanicitextbox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.sifre = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guncellebtn = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.yetkig = new Guna.UI2.WinForms.Guna2ComboBox();
             this.sektorgrup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sektorlerdtgview)).BeginInit();
             this.kullanicigrup.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kullanicilardtgvw)).BeginInit();
             this.eklegrup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kullanicilardtgvw)).BeginInit();
+            this.guncellegrup.SuspendLayout();
             this.SuspendLayout();
             // 
             // sektortanimla
@@ -201,14 +206,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sektorlerdtgview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.sektorlerdtgview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.sektorlerdtgview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.sektorlerdtgview.ColumnHeadersHeight = 30;
             this.sektorlerdtgview.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sektorlerdtgview.GridColor = System.Drawing.SystemColors.ControlLight;
@@ -216,14 +221,14 @@
             this.sektorlerdtgview.MultiSelect = false;
             this.sektorlerdtgview.Name = "sektorlerdtgview";
             this.sektorlerdtgview.ReadOnly = true;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.sektorlerdtgview.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.sektorlerdtgview.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.sektorlerdtgview.RowHeadersVisible = false;
             this.sektorlerdtgview.RowTemplate.Height = 25;
             this.sektorlerdtgview.RowTemplate.ReadOnly = true;
@@ -234,10 +239,10 @@
             // 
             // kullanicigrup
             // 
+            this.kullanicigrup.Controls.Add(this.guncellegrup);
             this.kullanicigrup.Controls.Add(this.eklegrup);
             this.kullanicigrup.Controls.Add(this.kullanicieklebtn);
             this.kullanicigrup.Controls.Add(this.kullaniciguncellebtn);
-            this.kullanicigrup.Controls.Add(this.kullanicisilbtn);
             this.kullanicigrup.Controls.Add(this.kullanicilardtgvw);
             this.kullanicigrup.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.kullanicigrup.Location = new System.Drawing.Point(26, 72);
@@ -248,56 +253,19 @@
             this.kullanicigrup.Text = "Kullanıcı Tanımlamaları";
             this.kullanicigrup.Visible = false;
             // 
-            // kullanicikaydetbtn
+            // eklegrup
             // 
-            this.kullanicikaydetbtn.AutoRoundedCorners = true;
-            this.kullanicikaydetbtn.BackColor = System.Drawing.Color.Transparent;
-            this.kullanicikaydetbtn.BorderRadius = 18;
-            this.kullanicikaydetbtn.CheckedState.Parent = this.kullanicikaydetbtn;
-            this.kullanicikaydetbtn.CustomImages.Parent = this.kullanicikaydetbtn;
-            this.kullanicikaydetbtn.FillColor = System.Drawing.Color.Maroon;
-            this.kullanicikaydetbtn.FillColor2 = System.Drawing.Color.Red;
-            this.kullanicikaydetbtn.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kullanicikaydetbtn.ForeColor = System.Drawing.Color.White;
-            this.kullanicikaydetbtn.HoverState.Parent = this.kullanicikaydetbtn;
-            this.kullanicikaydetbtn.Location = new System.Drawing.Point(24, 213);
-            this.kullanicikaydetbtn.Name = "kullanicikaydetbtn";
-            this.kullanicikaydetbtn.ShadowDecoration.Parent = this.kullanicikaydetbtn;
-            this.kullanicikaydetbtn.Size = new System.Drawing.Size(216, 38);
-            this.kullanicikaydetbtn.TabIndex = 22;
-            this.kullanicikaydetbtn.Text = "Kaydet";
-            this.kullanicikaydetbtn.Click += new System.EventHandler(this.kullanicikaydetbtn_Click);
-            // 
-            // sifretextbox
-            // 
-            this.sifretextbox.AutoRoundedCorners = true;
-            this.sifretextbox.BackColor = System.Drawing.Color.Transparent;
-            this.sifretextbox.BorderColor = System.Drawing.Color.Red;
-            this.sifretextbox.BorderRadius = 23;
-            this.sifretextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.sifretextbox.DefaultText = "Şifre";
-            this.sifretextbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.sifretextbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.sifretextbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.sifretextbox.DisabledState.Parent = this.sifretextbox;
-            this.sifretextbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.sifretextbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.sifretextbox.FocusedState.Parent = this.sifretextbox;
-            this.sifretextbox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sifretextbox.ForeColor = System.Drawing.Color.Black;
-            this.sifretextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.sifretextbox.HoverState.Parent = this.sifretextbox;
-            this.sifretextbox.Location = new System.Drawing.Point(24, 104);
-            this.sifretextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.sifretextbox.Name = "sifretextbox";
-            this.sifretextbox.PasswordChar = '\0';
-            this.sifretextbox.PlaceholderText = "";
-            this.sifretextbox.SelectedText = "";
-            this.sifretextbox.ShadowDecoration.Parent = this.sifretextbox;
-            this.sifretextbox.Size = new System.Drawing.Size(343, 49);
-            this.sifretextbox.TabIndex = 21;
-            this.sifretextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sifretextbox_KeyPress);
-            this.sifretextbox.Leave += new System.EventHandler(this.sifretextbox_Leave);
+            this.eklegrup.Controls.Add(this.kullaniciaditextbox);
+            this.eklegrup.Controls.Add(this.sifretextbox);
+            this.eklegrup.Controls.Add(this.kullanicikaydetbtn);
+            this.eklegrup.Controls.Add(this.yetkicombobox);
+            this.eklegrup.Location = new System.Drawing.Point(25, 234);
+            this.eklegrup.Name = "eklegrup";
+            this.eklegrup.Size = new System.Drawing.Size(462, 294);
+            this.eklegrup.TabIndex = 27;
+            this.eklegrup.TabStop = false;
+            this.eklegrup.Text = "Kullanıcı Ekleme";
+            this.eklegrup.Visible = false;
             // 
             // kullaniciaditextbox
             // 
@@ -324,48 +292,64 @@
             this.kullaniciaditextbox.PasswordChar = '\0';
             this.kullaniciaditextbox.PlaceholderText = "";
             this.kullaniciaditextbox.SelectedText = "";
+            this.kullaniciaditextbox.SelectionStart = 13;
             this.kullaniciaditextbox.ShadowDecoration.Parent = this.kullaniciaditextbox;
             this.kullaniciaditextbox.Size = new System.Drawing.Size(343, 49);
             this.kullaniciaditextbox.TabIndex = 20;
             this.kullaniciaditextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kullaniciaditextbox_KeyPress);
             this.kullaniciaditextbox.Leave += new System.EventHandler(this.kullaniciaditextbox_Leave);
             // 
-            // kullanicilardtgvw
+            // sifretextbox
             // 
-            this.kullanicilardtgvw.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.kullanicilardtgvw.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.kullanicilardtgvw.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
-            this.kullanicilardtgvw.ColumnHeadersHeight = 30;
-            this.kullanicilardtgvw.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kullanicilardtgvw.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.kullanicilardtgvw.Location = new System.Drawing.Point(535, 28);
-            this.kullanicilardtgvw.MultiSelect = false;
-            this.kullanicilardtgvw.Name = "kullanicilardtgvw";
-            this.kullanicilardtgvw.ReadOnly = true;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.kullanicilardtgvw.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
-            this.kullanicilardtgvw.RowHeadersVisible = false;
-            this.kullanicilardtgvw.RowTemplate.Height = 25;
-            this.kullanicilardtgvw.RowTemplate.ReadOnly = true;
-            this.kullanicilardtgvw.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.kullanicilardtgvw.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.kullanicilardtgvw.Size = new System.Drawing.Size(512, 513);
-            this.kullanicilardtgvw.TabIndex = 19;
+            this.sifretextbox.AutoRoundedCorners = true;
+            this.sifretextbox.BackColor = System.Drawing.Color.Transparent;
+            this.sifretextbox.BorderColor = System.Drawing.Color.Red;
+            this.sifretextbox.BorderRadius = 23;
+            this.sifretextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.sifretextbox.DefaultText = "Şifre";
+            this.sifretextbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.sifretextbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.sifretextbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.sifretextbox.DisabledState.Parent = this.sifretextbox;
+            this.sifretextbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.sifretextbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.sifretextbox.FocusedState.Parent = this.sifretextbox;
+            this.sifretextbox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sifretextbox.ForeColor = System.Drawing.Color.Black;
+            this.sifretextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.sifretextbox.HoverState.Parent = this.sifretextbox;
+            this.sifretextbox.Location = new System.Drawing.Point(24, 104);
+            this.sifretextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sifretextbox.Name = "sifretextbox";
+            this.sifretextbox.PasswordChar = '\0';
+            this.sifretextbox.PlaceholderText = "";
+            this.sifretextbox.SelectedText = "";
+            this.sifretextbox.SelectionStart = 5;
+            this.sifretextbox.ShadowDecoration.Parent = this.sifretextbox;
+            this.sifretextbox.Size = new System.Drawing.Size(343, 49);
+            this.sifretextbox.TabIndex = 21;
+            this.sifretextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sifretextbox_KeyPress);
+            this.sifretextbox.Leave += new System.EventHandler(this.sifretextbox_Leave);
+            // 
+            // kullanicikaydetbtn
+            // 
+            this.kullanicikaydetbtn.AutoRoundedCorners = true;
+            this.kullanicikaydetbtn.BackColor = System.Drawing.Color.Transparent;
+            this.kullanicikaydetbtn.BorderRadius = 18;
+            this.kullanicikaydetbtn.CheckedState.Parent = this.kullanicikaydetbtn;
+            this.kullanicikaydetbtn.CustomImages.Parent = this.kullanicikaydetbtn;
+            this.kullanicikaydetbtn.FillColor = System.Drawing.Color.Maroon;
+            this.kullanicikaydetbtn.FillColor2 = System.Drawing.Color.Red;
+            this.kullanicikaydetbtn.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kullanicikaydetbtn.ForeColor = System.Drawing.Color.White;
+            this.kullanicikaydetbtn.HoverState.Parent = this.kullanicikaydetbtn;
+            this.kullanicikaydetbtn.Location = new System.Drawing.Point(24, 213);
+            this.kullanicikaydetbtn.Name = "kullanicikaydetbtn";
+            this.kullanicikaydetbtn.ShadowDecoration.Parent = this.kullanicikaydetbtn;
+            this.kullanicikaydetbtn.Size = new System.Drawing.Size(216, 38);
+            this.kullanicikaydetbtn.TabIndex = 22;
+            this.kullanicikaydetbtn.Text = "Kaydet";
+            this.kullanicikaydetbtn.Click += new System.EventHandler(this.kullanicikaydetbtn_Click);
             // 
             // yetkicombobox
             // 
@@ -396,24 +380,25 @@
             this.yetkicombobox.TabIndex = 23;
             this.yetkicombobox.SelectedValueChanged += new System.EventHandler(this.yetkicombobox_SelectedValueChanged);
             // 
-            // kullanicisilbtn
+            // kullanicieklebtn
             // 
-            this.kullanicisilbtn.AutoRoundedCorners = true;
-            this.kullanicisilbtn.BackColor = System.Drawing.Color.Transparent;
-            this.kullanicisilbtn.BorderRadius = 18;
-            this.kullanicisilbtn.CheckedState.Parent = this.kullanicisilbtn;
-            this.kullanicisilbtn.CustomImages.Parent = this.kullanicisilbtn;
-            this.kullanicisilbtn.FillColor = System.Drawing.Color.Maroon;
-            this.kullanicisilbtn.FillColor2 = System.Drawing.Color.Red;
-            this.kullanicisilbtn.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kullanicisilbtn.ForeColor = System.Drawing.Color.White;
-            this.kullanicisilbtn.HoverState.Parent = this.kullanicisilbtn;
-            this.kullanicisilbtn.Location = new System.Drawing.Point(25, 159);
-            this.kullanicisilbtn.Name = "kullanicisilbtn";
-            this.kullanicisilbtn.ShadowDecoration.Parent = this.kullanicisilbtn;
-            this.kullanicisilbtn.Size = new System.Drawing.Size(216, 38);
-            this.kullanicisilbtn.TabIndex = 24;
-            this.kullanicisilbtn.Text = "Kullanıcı Sil";
+            this.kullanicieklebtn.AutoRoundedCorners = true;
+            this.kullanicieklebtn.BackColor = System.Drawing.Color.Transparent;
+            this.kullanicieklebtn.BorderRadius = 18;
+            this.kullanicieklebtn.CheckedState.Parent = this.kullanicieklebtn;
+            this.kullanicieklebtn.CustomImages.Parent = this.kullanicieklebtn;
+            this.kullanicieklebtn.FillColor = System.Drawing.Color.Maroon;
+            this.kullanicieklebtn.FillColor2 = System.Drawing.Color.Red;
+            this.kullanicieklebtn.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kullanicieklebtn.ForeColor = System.Drawing.Color.White;
+            this.kullanicieklebtn.HoverState.Parent = this.kullanicieklebtn;
+            this.kullanicieklebtn.Location = new System.Drawing.Point(25, 73);
+            this.kullanicieklebtn.Name = "kullanicieklebtn";
+            this.kullanicieklebtn.ShadowDecoration.Parent = this.kullanicieklebtn;
+            this.kullanicieklebtn.Size = new System.Drawing.Size(216, 38);
+            this.kullanicieklebtn.TabIndex = 26;
+            this.kullanicieklebtn.Text = "Kullanıcı Ekle";
+            this.kullanicieklebtn.Click += new System.EventHandler(this.kullanicieklebtn_Click);
             // 
             // kullaniciguncellebtn
             // 
@@ -427,46 +412,172 @@
             this.kullaniciguncellebtn.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.kullaniciguncellebtn.ForeColor = System.Drawing.Color.White;
             this.kullaniciguncellebtn.HoverState.Parent = this.kullaniciguncellebtn;
-            this.kullaniciguncellebtn.Location = new System.Drawing.Point(25, 103);
+            this.kullaniciguncellebtn.Location = new System.Drawing.Point(25, 130);
             this.kullaniciguncellebtn.Name = "kullaniciguncellebtn";
             this.kullaniciguncellebtn.ShadowDecoration.Parent = this.kullaniciguncellebtn;
             this.kullaniciguncellebtn.Size = new System.Drawing.Size(216, 38);
             this.kullaniciguncellebtn.TabIndex = 25;
             this.kullaniciguncellebtn.Text = "Kullanıcı Güncelle";
+            this.kullaniciguncellebtn.Click += new System.EventHandler(this.kullaniciguncellebtn_Click);
             // 
-            // kullanicieklebtn
+            // kullanicilardtgvw
             // 
-            this.kullanicieklebtn.AutoRoundedCorners = true;
-            this.kullanicieklebtn.BackColor = System.Drawing.Color.Transparent;
-            this.kullanicieklebtn.BorderRadius = 18;
-            this.kullanicieklebtn.CheckedState.Parent = this.kullanicieklebtn;
-            this.kullanicieklebtn.CustomImages.Parent = this.kullanicieklebtn;
-            this.kullanicieklebtn.FillColor = System.Drawing.Color.Maroon;
-            this.kullanicieklebtn.FillColor2 = System.Drawing.Color.Red;
-            this.kullanicieklebtn.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.kullanicieklebtn.ForeColor = System.Drawing.Color.White;
-            this.kullanicieklebtn.HoverState.Parent = this.kullanicieklebtn;
-            this.kullanicieklebtn.Location = new System.Drawing.Point(25, 45);
-            this.kullanicieklebtn.Name = "kullanicieklebtn";
-            this.kullanicieklebtn.ShadowDecoration.Parent = this.kullanicieklebtn;
-            this.kullanicieklebtn.Size = new System.Drawing.Size(216, 38);
-            this.kullanicieklebtn.TabIndex = 26;
-            this.kullanicieklebtn.Text = "Kullanıcı Ekle";
-            this.kullanicieklebtn.Click += new System.EventHandler(this.kullanicieklebtn_Click);
+            this.kullanicilardtgvw.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.kullanicilardtgvw.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kullanicilardtgvw.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.kullanicilardtgvw.ColumnHeadersHeight = 30;
+            this.kullanicilardtgvw.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kullanicilardtgvw.GridColor = System.Drawing.SystemColors.ControlLight;
+            this.kullanicilardtgvw.Location = new System.Drawing.Point(535, 28);
+            this.kullanicilardtgvw.MultiSelect = false;
+            this.kullanicilardtgvw.Name = "kullanicilardtgvw";
+            this.kullanicilardtgvw.ReadOnly = true;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kullanicilardtgvw.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.kullanicilardtgvw.RowHeadersVisible = false;
+            this.kullanicilardtgvw.RowTemplate.Height = 25;
+            this.kullanicilardtgvw.RowTemplate.ReadOnly = true;
+            this.kullanicilardtgvw.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.kullanicilardtgvw.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.kullanicilardtgvw.Size = new System.Drawing.Size(512, 513);
+            this.kullanicilardtgvw.TabIndex = 19;
             // 
-            // eklegrup
+            // guncellegrup
             // 
-            this.eklegrup.Controls.Add(this.kullaniciaditextbox);
-            this.eklegrup.Controls.Add(this.sifretextbox);
-            this.eklegrup.Controls.Add(this.kullanicikaydetbtn);
-            this.eklegrup.Controls.Add(this.yetkicombobox);
-            this.eklegrup.Location = new System.Drawing.Point(25, 234);
-            this.eklegrup.Name = "eklegrup";
-            this.eklegrup.Size = new System.Drawing.Size(462, 294);
-            this.eklegrup.TabIndex = 27;
-            this.eklegrup.TabStop = false;
-            this.eklegrup.Text = "Kullanıcı Ekleme";
-            this.eklegrup.Visible = false;
+            this.guncellegrup.Controls.Add(this.kullanicitextbox);
+            this.guncellegrup.Controls.Add(this.sifre);
+            this.guncellegrup.Controls.Add(this.guncellebtn);
+            this.guncellegrup.Controls.Add(this.yetkig);
+            this.guncellegrup.Location = new System.Drawing.Point(25, 234);
+            this.guncellegrup.Name = "guncellegrup";
+            this.guncellegrup.Size = new System.Drawing.Size(462, 294);
+            this.guncellegrup.TabIndex = 28;
+            this.guncellegrup.TabStop = false;
+            this.guncellegrup.Text = "Kullanıcı Güncelleme";
+            this.guncellegrup.Visible = false;
+            // 
+            // kullanicitextbox
+            // 
+            this.kullanicitextbox.AutoRoundedCorners = true;
+            this.kullanicitextbox.BackColor = System.Drawing.Color.Transparent;
+            this.kullanicitextbox.BorderColor = System.Drawing.Color.Red;
+            this.kullanicitextbox.BorderRadius = 23;
+            this.kullanicitextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.kullanicitextbox.DefaultText = "Kullanıcı Adı";
+            this.kullanicitextbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.kullanicitextbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.kullanicitextbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.kullanicitextbox.DisabledState.Parent = this.kullanicitextbox;
+            this.kullanicitextbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.kullanicitextbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.kullanicitextbox.FocusedState.Parent = this.kullanicitextbox;
+            this.kullanicitextbox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kullanicitextbox.ForeColor = System.Drawing.Color.Black;
+            this.kullanicitextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.kullanicitextbox.HoverState.Parent = this.kullanicitextbox;
+            this.kullanicitextbox.Location = new System.Drawing.Point(24, 47);
+            this.kullanicitextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kullanicitextbox.Name = "kullanicitextbox";
+            this.kullanicitextbox.PasswordChar = '\0';
+            this.kullanicitextbox.PlaceholderText = "";
+            this.kullanicitextbox.ReadOnly = true;
+            this.kullanicitextbox.SelectedText = "";
+            this.kullanicitextbox.SelectionStart = 13;
+            this.kullanicitextbox.ShadowDecoration.Parent = this.kullanicitextbox;
+            this.kullanicitextbox.Size = new System.Drawing.Size(343, 49);
+            this.kullanicitextbox.TabIndex = 20;
+            // 
+            // sifre
+            // 
+            this.sifre.AutoRoundedCorners = true;
+            this.sifre.BackColor = System.Drawing.Color.Transparent;
+            this.sifre.BorderColor = System.Drawing.Color.Red;
+            this.sifre.BorderRadius = 23;
+            this.sifre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.sifre.DefaultText = "Şifre";
+            this.sifre.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.sifre.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.sifre.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.sifre.DisabledState.Parent = this.sifre;
+            this.sifre.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.sifre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.sifre.FocusedState.Parent = this.sifre;
+            this.sifre.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sifre.ForeColor = System.Drawing.Color.Black;
+            this.sifre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.sifre.HoverState.Parent = this.sifre;
+            this.sifre.Location = new System.Drawing.Point(24, 104);
+            this.sifre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sifre.Name = "sifre";
+            this.sifre.PasswordChar = '\0';
+            this.sifre.PlaceholderText = "";
+            this.sifre.SelectedText = "";
+            this.sifre.SelectionStart = 5;
+            this.sifre.ShadowDecoration.Parent = this.sifre;
+            this.sifre.Size = new System.Drawing.Size(343, 49);
+            this.sifre.TabIndex = 21;
+            // 
+            // guncellebtn
+            // 
+            this.guncellebtn.AutoRoundedCorners = true;
+            this.guncellebtn.BackColor = System.Drawing.Color.Transparent;
+            this.guncellebtn.BorderRadius = 18;
+            this.guncellebtn.CheckedState.Parent = this.guncellebtn;
+            this.guncellebtn.CustomImages.Parent = this.guncellebtn;
+            this.guncellebtn.FillColor = System.Drawing.Color.Maroon;
+            this.guncellebtn.FillColor2 = System.Drawing.Color.Red;
+            this.guncellebtn.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.guncellebtn.ForeColor = System.Drawing.Color.White;
+            this.guncellebtn.HoverState.Parent = this.guncellebtn;
+            this.guncellebtn.Location = new System.Drawing.Point(24, 213);
+            this.guncellebtn.Name = "guncellebtn";
+            this.guncellebtn.ShadowDecoration.Parent = this.guncellebtn;
+            this.guncellebtn.Size = new System.Drawing.Size(216, 38);
+            this.guncellebtn.TabIndex = 22;
+            this.guncellebtn.Text = "Güncelle";
+            // 
+            // yetkig
+            // 
+            this.yetkig.AutoRoundedCorners = true;
+            this.yetkig.BackColor = System.Drawing.Color.Transparent;
+            this.yetkig.BorderColor = System.Drawing.Color.Red;
+            this.yetkig.BorderRadius = 17;
+            this.yetkig.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.yetkig.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.yetkig.FocusedColor = System.Drawing.Color.Empty;
+            this.yetkig.FocusedState.Parent = this.yetkig;
+            this.yetkig.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.yetkig.ForeColor = System.Drawing.Color.Black;
+            this.yetkig.FormattingEnabled = true;
+            this.yetkig.HoverState.Parent = this.yetkig;
+            this.yetkig.ItemHeight = 30;
+            this.yetkig.Items.AddRange(new object[] {
+            "*Yetki Seçiniz",
+            "ADMİN",
+            "KULLANICI",
+            "MUHASEBE"});
+            this.yetkig.ItemsAppearance.Parent = this.yetkig;
+            this.yetkig.Location = new System.Drawing.Point(24, 162);
+            this.yetkig.Name = "yetkig";
+            this.yetkig.ShadowDecoration.Parent = this.yetkig;
+            this.yetkig.Size = new System.Drawing.Size(343, 36);
+            this.yetkig.StartIndex = 0;
+            this.yetkig.TabIndex = 23;
             // 
             // Tanimlamalar
             // 
@@ -484,8 +595,9 @@
             this.sektorgrup.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sektorlerdtgview)).EndInit();
             this.kullanicigrup.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kullanicilardtgvw)).EndInit();
             this.eklegrup.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kullanicilardtgvw)).EndInit();
+            this.guncellegrup.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -508,6 +620,10 @@
         public Guna.UI2.WinForms.Guna2ComboBox yetkicombobox;
         private Guna.UI2.WinForms.Guna2GradientButton kullanicieklebtn;
         private Guna.UI2.WinForms.Guna2GradientButton kullaniciguncellebtn;
-        private Guna.UI2.WinForms.Guna2GradientButton kullanicisilbtn;
+        private System.Windows.Forms.GroupBox guncellegrup;
+        private Guna.UI2.WinForms.Guna2TextBox kullanicitextbox;
+        private Guna.UI2.WinForms.Guna2TextBox sifre;
+        private Guna.UI2.WinForms.Guna2GradientButton guncellebtn;
+        public Guna.UI2.WinForms.Guna2ComboBox yetkig;
     }
 }

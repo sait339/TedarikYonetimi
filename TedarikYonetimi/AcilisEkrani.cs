@@ -37,7 +37,7 @@ namespace TedarikYonetimi
             gelenVers = versionread.ReadLine().ToString();
 
 
-            if (gelenVers.Equals(lastVers))
+            if (Convert.ToDouble(gelenVers)<=Convert.ToDouble(lastVers))
             {
                 return false;
             }
@@ -77,6 +77,11 @@ namespace TedarikYonetimi
                 f.Show();
             }
             
+        }
+
+        private void AcilisEkrani_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

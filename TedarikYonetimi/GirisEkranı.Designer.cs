@@ -38,10 +38,10 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.GirisAnaPanel = new System.Windows.Forms.Panel();
             this.GirisEkrani = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.benihatirla = new System.Windows.Forms.CheckBox();
             this.girisyapbuton = new Guna.UI2.WinForms.Guna2GradientButton();
             this.sifre = new Guna.UI2.WinForms.Guna2TextBox();
             this.kullaniciadi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.benihatirla = new System.Windows.Forms.CheckBox();
             this.GirisUstPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GirisAnaPanel.SuspendLayout();
@@ -68,7 +68,7 @@
             this.GirisUstPanel.Name = "GirisUstPanel";
             this.GirisUstPanel.ShadowDecoration.Parent = this.GirisUstPanel;
             this.GirisUstPanel.Size = new System.Drawing.Size(725, 60);
-            this.GirisUstPanel.TabIndex = 0;
+            this.GirisUstPanel.TabIndex = 2;
             this.GirisUstPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.GirisUstPanel_MouseDown);
             // 
             // pictureBox1
@@ -168,6 +168,17 @@
             this.GirisEkrani.Text = "Kullanıcı Giriş Ekranı";
             this.GirisEkrani.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // benihatirla
+            // 
+            this.benihatirla.AutoSize = true;
+            this.benihatirla.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.benihatirla.Location = new System.Drawing.Point(70, 147);
+            this.benihatirla.Name = "benihatirla";
+            this.benihatirla.Size = new System.Drawing.Size(105, 23);
+            this.benihatirla.TabIndex = 2;
+            this.benihatirla.Text = "Beni Hatırla";
+            this.benihatirla.UseVisualStyleBackColor = true;
+            // 
             // girisyapbuton
             // 
             this.girisyapbuton.AutoRoundedCorners = true;
@@ -257,17 +268,6 @@
             this.kullaniciadi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.kullaniciadi_KeyDown);
             this.kullaniciadi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.kullaniciadi_KeyPress);
             this.kullaniciadi.Leave += new System.EventHandler(this.kullaniciadi_Leave);
-            // 
-            // benihatirla
-            // 
-            this.benihatirla.AutoSize = true;
-            this.benihatirla.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.benihatirla.Location = new System.Drawing.Point(70, 147);
-            this.benihatirla.Name = "benihatirla";
-            this.benihatirla.Size = new System.Drawing.Size(105, 23);
-            this.benihatirla.TabIndex = 2;
-            this.benihatirla.Text = "Beni Hatırla";
-            this.benihatirla.UseVisualStyleBackColor = true;
             // 
             // GirisEkranı
             // 

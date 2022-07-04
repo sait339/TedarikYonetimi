@@ -214,7 +214,7 @@ namespace TedarikYonetimi
                             if(File.Exists(tasimayolu) == false)
                             {
                                 Directory.CreateDirectory(tasimayolu);
-                                File.Move(Application.StartupPath + "\\Kartvizitler\\" + kartvizitADI, tasimayolu);
+                                File.Move(Application.StartupPath + "\\Kartvizitler\\" + kartvizitADI, tasimayolu+"\\"+ kartvizitADI);
                             }
                         }
                         SqlBaglanti.baglanti.Close();

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.yetkiliadinagorearatextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.firmaadinagorearatextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.yetkililerdtgview = new System.Windows.Forms.DataGridView();
@@ -46,8 +46,6 @@
             // 
             // yetkiliadinagorearatextbox
             // 
-            this.yetkiliadinagorearatextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.yetkiliadinagorearatextbox.AutoRoundedCorners = true;
             this.yetkiliadinagorearatextbox.BackColor = System.Drawing.Color.Transparent;
             this.yetkiliadinagorearatextbox.BorderColor = System.Drawing.Color.Red;
@@ -71,6 +69,7 @@
             this.yetkiliadinagorearatextbox.PasswordChar = '\0';
             this.yetkiliadinagorearatextbox.PlaceholderText = "";
             this.yetkiliadinagorearatextbox.SelectedText = "";
+            this.yetkiliadinagorearatextbox.SelectionStart = 22;
             this.yetkiliadinagorearatextbox.ShadowDecoration.Parent = this.yetkiliadinagorearatextbox;
             this.yetkiliadinagorearatextbox.Size = new System.Drawing.Size(492, 36);
             this.yetkiliadinagorearatextbox.TabIndex = 26;
@@ -80,8 +79,6 @@
             // 
             // firmaadinagorearatextbox
             // 
-            this.firmaadinagorearatextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.firmaadinagorearatextbox.AutoRoundedCorners = true;
             this.firmaadinagorearatextbox.BackColor = System.Drawing.Color.Transparent;
             this.firmaadinagorearatextbox.BorderColor = System.Drawing.Color.Red;
@@ -119,14 +116,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.yetkililerdtgview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.yetkililerdtgview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.yetkililerdtgview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.yetkililerdtgview.ColumnHeadersHeight = 30;
             this.yetkililerdtgview.Cursor = System.Windows.Forms.Cursors.Hand;
             this.yetkililerdtgview.GridColor = System.Drawing.SystemColors.ControlLight;
@@ -134,14 +131,14 @@
             this.yetkililerdtgview.MultiSelect = false;
             this.yetkililerdtgview.Name = "yetkililerdtgview";
             this.yetkililerdtgview.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.yetkililerdtgview.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.yetkililerdtgview.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.yetkililerdtgview.RowHeadersVisible = false;
             this.yetkililerdtgview.RowTemplate.Height = 25;
             this.yetkililerdtgview.RowTemplate.ReadOnly = true;
@@ -152,6 +149,7 @@
             // 
             // yetkilisecbtn
             // 
+            this.yetkilisecbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.yetkilisecbtn.AutoRoundedCorners = true;
             this.yetkilisecbtn.BackColor = System.Drawing.Color.Transparent;
             this.yetkilisecbtn.BorderRadius = 18;
@@ -172,6 +170,7 @@
             // 
             // yetkilisecimlabel
             // 
+            this.yetkilisecimlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.yetkilisecimlabel.AutoSize = true;
             this.yetkilisecimlabel.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.yetkilisecimlabel.Location = new System.Drawing.Point(12, 324);
@@ -182,6 +181,7 @@
             // 
             // aditextbox
             // 
+            this.aditextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.aditextbox.AutoRoundedCorners = true;
             this.aditextbox.BackColor = System.Drawing.Color.Transparent;
             this.aditextbox.BorderColor = System.Drawing.Color.Red;
@@ -205,6 +205,7 @@
             this.aditextbox.PasswordChar = '\0';
             this.aditextbox.PlaceholderText = "";
             this.aditextbox.SelectedText = "";
+            this.aditextbox.SelectionStart = 3;
             this.aditextbox.ShadowDecoration.Parent = this.aditextbox;
             this.aditextbox.Size = new System.Drawing.Size(565, 49);
             this.aditextbox.TabIndex = 29;
@@ -212,6 +213,7 @@
             // 
             // soyaditextbox
             // 
+            this.soyaditextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.soyaditextbox.AutoRoundedCorners = true;
             this.soyaditextbox.BackColor = System.Drawing.Color.Transparent;
             this.soyaditextbox.BorderColor = System.Drawing.Color.Red;
@@ -235,6 +237,7 @@
             this.soyaditextbox.PasswordChar = '\0';
             this.soyaditextbox.PlaceholderText = "";
             this.soyaditextbox.SelectedText = "";
+            this.soyaditextbox.SelectionStart = 6;
             this.soyaditextbox.ShadowDecoration.Parent = this.soyaditextbox;
             this.soyaditextbox.Size = new System.Drawing.Size(565, 49);
             this.soyaditextbox.TabIndex = 30;
@@ -242,6 +245,7 @@
             // 
             // calismapozisyontextbox
             // 
+            this.calismapozisyontextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.calismapozisyontextbox.AutoRoundedCorners = true;
             this.calismapozisyontextbox.BackColor = System.Drawing.Color.Transparent;
             this.calismapozisyontextbox.BorderColor = System.Drawing.Color.Red;
@@ -265,6 +269,7 @@
             this.calismapozisyontextbox.PasswordChar = '\0';
             this.calismapozisyontextbox.PlaceholderText = "";
             this.calismapozisyontextbox.SelectedText = "";
+            this.calismapozisyontextbox.SelectionStart = 17;
             this.calismapozisyontextbox.ShadowDecoration.Parent = this.calismapozisyontextbox;
             this.calismapozisyontextbox.Size = new System.Drawing.Size(565, 49);
             this.calismapozisyontextbox.TabIndex = 31;
@@ -272,6 +277,7 @@
             // 
             // iletisimtextbox
             // 
+            this.iletisimtextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.iletisimtextbox.AutoRoundedCorners = true;
             this.iletisimtextbox.BackColor = System.Drawing.Color.Transparent;
             this.iletisimtextbox.BorderColor = System.Drawing.Color.Red;
@@ -295,6 +301,7 @@
             this.iletisimtextbox.PasswordChar = '\0';
             this.iletisimtextbox.PlaceholderText = "";
             this.iletisimtextbox.SelectedText = "";
+            this.iletisimtextbox.SelectionStart = 17;
             this.iletisimtextbox.ShadowDecoration.Parent = this.iletisimtextbox;
             this.iletisimtextbox.Size = new System.Drawing.Size(565, 49);
             this.iletisimtextbox.TabIndex = 32;
@@ -302,6 +309,7 @@
             // 
             // mailtextbox
             // 
+            this.mailtextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.mailtextbox.AutoRoundedCorners = true;
             this.mailtextbox.BackColor = System.Drawing.Color.Transparent;
             this.mailtextbox.BorderColor = System.Drawing.Color.Red;
@@ -325,6 +333,7 @@
             this.mailtextbox.PasswordChar = '\0';
             this.mailtextbox.PlaceholderText = "";
             this.mailtextbox.SelectedText = "";
+            this.mailtextbox.SelectionStart = 11;
             this.mailtextbox.ShadowDecoration.Parent = this.mailtextbox;
             this.mailtextbox.Size = new System.Drawing.Size(565, 49);
             this.mailtextbox.TabIndex = 33;
@@ -332,6 +341,7 @@
             // 
             // bilgileriguncellebuton
             // 
+            this.bilgileriguncellebuton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bilgileriguncellebuton.AutoRoundedCorners = true;
             this.bilgileriguncellebuton.BackColor = System.Drawing.Color.Transparent;
             this.bilgileriguncellebuton.BorderRadius = 18;

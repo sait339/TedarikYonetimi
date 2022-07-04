@@ -51,6 +51,7 @@
             // 
             // firmasecimlabel
             // 
+            this.firmasecimlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.firmasecimlabel.AutoSize = true;
             this.firmasecimlabel.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.firmasecimlabel.Location = new System.Drawing.Point(12, 296);
@@ -61,6 +62,7 @@
             // 
             // firmasecbtn
             // 
+            this.firmasecbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.firmasecbtn.AutoRoundedCorners = true;
             this.firmasecbtn.BackColor = System.Drawing.Color.Transparent;
             this.firmasecbtn.BorderRadius = 18;
@@ -160,6 +162,9 @@
             // 
             // firmalardtgview
             // 
+            this.firmalardtgview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.firmalardtgview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.firmalardtgview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.firmalardtgview.ColumnHeadersVisible = false;
@@ -187,6 +192,8 @@
             // 
             // iletisimtexbox
             // 
+            this.iletisimtexbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.iletisimtexbox.AutoRoundedCorners = true;
             this.iletisimtexbox.BackColor = System.Drawing.Color.Transparent;
             this.iletisimtexbox.BorderColor = System.Drawing.Color.Red;
@@ -218,6 +225,8 @@
             // 
             // mailtextbox
             // 
+            this.mailtextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.mailtextbox.AutoRoundedCorners = true;
             this.mailtextbox.BackColor = System.Drawing.Color.Transparent;
             this.mailtextbox.BorderColor = System.Drawing.Color.Red;
@@ -249,6 +258,8 @@
             // 
             // websitesitextbox
             // 
+            this.websitesitextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.websitesitextbox.AutoRoundedCorners = true;
             this.websitesitextbox.BackColor = System.Drawing.Color.Transparent;
             this.websitesitextbox.BorderColor = System.Drawing.Color.Red;
@@ -280,6 +291,7 @@
             // 
             // calismaseklicombobox
             // 
+            this.calismaseklicombobox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.calismaseklicombobox.AutoRoundedCorners = true;
             this.calismaseklicombobox.BackColor = System.Drawing.Color.Transparent;
             this.calismaseklicombobox.BorderColor = System.Drawing.Color.Red;
@@ -309,6 +321,7 @@
             // 
             // odemeseklicombobox
             // 
+            this.odemeseklicombobox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.odemeseklicombobox.AutoRoundedCorners = true;
             this.odemeseklicombobox.BackColor = System.Drawing.Color.Transparent;
             this.odemeseklicombobox.BorderColor = System.Drawing.Color.Red;
@@ -338,6 +351,7 @@
             // 
             // sektorcombobox
             // 
+            this.sektorcombobox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.sektorcombobox.AutoRoundedCorners = true;
             this.sektorcombobox.BackColor = System.Drawing.Color.Transparent;
             this.sektorcombobox.BorderColor = System.Drawing.Color.Red;
@@ -364,6 +378,8 @@
             // 
             // aciklamatextbox
             // 
+            this.aciklamatextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.aciklamatextbox.AutoRoundedCorners = true;
             this.aciklamatextbox.BackColor = System.Drawing.Color.Transparent;
             this.aciklamatextbox.BorderColor = System.Drawing.Color.Red;
@@ -395,6 +411,8 @@
             // 
             // firmaunvantextbox
             // 
+            this.firmaunvantextbox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.firmaunvantextbox.AutoRoundedCorners = true;
             this.firmaunvantextbox.BackColor = System.Drawing.Color.Transparent;
             this.firmaunvantextbox.BorderColor = System.Drawing.Color.Red;
@@ -426,6 +444,7 @@
             // 
             // firmaguncellebuton
             // 
+            this.firmaguncellebuton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.firmaguncellebuton.AutoRoundedCorners = true;
             this.firmaguncellebuton.BackColor = System.Drawing.Color.Transparent;
             this.firmaguncellebuton.BorderRadius = 23;
@@ -447,6 +466,7 @@
             // 
             // kartvizitguncellebuton
             // 
+            this.kartvizitguncellebuton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.kartvizitguncellebuton.AutoRoundedCorners = true;
             this.kartvizitguncellebuton.BackColor = System.Drawing.Color.Transparent;
             this.kartvizitguncellebuton.BorderRadius = 23;

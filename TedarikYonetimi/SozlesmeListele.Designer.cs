@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.firmaaramatextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.sozlesmelerdtgview = new System.Windows.Forms.DataGridView();
             this.sozlesmeadinagoreara = new Guna.UI2.WinForms.Guna2TextBox();
@@ -67,6 +67,9 @@
             this.firmaaramatextbox.ShadowDecoration.Parent = this.firmaaramatextbox;
             this.firmaaramatextbox.Size = new System.Drawing.Size(575, 36);
             this.firmaaramatextbox.TabIndex = 22;
+            this.firmaaramatextbox.TextChanged += new System.EventHandler(this.firmaaramatextbox_TextChanged);
+            this.firmaaramatextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.firmaaramatextbox_KeyPress);
+            this.firmaaramatextbox.Leave += new System.EventHandler(this.firmaaramatextbox_Leave);
             // 
             // sozlesmelerdtgview
             // 
@@ -74,14 +77,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sozlesmelerdtgview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.sozlesmelerdtgview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.sozlesmelerdtgview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.sozlesmelerdtgview.ColumnHeadersHeight = 30;
             this.sozlesmelerdtgview.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sozlesmelerdtgview.GridColor = System.Drawing.SystemColors.ControlLight;
@@ -89,14 +92,14 @@
             this.sozlesmelerdtgview.MultiSelect = false;
             this.sozlesmelerdtgview.Name = "sozlesmelerdtgview";
             this.sozlesmelerdtgview.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.sozlesmelerdtgview.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.sozlesmelerdtgview.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.sozlesmelerdtgview.RowHeadersVisible = false;
             this.sozlesmelerdtgview.RowTemplate.Height = 25;
             this.sozlesmelerdtgview.RowTemplate.ReadOnly = true;
@@ -133,9 +136,13 @@
             this.sozlesmeadinagoreara.PasswordChar = '\0';
             this.sozlesmeadinagoreara.PlaceholderText = "";
             this.sozlesmeadinagoreara.SelectedText = "";
+            this.sozlesmeadinagoreara.SelectionStart = 23;
             this.sozlesmeadinagoreara.ShadowDecoration.Parent = this.sozlesmeadinagoreara;
             this.sozlesmeadinagoreara.Size = new System.Drawing.Size(511, 36);
             this.sozlesmeadinagoreara.TabIndex = 23;
+            this.sozlesmeadinagoreara.TextChanged += new System.EventHandler(this.sozlesmeadinagoreara_TextChanged);
+            this.sozlesmeadinagoreara.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sozlesmeadinagoreara_KeyPress);
+            this.sozlesmeadinagoreara.Leave += new System.EventHandler(this.sozlesmeadinagoreara_Leave);
             // 
             // SozlesmeListele
             // 

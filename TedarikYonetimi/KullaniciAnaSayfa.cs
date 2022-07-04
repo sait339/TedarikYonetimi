@@ -316,5 +316,17 @@ namespace TedarikYonetimi
             tanimlamalar.BringToFront();
             tanimlamalar.Show();
         }
+
+        private void guna2GradientTileButton1_Click(object sender, EventArgs e)
+        {
+            geridon.Visible = true;
+            KullaniciGirisAnaPanel.Controls.Clear();
+            SifreDegistir sifredegistir = new SifreDegistir();
+            sifredegistir.TopLevel = false;
+            sifredegistir.Dock = DockStyle.Fill;
+            KullaniciGirisAnaPanel.Controls.Add(sifredegistir);
+            sifredegistir.BringToFront();
+            sifredegistir.Show();
+        }
     }
 }
