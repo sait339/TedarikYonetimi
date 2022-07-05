@@ -16,6 +16,7 @@ namespace TedarikYonetimi
     public partial class SozlesmeListele : Form
     {
         DataTable sozlesmeler = new DataTable();
+        string dosya;
         DataGridViewButtonColumn goruntule = new DataGridViewButtonColumn();
         public SozlesmeListele()
         {
@@ -58,11 +59,12 @@ namespace TedarikYonetimi
 
         private void sozlesmelerdtgview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            dosya = "\\\\netsissrv\\NETSISV9\\tedarikyonetim\\Empero";
             string sozlesmeadi = sozlesmelerdtgview.CurrentRow.Cells["SözleşmeAdı"].Value.ToString();
             string firmaadi = sozlesmelerdtgview.CurrentRow.Cells["FirmaAdı"].Value.ToString();
             if(e.ColumnIndex ==0)
             {
-                Process.Start(Path.Combine(Application.StartupPath, "2022Sözleşmeler", firmaadi+"-"+sozlesmeadi));
+                Process.Start(Path.Combine(dosya, "2022Sözleşmeler", firmaadi+"-"+sozlesmeadi));
             }
         }
 

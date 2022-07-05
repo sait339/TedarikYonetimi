@@ -32,6 +32,7 @@ namespace TedarikYonetimi
         ArrayList sorumluadlar = new ArrayList();
         DataGridViewButtonColumn dgvaciklamaBtn = new DataGridViewButtonColumn();
         DataGridViewButtonColumn dgvkartvizitBtn = new DataGridViewButtonColumn();
+        string dosya;
         public FirmaListele()
         {
             InitializeComponent();
@@ -156,8 +157,8 @@ namespace TedarikYonetimi
                     kartismi = dr["kartvizit_ismi"].ToString();
                 }
                 SqlBaglanti.baglanti.Close();
-
-                Process.Start(Path.Combine(Application.StartupPath,"Kartvizitler",kartismi));
+                dosya = "\\\\netsissrv\\NETSISV9\\tedarikyonetim\\Empero";
+                Process.Start(Path.Combine(dosya,"Kartvizitler",kartismi));
             }
 
 

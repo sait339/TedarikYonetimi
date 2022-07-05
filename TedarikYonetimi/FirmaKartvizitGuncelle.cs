@@ -14,7 +14,7 @@ namespace TedarikYonetimi
 {
     public partial class FirmaKartvizitGuncelle : Form
     {
-        string dosyaismi, kartvizitid, kartvizityolu, kartvizitismi,islemyapanid,sorumluid;
+        string dosyaismi, kartvizitid, kartvizityolu, kartvizitismi,islemyapanid,sorumluid,dosya;
         public FirmaKartvizitGuncelle()
         {
             InitializeComponent();
@@ -22,8 +22,9 @@ namespace TedarikYonetimi
 
         private void kartvizitguncellebuton_Click(object sender, EventArgs e)
         {
-            File.Delete(Application.StartupPath + "\\Kartvizitler\\" + dosyaismi);
-            File.Copy(kartvizityolu, Application.StartupPath + "\\Kartvizitler" + "\\" + dosyaismi);
+            dosya = "\\\\netsissrv\\NETSISV9\\tedarikyonetim\\Empero";
+            File.Delete(dosya + "\\Kartvizitler\\" + dosyaismi);
+            File.Copy(kartvizityolu, dosya + "\\Kartvizitler" + "\\" + dosyaismi);
             HataEkranı onay = new HataEkranı();
             HataEkranı.durum = "ONAY";
             HataEkranı.baslik = "GÜNCELLEME BAŞARILI";
@@ -113,7 +114,7 @@ namespace TedarikYonetimi
                 dosyaismi = dr["kartvizit_ismi"].ToString();
             }
             SqlBaglanti.baglanti.Close();
-            kartvizitpicturebox.ImageLocation = Application.StartupPath + "\\Kartvizitler\\" + dosyaismi;
+            kartvizitpicturebox.ImageLocation = dosya + "\\Kartvizitler\\" + dosyaismi;
         }
     }
 }

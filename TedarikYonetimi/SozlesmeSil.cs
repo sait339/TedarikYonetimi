@@ -15,6 +15,7 @@ namespace TedarikYonetimi
     public partial class SozlesmeSil : Form
     {
         DataTable sozlesmeler = new DataTable();
+        string dosya;
         public SozlesmeSil()
         {
             InitializeComponent();
@@ -47,6 +48,7 @@ namespace TedarikYonetimi
 
         private void sozlesmesilbtn_Click(object sender, EventArgs e)
         {
+            dosya = "\\\\netsissrv\\NETSISV9\\tedarikyonetim\\Empero";
             string sozlesmeid, sozlesmedosyaadi,sorumlu,firmaadi;
             sozlesmeid = sozlesmelerdtgview.CurrentRow.Cells[0].Value.ToString();
             sozlesmedosyaadi = sozlesmelerdtgview.CurrentRow.Cells[1].Value.ToString();
@@ -65,7 +67,7 @@ namespace TedarikYonetimi
                         yetkilisil.Parameters.AddWithValue("@sozlesmeid", sozlesmeid);
                         yetkilisil.ExecuteNonQuery();
                         SqlBaglanti.baglanti.Close();
-                        File.Delete(Application.StartupPath + "\\2022Sözleşmeler\\" + firmaadi + "-" + sozlesmedosyaadi);
+                        File.Delete(dosya + "\\2022Sözleşmeler\\" + firmaadi + "-" + sozlesmedosyaadi);
                         HataEkranı hata = new HataEkranı();
                         HataEkranı.durum = "ONAY";
                         HataEkranı.baslik = "BAŞARILI";

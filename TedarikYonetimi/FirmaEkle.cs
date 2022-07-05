@@ -15,7 +15,7 @@ namespace TedarikYonetimi
 {
     public partial class FirmaEkle : Form
     {
-        string kartvizityolu, kartvizitismi,kayityolu;
+        string kartvizityolu, kartvizitismi,kayityolu,dosya;
         public FirmaEkle()
         {
             InitializeComponent();
@@ -132,12 +132,13 @@ namespace TedarikYonetimi
 
         private void firmaeklebuton_Click(object sender, EventArgs e)
         {
-            kayityolu = Application.StartupPath + "\\Kartvizitler";
+            dosya = "\\\\netsissrv\\NETSISV9\\tedarikyonetim\\Empero";
+            kayityolu = dosya + "\\Kartvizitler";
             try
             {
                 if (File.Exists(kayityolu) == false)
                 {
-                    Directory.CreateDirectory(Application.StartupPath + "\\Kartvizitler");
+                    Directory.CreateDirectory(kayityolu);
                     if (File.Exists(kayityolu + "\\" + kartvizitismi))
                     {
                         HataEkranı hatagoster = new HataEkranı();
@@ -148,11 +149,6 @@ namespace TedarikYonetimi
                     }
                     else
                     {
-                        HataEkranı onaygoster = new HataEkranı();
-                        HataEkranı.durum = "ONAY";
-                        HataEkranı.baslik = "BAŞARILI.";
-                        HataEkranı.text = "Kartvizit başarılı bir şekilde yüklenmiştir.";
-                        onaygoster.Show();
 
                         SqlBaglanti.baglanti.Close();
                         SqlBaglanti.baglanti.Open();
@@ -281,6 +277,7 @@ namespace TedarikYonetimi
                             HataEkranı.baslik = "KAYIT BAŞARILI";
                             HataEkranı.text = "Firma başarılı bir şekilde eklenmiştir.";
                             onay.Show();
+
                         }
                         else
                         {

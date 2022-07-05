@@ -158,30 +158,6 @@ namespace TedarikYonetimi
             }
         }
 
-        private void yetkicombobox_SelectedValueChanged(object sender, EventArgs e)
-        {
-            string secim = yetkicombobox.SelectedItem.ToString();
-            if (secim=="ADMİN")
-            {
-                yetki = "1";
-            }
-            else if(secim=="KULLANICI")
-            {
-                yetki = "2";
-            }
-            else if (secim=="MUHASEBE")
-            {
-                yetki = "3";
-            }
-            else
-            {
-                HataEkranı hata = new HataEkranı();
-                HataEkranı.durum = "HATA";
-                HataEkranı.baslik = "KAYIT TAMAMLANAMADI";
-                HataEkranı.text = "Yetki Seçimi Yapılmadı";
-                hata.Show();
-            }
-        }
 
         private void kullanicitanimla_Click(object sender, EventArgs e)
         {
@@ -208,46 +184,76 @@ namespace TedarikYonetimi
             string kullaniciadi, sifre,kontrol="";
             kullaniciadi = kullaniciaditextbox.Text;
             sifre = sifretextbox.Text;
-            if(kullaniciadi=="" || kullaniciadi == "Kullanıcı Adı" || sifre=="" || sifre=="Şifre" || yetki=="")
+            try
             {
-                HataEkranı hata = new HataEkranı();
-                HataEkranı.durum = "HATA";
-                HataEkranı.baslik = "KAYIT TAMAMLANAMADI";
-                HataEkranı.text = "Geçerli bir kullanıcı adı, şifre ve yetki giriniz.";
-                hata.Show();
-            }
-            else
-            {
-                SqlBaglanti.baglanti.Open();
-                SqlCommand kullaniciadikontrol = new SqlCommand("SELECT kullanici_adi FROM kullanicilar", SqlBaglanti.baglanti);
-                SqlDataReader dr = kullaniciadikontrol.ExecuteReader();
-                while(dr.Read())
+                string secim = yetkicombobox.Text;
+                if (secim == "ADMİN" )
                 {
-                    if(kullaniciadi.Equals(dr["kullanici_adi"].ToString()))
+                    yetki = "1";
+                }
+                else if (secim == "KULLANICI")
+                {
+                    yetki = "2";
+                }
+                else if (secim == "MUHASEBE")
+                {
+                    yetki = "3";
+                }
+                else
+                {
+                    HataEkranı hata1 = new HataEkranı();
+                    HataEkranı.durum = "HATA";
+                    HataEkranı.baslik = "KAYIT TAMAMLANAMADI";
+                    HataEkranı.text = "Yetki Seçimi Yapılmadı";
+                    hata1.Show();
+                }
+
+                if (kullaniciadi == "" || kullaniciadi == "Kullanıcı Adı" || sifre == "" || sifre == "Şifre" || yetki == "")
+                {
+                    HataEkranı hata = new HataEkranı();
+                    HataEkranı.durum = "HATA";
+                    HataEkranı.baslik = "KAYIT TAMAMLANAMADI";
+                    HataEkranı.text = "Geçerli bir kullanıcı adı, şifre ve yetki giriniz.";
+                    hata.Show();
+                }
+                else
+                {
+                    SqlBaglanti.baglanti.Open();
+                    SqlCommand kullaniciadikontrol = new SqlCommand("SELECT kullanici_adi FROM kullanicilar", SqlBaglanti.baglanti);
+                    SqlDataReader dr = kullaniciadikontrol.ExecuteReader();
+                    while (dr.Read())
+                    {
+                        if (kullaniciadi.Equals(dr["kullanici_adi"].ToString()))
+                        {
+                            SqlBaglanti.baglanti.Close();
+                            HataEkranı hata = new HataEkranı();
+                            HataEkranı.durum = "HATA";
+                            HataEkranı.baslik = "KAYIT TAMAMLANAMADI";
+                            HataEkranı.text = "Kullanıcı Adı Zaten Kayıtlı.";
+                            hata.Show();
+                            kontrol = "1";
+                            break;
+                        }
+                    }
+                    if (kontrol != "1")
                     {
                         SqlBaglanti.baglanti.Close();
-                        HataEkranı hata = new HataEkranı();
-                        HataEkranı.durum = "HATA";
-                        HataEkranı.baslik = "KAYIT TAMAMLANAMADI";
-                        HataEkranı.text = "Kullanıcı Adı Zaten Kayıtlı.";
-                        hata.Show();
-                        kontrol = "1";
-                        break;
+                        SqlBaglanti.baglanti.Open();
+                        SqlCommand sektorekle = new SqlCommand("INSERT INTO kullanicilar(kullanici_adi,kullanici_sifre,kullanici_yetki) VALUES (@ad,@sifre,@yetki)", SqlBaglanti.baglanti);
+                        sektorekle.Parameters.AddWithValue("@ad", kullaniciadi);
+                        sektorekle.Parameters.AddWithValue("@sifre", sifre);
+                        sektorekle.Parameters.AddWithValue("@yetki", yetki);
+                        sektorekle.ExecuteNonQuery();
+                        SqlBaglanti.baglanti.Close();
+                        kullanicitanimla.PerformClick();
                     }
                 }
-                if(kontrol!="1")
-                {
-                    SqlBaglanti.baglanti.Close();
-                    SqlBaglanti.baglanti.Open();
-                    SqlCommand sektorekle = new SqlCommand("INSERT INTO kullanicilar(kullanici_adi,kullanici_sifre,kullanici_yetki) VALUES (@ad,@sifre,@yetki)", SqlBaglanti.baglanti);
-                    sektorekle.Parameters.AddWithValue("@ad", kullaniciadi);
-                    sektorekle.Parameters.AddWithValue("@sifre", sifre);
-                    sektorekle.Parameters.AddWithValue("@yetki", yetki);
-                    sektorekle.ExecuteNonQuery();
-                    SqlBaglanti.baglanti.Close();
-                    kullanicitanimla.PerformClick();
-                }
             }
+            catch
+            {
+
+            }
+            
         }
 
         private void kullaniciguncellebtn_Click(object sender, EventArgs e)
@@ -258,48 +264,54 @@ namespace TedarikYonetimi
 
         private void guncellebtn_Click(object sender, EventArgs e)
         {
-            string sifree=sifre.Text;
-            SqlBaglanti.baglanti.Open();
-            SqlCommand yetkiliguncelleme = new SqlCommand("UPDATE kullanicilar SET kullanici_sifre=@sifre,kullanici_yetki=@yetki WHERE kullanici_adi=@ad", SqlBaglanti.baglanti);
-            yetkiliguncelleme.Parameters.AddWithValue("@sifre", sifree);
-            yetkiliguncelleme.Parameters.AddWithValue("@yetki", yetki);
-            yetkiliguncelleme.Parameters.AddWithValue("@ad", kullaniciadi.Text);
-            yetkiliguncelleme.ExecuteNonQuery();
-            SqlBaglanti.baglanti.Close();
-            kullanicitanimla.PerformClick();
-            HataEkranı hata = new HataEkranı();
-            HataEkranı.durum = "ONAY";
-            HataEkranı.baslik = "GÜNCELLEME BAŞARILI";
-            HataEkranı.text = "Güncelleme işlemi başarılı.";
-            hata.Show();
+            try
+            {
+                string secim = kullaniciyetki.Text;
+                if (secim == "ADMİN")
+                {
+                    yetki = "1";
+                }
+                else if (secim == "KULLANICI" )
+                {
+                    yetki = "2";
+                }
+                else if (secim == "MUHASEBE" )
+                {
+                    yetki = "3";
+                }
+                else
+                {
+                    HataEkranı hata1 = new HataEkranı();
+                    HataEkranı.durum = "HATA";
+                    HataEkranı.baslik = "KAYIT TAMAMLANAMADI";
+                    HataEkranı.text = "Yetki Seçimi Yapılmadı";
+                    hata1.Show();
+                }
+
+                string sifree = sifre.Text;
+                SqlBaglanti.baglanti.Open();
+                SqlCommand yetkiliguncelleme = new SqlCommand("UPDATE kullanicilar SET kullanici_sifre=@sifre,kullanici_yetki=@yetki WHERE kullanici_adi=@ad", SqlBaglanti.baglanti);
+                yetkiliguncelleme.Parameters.AddWithValue("@sifre", sifree);
+                yetkiliguncelleme.Parameters.AddWithValue("@yetki", yetki);
+                yetkiliguncelleme.Parameters.AddWithValue("@ad", kullaniciadi.Text);
+                yetkiliguncelleme.ExecuteNonQuery();
+                SqlBaglanti.baglanti.Close();
+                HataEkranı hata = new HataEkranı();
+                HataEkranı.durum = "ONAY";
+                HataEkranı.baslik = "GÜNCELLEME BAŞARILI";
+                HataEkranı.text = "Güncelleme işlemi başarılı.";
+                hata.Show();
+                kullanicitanimla.PerformClick();
+            }
+            catch
+            {
+
+            }
+            
             
 
         }
 
-        private void kullaniciyetki_SelectedValueChanged(object sender, EventArgs e)
-        {
-            string secim = yetkicombobox.SelectedItem.ToString();
-            if (secim == "ADMİN")
-            {
-                yetki = "1";
-            }
-            else if (secim == "KULLANICI")
-            {
-                yetki = "2";
-            }
-            else if (secim == "MUHASEBE")
-            {
-                yetki = "3";
-            }
-            else
-            {
-                HataEkranı hata = new HataEkranı();
-                HataEkranı.durum = "HATA";
-                HataEkranı.baslik = "KAYIT TAMAMLANAMADI";
-                HataEkranı.text = "Yetki Seçimi Yapılmadı";
-                hata.Show();
-            }
-        }
 
         private void kullanicilardtgvw_CellEnter(object sender, DataGridViewCellEventArgs e)
         {

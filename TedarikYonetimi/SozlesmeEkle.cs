@@ -23,7 +23,7 @@ namespace TedarikYonetimi
         ArrayList firmaadlari = new ArrayList();
         ArrayList sektoradlari = new ArrayList();
         DataTable firmatablo = new DataTable();
-        string firmaadi,firmaid, sozlesmeaciklama,sorumluid;
+        string firmaadi,firmaid, sozlesmeaciklama,sorumluid,dosya;
         public SozlesmeEkle()
         {
             InitializeComponent();
@@ -181,11 +181,12 @@ namespace TedarikYonetimi
 
         private void dosyasecbuton_Click(object sender, EventArgs e)
         {
+            dosya = "\\\\netsissrv\\NETSISV9\\tedarikyonetim\\Empero";
             OpenFileDialog sozlesme = new OpenFileDialog();
             sozlesme.Filter = "Tüm Dosyalar |*.*| Resim Dosyası *.jpg |*.jpg | PDF *.pdf|*.pdf"; ;
             sozlesme.Title = "Sözleşme Seçiniz.";
             yıl = DateTime.Now.Year.ToString();
-            kayityolu = Application.StartupPath + "\\" + yıl + "Sözleşmeler";
+            kayityolu = dosya + "\\" + yıl + "Sözleşmeler";
             if (sozlesme.ShowDialog() == DialogResult.OK)
             {
                 sozlesmedosyaadi = sozlesme.SafeFileName.ToString(); ;
@@ -222,7 +223,7 @@ namespace TedarikYonetimi
             {
                 if (File.Exists(kayityolu) == false)
                 {
-                    Directory.CreateDirectory(Application.StartupPath + "\\" + yıl + "Sözleşmeler");
+                    Directory.CreateDirectory(dosya + "\\" + yıl + "Sözleşmeler");
                     if (File.Exists(kayityolu + "\\" + firmaadi + "-" + sozlesmedosyaadi))
                     {
                         HataEkranı hatagoster = new HataEkranı();

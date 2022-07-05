@@ -70,7 +70,6 @@
             this.Name = "AcilisEkrani";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AcilisEkrani";
-            this.Load += new System.EventHandler(this.AcilisEkrani_Load);
             this.ResumeLayout(false);
 
         }

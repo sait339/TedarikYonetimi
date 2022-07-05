@@ -15,7 +15,7 @@ namespace TedarikYonetimi
     public partial class SozlesmeGuncelle : Form
     {
         DataTable sozlesmeler = new DataTable();
-        string sozlesmeadi, sozlesmeyolu,sozlesmeid,sozlesmedosyaadi,aciklama,firmaadi,sorumluadi;
+        string sozlesmeadi, sozlesmeyolu,sozlesmeid,sozlesmedosyaadi,aciklama,firmaadi,sorumluadi,dosya;
 
         private void sozlesmeadinagoreara_TextChanged(object sender, EventArgs e)
         {
@@ -167,12 +167,13 @@ namespace TedarikYonetimi
 
         private void sozlesmeonaylabtn_Click(object sender, EventArgs e)
         {
+            dosya = "\\\\netsissrv\\NETSISV9\\tedarikyonetim\\Empero";
             try
             {
                 if(sorumluadi==KullaniciAnaSayfa.sorumluadi || GirisEkranı.yetki == "1")
                 {
-                    File.Delete(Application.StartupPath + "\\2022Sözleşmeler\\" + firmaadi + "-" + sozlesmedosyaadi);
-                    File.Copy(sozlesmeyolu, Application.StartupPath + "\\2022Sözleşmeler" + "\\" + firmaadi + "-" + sozlesmeadi);
+                    File.Delete(dosya + "\\2022Sözleşmeler\\" + firmaadi + "-" + sozlesmedosyaadi);
+                    File.Copy(sozlesmeyolu, dosya + "\\2022Sözleşmeler" + "\\" + firmaadi + "-" + sozlesmeadi);
                     SqlBaglanti.baglanti.Open();
                     SqlCommand guncelle = new SqlCommand("UPDATE sozlesmeler SET sozlesme_aciklama=@aciklama,sozlesme_dosyaadi=@dosyaadi WHERE sozlesme_id=@id", SqlBaglanti.baglanti);
                     guncelle.Parameters.AddWithValue("@aciklama",aciklamatextbox.Text);

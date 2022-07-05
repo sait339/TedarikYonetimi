@@ -29,7 +29,7 @@ namespace TedarikYonetimi
         ArrayList sektoradlar = new ArrayList();
         ArrayList sorumluIDler = new ArrayList();
         ArrayList sorumluadlar = new ArrayList();
-        string islemyapanid,sorumluid,kartvizitID,sorumluID;
+        string islemyapanid,sorumluid,kartvizitID,sorumluID,dosya;
 
         public FirmaSil()
         {
@@ -38,6 +38,7 @@ namespace TedarikYonetimi
 
         private void FirmaSil_Load(object sender, EventArgs e)
         {
+            dosya = "\\\\netsissrv\\NETSISV9\\tedarikyonetim\\Empero";
             SqlBaglanti.baglanti.Open();
             SqlCommand sektorfiltre = new SqlCommand("SELECT *FROM sektorler ORDER BY sektor_adi", SqlBaglanti.baglanti);
             SqlDataReader dr0 = sektorfiltre.ExecuteReader();
@@ -209,12 +210,12 @@ namespace TedarikYonetimi
                         SqlDataReader kr = kartvizitadisorgula.ExecuteReader();
                         if (kr.Read())
                         {
-                            string tasimayolu = Application.StartupPath + "\\Silinen Firmaların Kartvizitleri";
+                            string tasimayolu = dosya + "\\Silinen Firmaların Kartvizitleri";
                             string kartvizitADI = kr["kartvizit_ismi"].ToString();
                             if(File.Exists(tasimayolu) == false)
                             {
                                 Directory.CreateDirectory(tasimayolu);
-                                File.Move(Application.StartupPath + "\\Kartvizitler\\" + kartvizitADI, tasimayolu+"\\"+ kartvizitADI);
+                                File.Move(dosya + "\\Kartvizitler\\" + kartvizitADI, tasimayolu+"\\"+ kartvizitADI);
                             }
                         }
                         SqlBaglanti.baglanti.Close();
@@ -225,7 +226,7 @@ namespace TedarikYonetimi
                         while (sr.Read())
                         {
                             string sozlesmead = sr["sozlesme_dosyaadi"].ToString();
-                            File.Delete(Application.StartupPath + "\\2022Sözleşmeler\\" +firmaadi +"-"+ sozlesmead);
+                            File.Delete(dosya + "\\2022Sözleşmeler\\" +firmaadi +"-"+ sozlesmead);
                         }
                         SqlBaglanti.baglanti.Close();
                         SqlBaglanti.baglanti.Open();

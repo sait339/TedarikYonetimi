@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
@@ -23,32 +24,19 @@ namespace TedarikYonetimi
 
         static bool UpdateControl()
         {
-            Uri versionurl = new Uri("http://localhost/emperosetup/version/version.txt");
-            Uri updateurl = new Uri("http://localhost/emperosetup/emperologo.png"); 
+            string updatetxt = ConfigurationManager.ConnectionStrings["UpdateTXT"].ConnectionString;
+            string updateexe = ConfigurationManager.ConnectionStrings["UpdateEXE"].ConnectionString;
             string gelenVers = "0";
-            string lastVers = "0.1";
-            WebClient update = new WebClient();
-            update.DownloadFileAsync(versionurl, "version.txt");
-            while (update.IsBusy)
-            {
-                Thread.Sleep(1);
-            }
-            StreamReader versionread = new StreamReader("version.txt");
+            string lastVers = "1.0.0.0";
+            StreamReader versionread = new StreamReader(updatetxt);
             gelenVers = versionread.ReadLine().ToString();
-
-
             if (Convert.ToDouble(gelenVers)<=Convert.ToDouble(lastVers))
             {
                 return false;
             }
             else
             {
-                update.DownloadFileAsync(updateurl, "emperologo.png");
-                while (update.IsBusy)
-                {
-                    Thread.Sleep(1);
-                }
-                Process.Start("emperologo.png");
+                Process.Start(updateexe);
                 return true;
             }
         }
@@ -64,8 +52,10 @@ namespace TedarikYonetimi
                     zamanlayici.Enabled = false;
                     DialogResult dialog = new DialogResult();
                     dialog = MessageBox.Show("Yeni Bir Güncelleme Mevcut.Güncelleme Yüklenirken\nLütfen Bekleyiniz.", "Dikkat", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    if (dialog == DialogResult.OK);
-                    this.Close();
+                    if (dialog == DialogResult.OK)
+                    {
+                        this.Close();
+                    }
                 }
             }
             else if (panel2.Width >= 430)
@@ -79,9 +69,5 @@ namespace TedarikYonetimi
             
         }
 
-        private void AcilisEkrani_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
