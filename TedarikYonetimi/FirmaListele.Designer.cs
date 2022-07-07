@@ -33,6 +33,7 @@
             this.sektorfiltercombo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.firmaaramatextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.firmalardtgview = new System.Windows.Forms.DataGridView();
+            this.excelaktarbtn = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.firmalardtgview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,12 +136,33 @@
             this.firmalardtgview.TabIndex = 18;
             this.firmalardtgview.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.firmalardtgview_CellContentClick);
             // 
+            // excelaktarbtn
+            // 
+            this.excelaktarbtn.AutoRoundedCorners = true;
+            this.excelaktarbtn.BackColor = System.Drawing.Color.Transparent;
+            this.excelaktarbtn.BorderRadius = 18;
+            this.excelaktarbtn.CheckedState.Parent = this.excelaktarbtn;
+            this.excelaktarbtn.CustomImages.Parent = this.excelaktarbtn;
+            this.excelaktarbtn.FillColor = System.Drawing.Color.Maroon;
+            this.excelaktarbtn.FillColor2 = System.Drawing.Color.Red;
+            this.excelaktarbtn.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.excelaktarbtn.ForeColor = System.Drawing.Color.White;
+            this.excelaktarbtn.HoverState.Parent = this.excelaktarbtn;
+            this.excelaktarbtn.Location = new System.Drawing.Point(918, 577);
+            this.excelaktarbtn.Name = "excelaktarbtn";
+            this.excelaktarbtn.ShadowDecoration.Parent = this.excelaktarbtn;
+            this.excelaktarbtn.Size = new System.Drawing.Size(188, 38);
+            this.excelaktarbtn.TabIndex = 21;
+            this.excelaktarbtn.Text = "Excele Aktar";
+            this.excelaktarbtn.Click += new System.EventHandler(this.excelaktarbtn_Click);
+            // 
             // FirmaListele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1118, 668);
+            this.Controls.Add(this.excelaktarbtn);
             this.Controls.Add(this.sektorfiltercombo);
             this.Controls.Add(this.firmaaramatextbox);
             this.Controls.Add(this.firmalardtgview);
@@ -158,5 +180,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox sektorfiltercombo;
         private Guna.UI2.WinForms.Guna2TextBox firmaaramatextbox;
         private System.Windows.Forms.DataGridView firmalardtgview;
+        private Guna.UI2.WinForms.Guna2GradientButton excelaktarbtn;
     }
 }

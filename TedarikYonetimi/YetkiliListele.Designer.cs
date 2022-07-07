@@ -33,6 +33,7 @@
             this.firmaadinagorearatextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.yetkililerdtgview = new System.Windows.Forms.DataGridView();
             this.yetkiliadinagorearatextbox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.excelaktarbtn = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.yetkililerdtgview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,11 +140,32 @@
             this.yetkiliadinagorearatextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.yetkiliadinagorearatextbox_KeyPress);
             this.yetkiliadinagorearatextbox.Leave += new System.EventHandler(this.yetkiliadinagorearatextbox_Leave);
             // 
+            // excelaktarbtn
+            // 
+            this.excelaktarbtn.AutoRoundedCorners = true;
+            this.excelaktarbtn.BackColor = System.Drawing.Color.Transparent;
+            this.excelaktarbtn.BorderRadius = 18;
+            this.excelaktarbtn.CheckedState.Parent = this.excelaktarbtn;
+            this.excelaktarbtn.CustomImages.Parent = this.excelaktarbtn;
+            this.excelaktarbtn.FillColor = System.Drawing.Color.Maroon;
+            this.excelaktarbtn.FillColor2 = System.Drawing.Color.Red;
+            this.excelaktarbtn.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.excelaktarbtn.ForeColor = System.Drawing.Color.White;
+            this.excelaktarbtn.HoverState.Parent = this.excelaktarbtn;
+            this.excelaktarbtn.Location = new System.Drawing.Point(919, 575);
+            this.excelaktarbtn.Name = "excelaktarbtn";
+            this.excelaktarbtn.ShadowDecoration.Parent = this.excelaktarbtn;
+            this.excelaktarbtn.Size = new System.Drawing.Size(188, 38);
+            this.excelaktarbtn.TabIndex = 24;
+            this.excelaktarbtn.Text = "Excele Aktar";
+            this.excelaktarbtn.Click += new System.EventHandler(this.excelaktarbtn_Click);
+            // 
             // YetkiliListele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1118, 668);
+            this.Controls.Add(this.excelaktarbtn);
             this.Controls.Add(this.yetkiliadinagorearatextbox);
             this.Controls.Add(this.firmaadinagorearatextbox);
             this.Controls.Add(this.yetkililerdtgview);
@@ -161,5 +183,6 @@
         private Guna.UI2.WinForms.Guna2TextBox firmaadinagorearatextbox;
         private System.Windows.Forms.DataGridView yetkililerdtgview;
         private Guna.UI2.WinForms.Guna2TextBox yetkiliadinagorearatextbox;
+        private Guna.UI2.WinForms.Guna2GradientButton excelaktarbtn;
     }
 }

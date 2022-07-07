@@ -215,5 +215,10 @@ namespace TedarikYonetimi
                 firmalardtgview.DataSource = dv;
             }
         }
+
+        private void excelaktarbtn_Click(object sender, EventArgs e)
+        {
+            ExcelAktarma.Excel_Disa_Aktar(firmalardtgview);
+        }
     }
 }

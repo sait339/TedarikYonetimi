@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.firmaaramatextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.sozlesmelerdtgview = new System.Windows.Forms.DataGridView();
             this.sozlesmeadinagoreara = new Guna.UI2.WinForms.Guna2TextBox();
+            this.excelaktarbtn = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.sozlesmelerdtgview)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,14 +78,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sozlesmelerdtgview.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.sozlesmelerdtgview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.sozlesmelerdtgview.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.sozlesmelerdtgview.ColumnHeadersHeight = 30;
             this.sozlesmelerdtgview.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sozlesmelerdtgview.GridColor = System.Drawing.SystemColors.ControlLight;
@@ -92,14 +93,14 @@
             this.sozlesmelerdtgview.MultiSelect = false;
             this.sozlesmelerdtgview.Name = "sozlesmelerdtgview";
             this.sozlesmelerdtgview.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.sozlesmelerdtgview.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.sozlesmelerdtgview.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.sozlesmelerdtgview.RowHeadersVisible = false;
             this.sozlesmelerdtgview.RowTemplate.Height = 25;
             this.sozlesmelerdtgview.RowTemplate.ReadOnly = true;
@@ -144,12 +145,33 @@
             this.sozlesmeadinagoreara.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sozlesmeadinagoreara_KeyPress);
             this.sozlesmeadinagoreara.Leave += new System.EventHandler(this.sozlesmeadinagoreara_Leave);
             // 
+            // excelaktarbtn
+            // 
+            this.excelaktarbtn.AutoRoundedCorners = true;
+            this.excelaktarbtn.BackColor = System.Drawing.Color.Transparent;
+            this.excelaktarbtn.BorderRadius = 18;
+            this.excelaktarbtn.CheckedState.Parent = this.excelaktarbtn;
+            this.excelaktarbtn.CustomImages.Parent = this.excelaktarbtn;
+            this.excelaktarbtn.FillColor = System.Drawing.Color.Maroon;
+            this.excelaktarbtn.FillColor2 = System.Drawing.Color.Red;
+            this.excelaktarbtn.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.excelaktarbtn.ForeColor = System.Drawing.Color.White;
+            this.excelaktarbtn.HoverState.Parent = this.excelaktarbtn;
+            this.excelaktarbtn.Location = new System.Drawing.Point(917, 577);
+            this.excelaktarbtn.Name = "excelaktarbtn";
+            this.excelaktarbtn.ShadowDecoration.Parent = this.excelaktarbtn;
+            this.excelaktarbtn.Size = new System.Drawing.Size(188, 38);
+            this.excelaktarbtn.TabIndex = 24;
+            this.excelaktarbtn.Text = "Excele Aktar";
+            this.excelaktarbtn.Click += new System.EventHandler(this.excelaktarbtn_Click);
+            // 
             // SozlesmeListele
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1118, 668);
+            this.Controls.Add(this.excelaktarbtn);
             this.Controls.Add(this.sozlesmeadinagoreara);
             this.Controls.Add(this.firmaaramatextbox);
             this.Controls.Add(this.sozlesmelerdtgview);
@@ -167,5 +189,6 @@
         private Guna.UI2.WinForms.Guna2TextBox firmaaramatextbox;
         private System.Windows.Forms.DataGridView sozlesmelerdtgview;
         private Guna.UI2.WinForms.Guna2TextBox sozlesmeadinagoreara;
+        private Guna.UI2.WinForms.Guna2GradientButton excelaktarbtn;
     }
 }
