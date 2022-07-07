@@ -61,9 +61,12 @@
             this.eskisifre.PlaceholderForeColor = System.Drawing.Color.White;
             this.eskisifre.PlaceholderText = "";
             this.eskisifre.SelectedText = "";
+            this.eskisifre.SelectionStart = 10;
             this.eskisifre.ShadowDecoration.Parent = this.eskisifre;
             this.eskisifre.Size = new System.Drawing.Size(229, 37);
             this.eskisifre.TabIndex = 0;
+            this.eskisifre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.eskisifre_KeyPress);
+            this.eskisifre.Leave += new System.EventHandler(this.eskisifre_Leave);
             // 
             // yenisifre1
             // 
@@ -92,9 +95,12 @@
             this.yenisifre1.PlaceholderForeColor = System.Drawing.Color.White;
             this.yenisifre1.PlaceholderText = "";
             this.yenisifre1.SelectedText = "";
+            this.yenisifre1.SelectionStart = 10;
             this.yenisifre1.ShadowDecoration.Parent = this.yenisifre1;
             this.yenisifre1.Size = new System.Drawing.Size(229, 37);
             this.yenisifre1.TabIndex = 1;
+            this.yenisifre1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.yenisifre1_KeyPress);
+            this.yenisifre1.Leave += new System.EventHandler(this.yenisifre1_Leave);
             // 
             // yenisifre2
             // 
@@ -123,9 +129,12 @@
             this.yenisifre2.PlaceholderForeColor = System.Drawing.Color.White;
             this.yenisifre2.PlaceholderText = "";
             this.yenisifre2.SelectedText = "";
+            this.yenisifre2.SelectionStart = 10;
             this.yenisifre2.ShadowDecoration.Parent = this.yenisifre2;
             this.yenisifre2.Size = new System.Drawing.Size(229, 37);
             this.yenisifre2.TabIndex = 2;
+            this.yenisifre2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.yenisifre2_KeyPress);
+            this.yenisifre2.Leave += new System.EventHandler(this.yenisifre2_Leave);
             // 
             // onaylabtn
             // 

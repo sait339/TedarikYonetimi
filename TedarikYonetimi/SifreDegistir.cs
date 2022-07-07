@@ -50,6 +50,15 @@ namespace TedarikYonetimi
                     HataEkranı.text = "Şifreniz Kaydedildi.";
                     onay.Show();
                 }
+                else
+                {
+                    HataEkranı onay = new HataEkranı();
+                    HataEkranı.durum = "HATA";
+                    HataEkranı.baslik = "GÜNCELLEME BAŞARISIZ OLDU";
+                    HataEkranı.text = "Eski şifre Yanlış Yada Şifreler uyuşmuyor.";
+                    onay.Show();
+
+                }
             }
             catch
             {
@@ -57,6 +66,54 @@ namespace TedarikYonetimi
             }
             
 
+        }
+
+        private void eskisifre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (eskisifre.Text.Equals("eski şifre"))
+            {
+                eskisifre.Clear();
+            }
+        }
+
+        private void eskisifre_Leave(object sender, EventArgs e)
+        {
+            if (eskisifre.Text.Equals(""))
+            {
+                eskisifre.Text = "eski şifre";
+            }
+        }
+
+        private void yenisifre1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (yenisifre1.Text.Equals("yeni şifre"))
+            {
+                yenisifre1.Clear();
+            }
+        }
+
+        private void yenisifre1_Leave(object sender, EventArgs e)
+        {
+            if (yenisifre1.Text.Equals(""))
+            {
+                yenisifre1.Text = "yeni şifre";
+            }
+        }
+
+        private void yenisifre2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (yenisifre2.Text.Equals("yeni şifre"))
+            {
+                yenisifre2.Clear();
+            }
+        }
+
+        private void yenisifre2_Leave(object sender, EventArgs e)
+        {
+            if (yenisifre2.Text.Equals(""))
+            {
+                yenisifre2.Text = "yeni şifre";
+            }
         }
     }
 }

@@ -21,13 +21,13 @@ namespace TedarikYonetimi
         {
             InitializeComponent();
         }
-
+        
         static bool UpdateControl()
         {
             string updatetxt = ConfigurationManager.ConnectionStrings["UpdateTXT"].ConnectionString;
             string updateexe = ConfigurationManager.ConnectionStrings["UpdateEXE"].ConnectionString;
             string gelenVers = "0";
-            string lastVers = "1.0.0.0";
+            string lastVers = "1.2";
             StreamReader versionread = new StreamReader(updatetxt);
             gelenVers = versionread.ReadLine().ToString();
             if (Convert.ToDouble(gelenVers)<=Convert.ToDouble(lastVers))
@@ -44,21 +44,21 @@ namespace TedarikYonetimi
         private void zamanlayici_Tick(object sender, EventArgs e)
         {
             panel2.Width += 5;
-            if (panel2.Width == 101)
-            {
-                if(UpdateControl()==true)
-                {
-                    zamanlayici.Stop();
-                    zamanlayici.Enabled = false;
-                    DialogResult dialog = new DialogResult();
-                    dialog = MessageBox.Show("Yeni Bir Güncelleme Mevcut.Güncelleme Yüklenirken\nLütfen Bekleyiniz.", "Dikkat", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    if (dialog == DialogResult.OK)
-                    {
-                        this.Close();
-                    }
-                }
-            }
-            else if (panel2.Width >= 430)
+            //if (panel2.Width == 101)
+            //{
+            //    if(UpdateControl()==true)
+            //    {
+            //        zamanlayici.Stop();
+            //        zamanlayici.Enabled = false;
+            //        DialogResult dialog = new DialogResult();
+            //        dialog = MessageBox.Show("Yeni Bir Güncelleme Mevcut.Güncelleme Yüklenirken\nLütfen Bekleyiniz.", "Dikkat", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //        if (dialog == DialogResult.OK)
+            //        {
+            //            this.Close();
+            //        }
+            //    }
+            //}
+            if (panel2.Width >= 430)
             {
                 zamanlayici.Stop();
                 zamanlayici.Enabled = false;

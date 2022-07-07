@@ -69,6 +69,7 @@ namespace TedarikYonetimi
 
         private void FirmaKartvizitGuncelle_Load(object sender, EventArgs e)
         {
+            dosya = "\\\\netsissrv\\NETSISV9\\tedarikyonetim\\Empero";
             SqlBaglanti.baglanti.Open();
             SqlCommand islemyaopanidsorgula = new SqlCommand("SELECT kullanici_id FROM kullanicilar WHERE kullanici_adi=@kullaniciadi", SqlBaglanti.baglanti);
             islemyaopanidsorgula.Parameters.AddWithValue("@kullaniciadi", KullaniciAnaSayfa.sorumluadi);
