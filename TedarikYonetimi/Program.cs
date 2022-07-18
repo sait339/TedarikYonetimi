@@ -16,7 +16,7 @@ namespace TedarikYonetimi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AcilisEkrani());
+            Application.Run(new KullaniciAnaSayfa());
         }
     }
 }
